@@ -1,5 +1,1645 @@
-Actual OS coding, put in notepad
+@ECHO OFF
+REM BFCPEOPTIONSTART
+REM Advanced BAT to EXE Converter www.BatToExeConverter.com
+REM BFCPEEXE=C:\Users\jason\OneDrive\Desktop\Jason Jaguar Operating System 2.0 Early Beta (Software Compatibility Release).exe
+REM BFCPEICON=C:\Program Files (x86)\Advanced BAT to EXE Converter v4.61\ab2econv461\icons\windows_95_98_logo_with_shading_by_archi_techi_d8x2ybr_fullview_6Jn_icon.ico
+REM BFCPEICONINDEX=-1
+REM BFCPEEMBEDDISPLAY=0
+REM BFCPEEMBEDDELETE=1
+REM BFCPEADMINEXE=0
+REM BFCPEINVISEXE=0
+REM BFCPEVERINCLUDE=1
+REM BFCPEVERVERSION=0.2.1.0
+REM BFCPEVERPRODUCT=Jason Jaguar OS 2.0 GUI
+REM BFCPEVERDESC=A beta for our GUI, don't leak!
+REM BFCPEVERCOMPANY=Jason Jaguar Inc. 
+REM BFCPEVERCOPYRIGHT=Copyright Info
+REM BFCPEWINDOWCENTER=1
+REM BFCPEDISABLEQE=0
+REM BFCPEWINDOWHEIGHT=30
+REM BFCPEWINDOWWIDTH=120
+REM BFCPEWTITLE=Jason Jaguar 2.0 GUI
+REM BFCPEOPTIONEND
 @echo off
+
+setlocal EnableDelayedExpansion
+
+:biosboot
+color 08
+if exist C:\JasonJaguarFileSystem goto cheloice
+if not exist C:\JasonJaguarFileSystem goto create1
+
+:create1
+mkdir C:\JasonJaguarFileSystem
+cls
+rem PrintCenter Creating Jason Jaguar FileSystem... 21 0 9
+rem CenterSelf
+set FGcol=10
+rem ChangeColor %FGcol% 0
+rem PrintBoxAt 15 51 3 20 2
+rem ChangeColor 0 %FGcol%
+
+rem Wait 50
+REM COPY FILES HERE
+
+rem ShadeBoxAt 16 52 1 2 8
+
+rem Wait 50
+REM COPY MORE FILES HERE
+
+rem ShadeBoxAt 16 54 1 2 8
+
+rem Wait 50
+REM COPY MORE FILES HERE
+
+rem ShadeBoxAt 16 56 1 2 8
+
+rem Wait 50
+REM COPY MORE FILES HERE
+
+rem ShadeBoxAt 16 58 1 2 8
+
+rem Wait 50
+REM COPY MORE FILES HERE
+
+rem ShadeBoxAt 16 60 1 2 8
+
+rem Wait 50
+REM COPY MORE FILES HERE
+
+rem ShadeBoxAt 16 62 1 2 8
+
+rem Wait 50
+REM COPY MORE FILES HERE
+
+rem ShadeBoxAt 16 64 1 2 8
+
+rem Wait 50
+REM COPY MORE FILES HERE
+
+rem ShadeBoxAt 16 66 1 2 8
+
+rem Wait 50
+REM COPY MORE FILES HERE
+
+rem ShadeBoxAt 16 68 1 2 8
+
+rem ClearColor
+rem Locate 30 1
+goto mainstoragecheck1
+
+
+
+:mainstoragecheck1
+cls
+if exist C:\JasonJaguarFileSystem\MainStorage(A) goto mainstoragecheck2
+if not exist C:\JasonJaguarFileSystem\MainStorage(A) goto create2
+
+
+
+:create2
+mkdir C:\JasonJaguarFileSystem\MainStorage(A)
+cls
+rem PrintCenter Creating Jason Jaguar FileSystem... 21 0 9
+rem CenterSelf
+set FGcol=10
+rem ChangeColor %FGcol% 0
+rem PrintBoxAt 15 51 3 20 2
+rem ChangeColor 0 %FGcol%
+
+rem Wait 50
+REM COPY FILES HERE
+
+rem ShadeBoxAt 16 52 1 2 8
+
+rem Wait 50
+REM COPY MORE FILES HERE
+
+rem ShadeBoxAt 16 54 1 2 8
+
+rem Wait 50
+REM COPY MORE FILES HERE
+
+rem ShadeBoxAt 16 56 1 2 8
+
+rem Wait 50
+REM COPY MORE FILES HERE
+
+rem ShadeBoxAt 16 58 1 2 8
+
+rem Wait 50
+REM COPY MORE FILES HERE
+
+rem ShadeBoxAt 16 60 1 2 8
+
+rem Wait 50
+REM COPY MORE FILES HERE
+
+rem ShadeBoxAt 16 62 1 2 8
+
+rem Wait 50
+REM COPY MORE FILES HERE
+
+rem ShadeBoxAt 16 64 1 2 8
+
+rem Wait 50
+REM COPY MORE FILES HERE
+
+rem ShadeBoxAt 16 66 1 2 8
+
+rem Wait 50
+REM COPY MORE FILES HERE
+
+rem ShadeBoxAt 16 68 1 2 8
+
+rem ClearColor
+rem Locate 30 1
+goto mainstoragecheck2
+
+
+:mainstoragecheck2
+cls
+if exist C:\JasonJaguarFileSystem\MainStorage(A)\Documents goto mainstoragecheck3
+if not exist C:\JasonJaguarFileSystem\MainStorage(A)\Documents goto create3
+
+
+
+
+:create3
+mkdir C:\JasonJaguarFileSystem\MainStorage(A)\Documents
+cls
+rem PrintCenter Creating Jason Jaguar FileSystem... 21 0 9
+rem CenterSelf
+set FGcol=10
+rem ChangeColor %FGcol% 0
+rem PrintBoxAt 15 51 3 20 2
+rem ChangeColor 0 %FGcol%
+
+rem Wait 50
+REM COPY FILES HERE
+
+rem ShadeBoxAt 16 52 1 2 8
+
+rem Wait 50
+REM COPY MORE FILES HERE
+
+rem ShadeBoxAt 16 54 1 2 8
+
+rem Wait 50
+REM COPY MORE FILES HERE
+
+rem ShadeBoxAt 16 56 1 2 8
+
+rem Wait 50
+REM COPY MORE FILES HERE
+
+rem ShadeBoxAt 16 58 1 2 8
+
+rem Wait 50
+REM COPY MORE FILES HERE
+
+rem ShadeBoxAt 16 60 1 2 8
+
+rem Wait 50
+REM COPY MORE FILES HERE
+
+rem ShadeBoxAt 16 62 1 2 8
+
+rem Wait 50
+REM COPY MORE FILES HERE
+
+rem ShadeBoxAt 16 64 1 2 8
+
+rem Wait 50
+REM COPY MORE FILES HERE
+
+rem ShadeBoxAt 16 66 1 2 8
+
+rem Wait 50
+REM COPY MORE FILES HERE
+
+rem ShadeBoxAt 16 68 1 2 8
+
+rem ClearColor
+rem Locate 30 1
+goto mainstoragecheck3
+
+
+:mainstoragecheck3
+cls
+if exist C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData goto mainstoragecheck4
+if not exist C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData goto create4
+
+
+
+
+:create4
+mkdir C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData
+mkdir C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\UserPass
+cls
+rem PrintCenter Creating Jason Jaguar FileSystem... 21 0 9
+rem CenterSelf
+set FGcol=10
+rem ChangeColor %FGcol% 0
+rem PrintBoxAt 15 51 3 20 2
+rem ChangeColor 0 %FGcol%
+
+rem Wait 50
+REM COPY FILES HERE
+
+rem ShadeBoxAt 16 52 1 2 8
+
+rem Wait 50
+REM COPY MORE FILES HERE
+
+rem ShadeBoxAt 16 54 1 2 8
+
+rem Wait 50
+REM COPY MORE FILES HERE
+
+rem ShadeBoxAt 16 56 1 2 8
+
+rem Wait 50
+REM COPY MORE FILES HERE
+
+rem ShadeBoxAt 16 58 1 2 8
+
+rem Wait 50
+REM COPY MORE FILES HERE
+
+rem ShadeBoxAt 16 60 1 2 8
+
+rem Wait 50
+REM COPY MORE FILES HERE
+
+rem ShadeBoxAt 16 62 1 2 8
+
+rem Wait 50
+REM COPY MORE FILES HERE
+
+rem ShadeBoxAt 16 64 1 2 8
+
+rem Wait 50
+REM COPY MORE FILES HERE
+
+rem ShadeBoxAt 16 66 1 2 8
+
+rem Wait 50
+REM COPY MORE FILES HERE
+
+rem ShadeBoxAt 16 68 1 2 8
+
+rem ClearColor
+rem Locate 30 1
+rem PrintCenter Jason Jaguar FileSystem created! 23 0 9
+pause
+goto cheloice
+
+:cheloice
+cls
+color 0a
+CHOICE /C 12 /N /T 2 /D 1 /M "Booting..[Press '2' to enter the 'Post-BIOS Command Prompt Terminal']"
+
+
+IF %ERRORLEVEL% EQU 2 GOTO CLIUSUS
+IF %ERRORLEVEL% EQU 1 GOTO titlescreen
+
+:CLIUSUS
+cls
+goto CLI
+
+:titlescreen
+cls
+rem ShadeBoxAt 15 21 1 2 2
+rem Wait 30
+rem ShadeBoxAt 15 23 1 3 2
+rem Wait 30
+rem ShadeBoxAt 15 26 1 5 2
+rem Wait 30
+rem ShadeBoxAt 15 31 1 7 2
+rem ShadeBoxAt 15 38 1 9 2
+rem ChangeColor 0 8
+rem ShadeBoxAt 15 21 1 1 4
+rem Wait 30
+rem ShadeBoxAt 15 47 1 11 2
+rem ShadeBoxAt 15 22 1 6 4
+rem Wait 30
+rem ShadeBoxAt 15 58 1 11 2
+rem ShadeBoxAt 15 28 1 6 4
+rem Wait 30
+rem ShadeBoxAt 15 41 1 40 2
+rem ShadeBoxAt 15 34 1 7 4
+rem ChangeColor 9 3
+rem ShadeBoxAt 13 46 1 3 3
+rem ShadeBoxAt 14 46 4 1 3
+rem ShadeBoxAt 17 47 1 2 3
+rem ShadeBoxAt 15 47 1 2 3
+rem ShadeBoxAt 14 49 1 1 3
+rem ShadeBoxAt 16 49 1 1 3
+rem Wait 30
+rem ShadeBoxAt 13 53 1 2 3
+rem ShadeBoxAt 14 52 4 1 3
+rem ShadeBoxAt 15 53 1 2 3
+rem ShadeBoxAt 14 55 4 1 3
+rem Wait 30
+rem ShadeBoxAt 13 58 1 5 3
+rem ShadeBoxAt 14 60 4 1 3
+rem Wait 30
+rem ShadeBoxAt 13 66 1 3 3
+rem ShadeBoxAt 14 65 3 1 3
+rem ShadeBoxAt 17 66 1 3 3
+rem Wait 30
+rem ShadeBoxAt 13 72 5 1 3
+rem ShadeBoxAt 15 73 1 3 3
+rem ShadeBoxAt 13 76 5 1 3
+rem Wait 30
+rem Wait 30
+rem Wait 30
+rem PrintCenter Jason Jaguar 9 0 9
+rem ChangeColor 0 7
+rem ShadeBoxAt 16 41 1 5 2
+rem ShadeBoxAt 16 47 1 2 2
+rem ShadeBoxAt 16 50 1 2 2
+rem ShadeBoxAt 16 53 1 2 2
+rem ShadeBoxAt 16 56 1 4 2
+rem ShadeBoxAt 16 61 1 4 2
+rem ShadeBoxAt 16 66 1 6 2
+rem ShadeBoxAt 16 73 1 3 2
+rem ShadeBoxAt 16 77 1 4 2
+rem Wait 30
+rem ChangeColor 0 15
+rem ShadeBoxAt 17 41 1 5 2
+rem ShadeBoxAt 17 49 1 3 2
+rem ShadeBoxAt 17 53 1 2 2
+rem ShadeBoxAt 17 56 1 4 2
+rem ShadeBoxAt 17 61 1 5 2
+rem ShadeBoxAt 17 69 1 3 2
+rem ShadeBoxAt 17 73 1 3 2
+rem ShadeBoxAt 17 77 1 4 2
+rem Wait 30
+rem ChangeColor 8 15
+rem ChangeColor 7 15
+rem ShadeBoxAt 18 41 1 40 2
+rem Wait 30
+rem ChangeColor 0 15
+rem ShadeBoxAt 15 41 1 5 4
+rem ShadeBoxAt 15 49 1 3 4
+rem ShadeBoxAt 15 56 1 4 4
+rem ShadeBoxAt 15 61 1 4 4
+rem ShadeBoxAt 15 66 1 6 4
+rem ShadeBoxAt 15 77 1 4 4
+rem Wait 30
+rem ShadeBoxAt 16 41 1 5 4
+rem ShadeBoxAt 16 47 1 2 4
+rem ShadeBoxAt 16 50 1 2 4
+rem ShadeBoxAt 16 53 1 2 4
+rem ShadeBoxAt 16 56 1 4 4
+rem ShadeBoxAt 16 61 1 4 4
+rem ShadeBoxAt 16 66 1 6 4
+rem ShadeBoxAt 16 73 1 3 4
+rem ShadeBoxAt 16 77 1 4 4
+rem Wait 30
+rem ShadeBoxAt 17 41 1 5 4
+rem ShadeBoxAt 17 49 1 3 4
+rem ShadeBoxAt 17 53 1 2 4
+rem ShadeBoxAt 17 56 1 4 4
+rem ShadeBoxAt 17 61 1 5 4
+rem ShadeBoxAt 17 69 1 3 4
+rem ShadeBoxAt 17 73 1 3 4
+rem ShadeBoxAt 17 77 1 4 4
+rem Wait 20
+rem ShadeBoxAt 18 41 1 40 2
+rem Wait 20
+rem ChangeColor 0 0
+rem ShadeBoxAt 18 41 1 40 2
+rem Wait 500
+rem ClearColor
+rem Locate 30 1
+rem PrintCenter 2.0 OPERATING GUI 24 0 9
+pause
+goto madepass
+
+:madepass
+cls
+if exist C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\UserPass\username.txt goto loadingsys
+if not exist C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\UserPass\username.txt goto firsttime
+
+
+:firsttime
+cls
+color 0a
+echo Welcome to the setup of your new GUI environment, Jason Jaguar 2.0
+pause
+set /p usernpass= What would you like your Username to be?:
+echo %usernpass%>C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\UserPass\username.txt
+cls
+ping Localhost -n 2 >nul
+echo Inputting Username...
+ping Localhost -n 2 >nul
+echo Inputting Username..
+ping Localhost -n 2 >nul
+echo Success!
+pause
+cls
+set /p usar=<C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\UserPass\username.txt
+
+echo Great, welcome %usar%. Enjoy Jason Jaguar 2.0 :)
+pause
+goto loadingsys
+
+
+
+
+rem WHEN MAKING VARIABLES, NO UPPERCASE, WHEN MAKING EQUALS FOR OPTION, NO SPACES
+:loadingsys
+cls
+set /p usar=<C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\UserPass\username.txt
+rem PrintCenter Loading Jason Jaguar 2.0 GUI Environment... 21 0 9
+rem CenterSelf
+set FGcol=10
+rem ChangeColor %FGcol% 0
+rem PrintBoxAt 15 51 3 20 2
+rem ChangeColor 0 %FGcol%
+
+rem Wait 500
+REM COPY FILES HERE
+
+rem ShadeBoxAt 16 52 1 2 8
+
+rem Wait 500
+REM COPY MORE FILES HERE
+
+rem ShadeBoxAt 16 54 1 2 8
+
+rem Wait 500
+REM COPY MORE FILES HERE
+
+rem ShadeBoxAt 16 56 1 2 8
+
+rem Wait 500
+REM COPY MORE FILES HERE
+
+rem ShadeBoxAt 16 58 1 2 8
+
+rem Wait 500
+REM COPY MORE FILES HERE
+
+rem ShadeBoxAt 16 60 1 2 8
+
+rem Wait 500
+REM COPY MORE FILES HERE
+
+rem ShadeBoxAt 16 62 1 2 8
+
+rem Wait 500
+REM COPY MORE FILES HERE
+
+rem ShadeBoxAt 16 64 1 2 8
+
+rem Wait 500
+REM COPY MORE FILES HERE
+
+rem ShadeBoxAt 16 66 1 2 8
+
+rem Wait 500
+REM COPY MORE FILES HERE
+
+rem ShadeBoxAt 16 68 1 2 8
+
+rem ClearColor
+rem Locate 30 1
+goto gui
+
+
+:gui
+cls
+rem PaintScreen 15
+rem ShadeBoxAt 3 1 27 120 2
+rem ShadeBoxAt 1 33 2 87 1
+rem ShadeBoxAt 2 34 1 87 2
+rem ShadeBoxAt 2 1 1 87 1
+rem Locate 25 1
+rem PrintCenter Welcome to Jason Jaguar 2.0! Check out the beta features and menus. 13 0 9
+rem ShadeBoxAt 14 28 1 66 1
+rem ShadeBoxAt 13 93 1 1 1
+rem PrintColorAt Jason Jaguar 2.0 GUI Beta VerTwo 1 88 0 9
+rem PrintColorAt Welcome, %usar%. :) 29 1 15 1
+rem PrintColorAt {@@} 1 2 0 9
+rem rem Last color value is box, first is text, first real value is height,
+rem rem second one is width
+rem rem WIDTH THEN HEIGHT FOR COORDINATES THOUGH
+rem PrintColorAt MenuTest 1 8 0 9
+rem PrintColorAt Legacy 1 18 0 9
+rem PrintColorAt Folder System 1 26 0 9
+rem PrintColorAt Reload Desktop 1 41 0 9 
+rem MouseCMD 2,1,5,1 8,1,15,1 18,1,23,1 26,1,38,1 41,1,54,1 get
+
+if %result%==1 goto test
+if %result%==2 goto fest
+if %result%==3 goto lega
+if %result%==4 goto filesys
+if %result%==5 goto test3
+if %result%==0 goto CLI
+
+:fest
+cls
+rem PrintColorAt You clicked. Good job, click again to go back to the GUI. 13 40 0 9
+rem MouseCMD 40,13,96,13 get
+
+if %result%==1 goto gui
+if %result%==0 goto CLI
+
+
+:test
+cls
+rem paintScreen 15
+rem ShadeBoxAt 3 1 27 120 2
+rem ShadeBoxAt 1 33 2 87 1
+rem ShadeBoxAt 2 34 1 87 2
+rem ShadeBoxAt 2 1 1 87 1
+rem Locate 25 1
+rem PrintCenter Welcome to Jason Jaguar 2.0! Check out the beta features and menus. 13 0 9
+rem ShadeBoxAt 14 28 1 66 1
+rem ShadeBoxAt 13 93 1 1 1
+rem ShadeBoxAt 2 2 12 11 4
+rem PrintColorAt Jason Jaguar 2.0 GUI Beta VerTwo 1 88 0 9
+rem PrintColorAt { 2 2 0 9
+rem PrintColorAt { 3 2 0 9
+rem PrintColorAt { 4 2 0 9
+rem PrintColorAt { 5 2 0 9
+rem PrintColorAt { 6 2 0 9
+rem PrintColorAt { 7 2 0 9
+rem PrintColorAt { 8 2 0 9
+rem PrintColorAt { 9 2 0 9
+rem PrintColorAt { 10 2 0 9
+rem PrintColorAt { 11 2 0 9
+rem PrintColorAt { 12 2 0 9
+rem PrintColorAt { 13 2 0 9
+rem PrintColorAt - 13 2 0 9
+rem PrintColorAt - 13 3 0 9
+rem PrintColorAt - 13 4 0 9
+rem PrintColorAt - 13 5 0 9
+rem PrintColorAt - 13 6 0 9
+rem PrintColorAt - 13 7 0 9
+rem PrintColorAt - 13 8 0 9
+rem PrintColorAt - 13 9 0 9
+rem PrintColorAt - 13 10 0 9
+rem PrintColorAt - 13 11 0 9
+rem PrintColorAt - 13 12 0 9
+rem PrintColorAt } 2 12 0 9
+rem PrintColorAt } 3 12 0 9
+rem PrintColorAt } 4 12 0 9
+rem PrintColorAt } 5 12 0 9
+rem PrintColorAt } 6 12 0 9
+rem PrintColorAt } 7 12 0 9
+rem PrintColorAt } 8 12 0 9
+rem PrintColorAt } 9 12 0 9
+rem PrintColorAt } 10 12 0 9
+rem PrintColorAt } 11 12 0 9
+rem PrintColorAt } 12 12 0 9
+rem PrintColorAt - 13 12 0 9
+rem ShadeBoxAt 14 3 1 11 1
+rem ShadeBoxAt 3 13 12 1 1
+rem PrintColorAt Sysinfo 3 3 15 1
+rem PrintColorAt About 5 3 15 1
+rem PrintColorAt Date 7 3 15 1
+rem PrintColorAt Spec 9 3 15 1
+rem Locate 25 1
+rem PrintColorAt Welcome, %usar%. :) 29 1 15 1 
+rem PrintColorAt {@@} 1 2 15 9
+rem rem Last color value is box, first is text, first real value is height,
+rem rem second one is width
+rem PrintColorAt MenuTest 1 8 0 9
+rem PrintColorAt Legacy 1 18 0 9
+rem PrintColorAt Folder System 1 26 0 9
+rem PrintColorAt Reload Desktop 1 41 0 9 
+rem MouseCMD 3,3,9,3 3,5,7,5 3,7,6,7 3,9,6,9 1,14,120,30 2,1,5,1 get
+
+if %result%==1 goto info
+if %result%==2 goto about
+if %result%==3 goto dateus
+if %result%==4 goto spec
+if %result%==5 goto gui
+if %result%==6 goto gui
+if %result%==0 goto CLI
+
+
+
+:info
+cls
+echo.================================
+echo     Jason Jaguar__OS_2.0__GUI
+echo.================================
+wmic computersystem get manufacturer,model,name >C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\sysinfo.txt
+wmic cpu get name,numberofcores >>C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\sysinfo.txt
+wmic bios get manufacturer,serialnumber,smbiosbiosversion >>C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\sysinfo.txt
+wmic memorychip where "devicelocator != 'SYSTEM ROM'" get capacity,devicelocator,manufacturer,partnumber >>C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\sysinfo.txt
+ECHO OS: Jason Jaguar 2.0.1 Graphical User Shell >>C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\sysinfo.txt
+wmic diskdrive get index,firmwarerevision,model,size >>C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\sysinfo.txt
+wmic logicaldisk get description,deviceid,freespace,size,volumename >>C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\sysinfo.txt
+wmic NIC where "physicaladapter=TRUE" get MACAddress,ProductName | findstr /v /C:"Virtual" >>C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\sysinfo.txt
+wmic nicconfig where ipenabled="TRUE" get description,macaddress,ipaddress,dhcpleaseobtained >>C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\sysinfo.txt
+echo.=================================
+echo     @Copyright Jaguar.inc, 2024
+echo.=================================
+echo.
+echo System specs are now captured. Be sure to check your 'OtherUserData' folder in 'MainStorage(A)' to find the full output. 
+echo If you'd like to see the specs on the OS itself, check the Command Terminal by using the "SYS" command.
+PAUSE
+goto gui
+
+
+
+:about
+rem paintScreen 15
+rem ShadeBoxAt 3 1 27 120 2
+rem ShadeBoxAt 1 33 2 87 1
+rem ShadeBoxAt 2 34 1 87 2
+rem ShadeBoxAt 2 1 1 87 1
+rem Locate 25 1
+rem PrintCenter Welcome to Jason Jaguar 2.0! Check out the beta features and menus. 13 0 9
+rem ShadeBoxAt 14 28 1 66 1
+rem ShadeBoxAt 13 93 1 1 1
+rem PrintColorAt Jason Jaguar 2.0 GUI Beta VerTwo 1 88 0 9
+rem ShadeBoxAt 6 17 10 40 4
+rem ShadeBoxAt 12 20 1 2 4
+rem PrintColorAt *X* 6 17 15 12
+rem PrintColorAt Jason Jaguar - 2.0 GUI Environment{/} 6 20 0 9
+rem PrintColorAt { 7 17 0 8
+rem PrintColorAt { 8 17 0 8
+rem PrintColorAt { 9 17 0 8
+rem PrintColorAt { 10 17 0 8
+rem PrintColorAt { 11 17 0 8
+rem PrintColorAt { 12 17 0 8
+rem PrintColorAt { 13 17 0 8
+rem PrintColorAt { 14 17 0 8
+rem PrintColorAt { 15 17 0 8
+rem PrintColorAt - 15 18 0 8
+rem PrintColorAt - 15 19 0 8
+rem PrintColorAt - 15 20 0 8
+rem PrintColorAt - 15 21 0 8
+rem PrintColorAt - 15 22 0 8
+rem PrintColorAt - 15 23 0 8
+rem PrintColorAt - 15 24 0 8
+rem PrintColorAt - 15 25 0 8
+rem PrintColorAt - 15 26 0 8
+rem PrintColorAt - 15 27 0 8
+rem PrintColorAt - 15 28 0 8
+rem PrintColorAt - 15 29 0 8
+rem PrintColorAt - 15 30 0 8
+rem PrintColorAt - 15 31 0 8
+rem PrintColorAt - 15 32 0 8
+rem PrintColorAt - 15 33 0 8
+rem PrintColorAt - 15 34 0 8
+rem PrintColorAt - 15 35 0 8
+rem PrintColorAt - 15 36 0 8
+rem PrintColorAt - 15 37 0 8
+rem PrintColorAt - 15 38 0 8
+rem PrintColorAt - 15 39 0 8
+rem PrintColorAt - 15 40 0 8
+rem PrintColorAt - 15 41 0 8
+rem PrintColorAt - 15 42 0 8
+rem PrintColorAt - 15 43 0 8
+rem PrintColorAt - 15 44 0 8
+rem PrintColorAt - 15 45 0 8
+rem PrintColorAt - 15 46 0 8
+rem PrintColorAt - 15 47 0 8
+rem PrintColorAt - 15 48 0 8
+rem PrintColorAt - 15 49 0 8
+rem PrintColorAt - 15 50 0 8
+rem PrintColorAt - 15 51 0 8
+rem PrintColorAt - 15 52 0 8
+rem PrintColorAt - 15 53 0 8
+rem PrintColorAt - 15 54 0 8
+rem PrintColorAt - 15 55 0 8
+rem PrintColorAt - 15 56 0 8
+rem PrintColorAt } 7 56 0 8
+rem PrintColorAt } 8 56 0 8
+rem PrintColorAt } 9 56 0 8
+rem PrintColorAt } 10 56 0 8
+rem PrintColorAt } 11 56 0 8
+rem PrintColorAt } 12 56 0 8
+rem PrintColorAt } 13 56 0 8
+rem PrintColorAt } 14 56 0 8
+rem PrintColorAt } 15 56 0 8
+rem PrintColorAt Jason Jaguar 2.0 Beta Build Ver Two 9 19 15 1
+rem PrintColorAt Technical Demonstration Test 12 22 15 1
+rem ShadeBoxAt 7 57 10 1 1
+rem ShadeBoxAt 16 18 1 40 1
+rem Locate 25 1
+rem PrintColorAt Welcome, %usar%. :) 29 1 15 1
+rem PrintColorAt {@@} 1 2 0 9
+rem rem Last color value is box, first is text, first real value is height,
+rem rem second one is width
+rem PrintColorAt MenuTest 1 8 0 9
+rem PrintColorAt Legacy 1 18 0 9
+rem PrintColorAt Folder System 1 26 0 9
+rem PrintColorAt Reload Desktop 1 41 0 9 
+rem MouseCMD 2,1,5,1 1,17,120,30 17,6,19,6 get
+if %result%==1 goto gui
+if %result%==2 goto gui
+if %result%==3 goto gui
+if %result%==0 goto CLI
+
+
+:dateus
+cls
+rem paintScreen 15
+rem ShadeBoxAt 3 1 27 120 2
+rem ShadeBoxAt 1 33 2 87 1
+rem ShadeBoxAt 2 34 1 87 2
+rem ShadeBoxAt 2 1 1 87 1
+rem Locate 25 1
+rem PrintCenter Welcome to Jason Jaguar 2.0! Check out the beta features and menus. 13 0 9
+rem ShadeBoxAt 14 28 1 66 1
+rem ShadeBoxAt 13 93 1 1 1
+rem PrintColorAt Jason Jaguar 2.0 GUI Beta VerTwo 1 88 0 9
+for /F "tokens=2" %%i in ('date /t') do set mydate=%%i
+set mytime=%time%
+rem ShadeBoxAt 6 17 10 40 4
+rem ShadeBoxAt 12 20 1 2 4
+rem PrintColorAt *X* 6 17 15 12
+rem PrintColorAt Jason Jaguar - 2.0 GUI Environment{/} 6 20 0 9
+rem PrintColorAt { 7 17 0 8
+rem PrintColorAt { 8 17 0 8
+rem PrintColorAt { 9 17 0 8
+rem PrintColorAt { 10 17 0 8
+rem PrintColorAt { 11 17 0 8
+rem PrintColorAt { 12 17 0 8
+rem PrintColorAt { 13 17 0 8
+rem PrintColorAt { 14 17 0 8
+rem PrintColorAt { 15 17 0 8
+rem PrintColorAt - 15 18 0 8
+rem PrintColorAt - 15 19 0 8
+rem PrintColorAt - 15 20 0 8
+rem PrintColorAt - 15 21 0 8
+rem PrintColorAt - 15 22 0 8
+rem PrintColorAt - 15 23 0 8
+rem PrintColorAt - 15 24 0 8
+rem PrintColorAt - 15 25 0 8
+rem PrintColorAt - 15 26 0 8
+rem PrintColorAt - 15 27 0 8
+rem PrintColorAt - 15 28 0 8
+rem PrintColorAt - 15 29 0 8
+rem PrintColorAt - 15 30 0 8
+rem PrintColorAt - 15 31 0 8
+rem PrintColorAt - 15 32 0 8
+rem PrintColorAt - 15 33 0 8
+rem PrintColorAt - 15 34 0 8
+rem PrintColorAt - 15 35 0 8
+rem PrintColorAt - 15 36 0 8
+rem PrintColorAt - 15 37 0 8
+rem PrintColorAt - 15 38 0 8
+rem PrintColorAt - 15 39 0 8
+rem PrintColorAt - 15 40 0 8
+rem PrintColorAt - 15 41 0 8
+rem PrintColorAt - 15 42 0 8
+rem PrintColorAt - 15 43 0 8
+rem PrintColorAt - 15 44 0 8
+rem PrintColorAt - 15 45 0 8
+rem PrintColorAt - 15 46 0 8
+rem PrintColorAt - 15 47 0 8
+rem PrintColorAt - 15 48 0 8
+rem PrintColorAt - 15 49 0 8
+rem PrintColorAt - 15 50 0 8
+rem PrintColorAt - 15 51 0 8
+rem PrintColorAt - 15 52 0 8
+rem PrintColorAt - 15 53 0 8
+rem PrintColorAt - 15 54 0 8
+rem PrintColorAt - 15 55 0 8
+rem PrintColorAt - 15 56 0 8
+rem PrintColorAt } 7 56 0 8
+rem PrintColorAt } 8 56 0 8
+rem PrintColorAt } 9 56 0 8
+rem PrintColorAt } 10 56 0 8
+rem PrintColorAt } 11 56 0 8
+rem PrintColorAt } 12 56 0 8
+rem PrintColorAt } 13 56 0 8
+rem PrintColorAt } 14 56 0 8
+rem PrintColorAt } 15 56 0 8
+rem PrintColorAt The date is %mydate%, 9 24 15 1
+rem PrintColorAt and the time is %mytime%. 12 22 15 1
+rem ShadeBoxAt 7 57 10 1 1
+rem ShadeBoxAt 16 18 1 40 1
+rem Locate 25 1
+rem PrintColorAt Welcome, %usar%. :) 29 1 15 1
+rem PrintColorAt {@@} 1 2 0 9
+rem rem Last color value is box, first is text, first real value is height,
+rem rem second one is width
+rem PrintColorAt MenuTest 1 8 0 9
+rem PrintColorAt Legacy 1 18 0 9
+rem PrintColorAt Folder System 1 26 0 9
+rem PrintColorAt Reload Desktop 1 41 0 9 
+rem MouseCMD 2,1,5,1 1,17,120,30 17,6,19,6 get
+if %result%==1 goto gui
+if %result%==2 goto gui
+if %result%==3 goto gui
+if %result%==0 goto CLI
+
+
+
+:spec
+cls
+rem paintScreen 15
+rem ShadeBoxAt 3 1 27 120 2
+rem ShadeBoxAt 1 33 2 87 1
+rem ShadeBoxAt 2 34 1 87 2
+rem ShadeBoxAt 2 1 1 87 1
+rem Locate 25 1
+rem PrintCenter Welcome to Jason Jaguar 2.0! Check out the beta features and menus. 13 0 9
+rem ShadeBoxAt 14 28 1 66 1
+rem ShadeBoxAt 13 93 1 1 1
+rem ShadeBoxAt 2 2 12 11 4
+rem ShadeBoxAt 9 9 12 11 4
+rem ShadeBoxAt 9 10 4 5 4
+rem PrintColorAt Jason Jaguar 2.0 GUI Beta VerTwo 1 88 0 9
+rem PrintColorAt { 2 2 0 9
+rem PrintColorAt { 3 2 0 9
+rem PrintColorAt { 4 2 0 9
+rem PrintColorAt { 5 2 0 9
+rem PrintColorAt { 6 2 0 9
+rem PrintColorAt { 7 2 0 9
+rem PrintColorAt { 8 2 0 9
+rem PrintColorAt { 9 2 0 9
+rem PrintColorAt { 10 2 0 9
+rem PrintColorAt { 11 2 0 9
+rem PrintColorAt { 12 2 0 9
+rem PrintColorAt { 13 2 0 9
+rem PrintColorAt - 13 2 0 9
+rem PrintColorAt - 13 3 0 9
+rem PrintColorAt - 13 4 0 9
+rem PrintColorAt - 13 5 0 9
+rem PrintColorAt - 13 6 0 9
+rem PrintColorAt - 13 7 0 9
+rem PrintColorAt - 13 8 0 9
+rem PrintColorAt - 13 9 0 9
+rem PrintColorAt - 13 10 0 9
+rem PrintColorAt - 13 11 0 9
+rem PrintColorAt - 13 12 0 9
+rem PrintColorAt } 2 12 0 9
+rem PrintColorAt } 3 12 0 9
+rem PrintColorAt } 4 12 0 9
+rem PrintColorAt } 5 12 0 9
+rem PrintColorAt } 6 12 0 9
+rem PrintColorAt } 7 12 0 9
+rem PrintColorAt } 8 12 0 9
+rem PrintColorAt } 9 12 0 9
+rem PrintColorAt } 10 12 0 9
+rem PrintColorAt } 11 12 0 9
+rem PrintColorAt } 12 12 0 9
+rem PrintColorAt - 13 12 0 9
+rem ShadeBoxAt 14 3 1 11 1
+rem ShadeBoxAt 3 13 12 1 1
+rem PrintColorAt Sysinfo 3 3 15 1
+rem PrintColorAt About 5 3 15 1
+rem PrintColorAt Date 7 3 15 1
+rem PrintColorAt Spec 9 3 15 1
+rem Locate 25 1
+rem PrintColorAt { 9 9 0 9
+rem PrintColorAt { 10 9 0 9
+rem PrintColorAt { 11 9 0 9
+rem PrintColorAt { 12 9 0 9
+rem PrintColorAt { 13 9 0 9
+rem PrintColorAt { 14 9 0 9
+rem PrintColorAt { 15 9 0 9
+rem PrintColorAt { 16 9 0 9
+rem PrintColorAt { 17 9 0 9
+rem PrintColorAt { 18 9 0 9
+rem PrintColorAt { 19 9 0 9
+rem PrintColorAt { 20 9 0 9
+rem PrintColorAt - 20 9 0 9
+rem PrintColorAt - 20 10 0 9
+rem PrintColorAt - 20 11 0 9
+rem PrintColorAt - 20 12 0 9
+rem PrintColorAt - 20 13 0 9
+rem PrintColorAt - 20 14 0 9
+rem PrintColorAt - 20 15 0 9
+rem PrintColorAt - 20 16 0 9
+rem PrintColorAt - 20 17 0 9
+rem PrintColorAt - 20 18 0 9
+rem PrintColorAt - 20 19 0 9
+rem PrintColorAt } 9 19 0 9
+rem PrintColorAt } 10 19 0 9
+rem PrintColorAt } 11 19 0 9
+rem PrintColorAt } 12 19 0 9
+rem PrintColorAt } 13 19 0 9
+rem PrintColorAt } 14 19 0 9
+rem PrintColorAt } 15 19 0 9
+rem PrintColorAt } 16 19 0 9
+rem PrintColorAt } 17 19 0 9
+rem PrintColorAt } 18 19 0 9
+rem PrintColorAt } 19 19 0 9
+rem PrintColorAt - 20 19 0 9
+rem ShadeBoxAt 9 10 4 9 4
+rem ShadeBoxAt 13 10 2 4 4
+rem PrintColorAt Calc 10 10 15 1
+rem PrintColorAt Word 12 10 15 1
+rem PrintColorAt CMD 14 10 15 1
+rem PrintColorAt Folders 16 10 15 1
+rem ShadeBoxAt 21 10 1 11 1
+rem ShadeBoxAt 10 20 12 1 1
+rem PrintColorAt Welcome, %usar%. :) 29 1 15 1 
+rem PrintColorAt {@@} 1 2 15 9
+rem rem Last color value is box, first is text, first real value is height,
+rem rem second one is width
+rem PrintColorAt MenuTest 1 8 0 9
+rem PrintColorAt Legacy 1 18 0 9
+rem PrintColorAt Folder System 1 26 0 9
+rem PrintColorAt Reload Desktop 1 41 0 9 
+rem MouseCMD 3,3,9,3 3,5,7,5 3,7,6,7 3,9,6,9 1,21,120,30 2,1,5,1 10,10,13,10 10,12,13,12 10,14,13,14 10,16,16,16 1,21,120,30 get
+
+if %result%==1 goto info
+if %result%==2 goto about
+if %result%==3 goto dateus
+if %result%==4 goto spec
+if %result%==5 goto gui
+if %result%==6 goto gui
+if %result%==7 goto calcu
+if %result%==8 goto word
+if %result%==9 goto CL
+if %result%==10 goto filesys
+if %result%==11 goto gui
+if %result%==0 goto CLI
+
+
+:mest
+set b=7
+cls
+rem paintScreen 15
+rem ShadeBoxAt 3 1 27 120 2
+rem ShadeBoxAt 1 33 2 87 1
+rem ShadeBoxAt 2 34 1 87 2
+rem ShadeBoxAt 2 1 1 87 1
+rem Locate 25 1
+rem PrintCenter Welcome to Jason Jaguar 2.0! Check out the beta features and menus. 13 0 9
+rem ShadeBoxAt 14 28 1 66 1
+rem ShadeBoxAt 13 93 1 1 1
+rem PrintColorAt Jason Jaguar 2.0 GUI Beta VerTwo 1 88 0 9
+rem ShadeBoxAt 6 17 10 40 4
+rem ShadeBoxAt 12 20 1 2 4
+rem PrintColorAt *X* 6 17 15 12
+rem PrintColorAt Jason Jaguar - 2.0 GUI Environment{/} 6 20 0 9
+rem PrintColorAt { 7 17 0 8
+rem PrintColorAt { 8 17 0 8
+rem PrintColorAt { 9 17 0 8
+rem PrintColorAt { 10 17 0 8
+rem PrintColorAt { 11 17 0 8
+rem PrintColorAt { 12 17 0 8
+rem PrintColorAt { 13 17 0 8
+rem PrintColorAt { 14 17 0 8
+rem PrintColorAt { 15 17 0 8
+rem PrintColorAt - 15 18 0 8
+rem PrintColorAt - 15 19 0 8
+rem PrintColorAt - 15 20 0 8
+rem PrintColorAt - 15 21 0 8
+rem PrintColorAt - 15 22 0 8
+rem PrintColorAt - 15 23 0 8
+rem PrintColorAt - 15 24 0 8
+rem PrintColorAt - 15 25 0 8
+rem PrintColorAt - 15 26 0 8
+rem PrintColorAt - 15 27 0 8
+rem PrintColorAt - 15 28 0 8
+rem PrintColorAt - 15 29 0 8
+rem PrintColorAt - 15 30 0 8
+rem PrintColorAt - 15 31 0 8
+rem PrintColorAt - 15 32 0 8
+rem PrintColorAt - 15 33 0 8
+rem PrintColorAt - 15 34 0 8
+rem PrintColorAt - 15 35 0 8
+rem PrintColorAt - 15 36 0 8
+rem PrintColorAt - 15 37 0 8
+rem PrintColorAt - 15 38 0 8
+rem PrintColorAt - 15 39 0 8
+rem PrintColorAt - 15 40 0 8
+rem PrintColorAt - 15 41 0 8
+rem PrintColorAt - 15 42 0 8
+rem PrintColorAt - 15 43 0 8
+rem PrintColorAt - 15 44 0 8
+rem PrintColorAt - 15 45 0 8
+rem PrintColorAt - 15 46 0 8
+rem PrintColorAt - 15 47 0 8
+rem PrintColorAt - 15 48 0 8
+rem PrintColorAt - 15 49 0 8
+rem PrintColorAt - 15 50 0 8
+rem PrintColorAt - 15 51 0 8
+rem PrintColorAt - 15 52 0 8
+rem PrintColorAt - 15 53 0 8
+rem PrintColorAt - 15 54 0 8
+rem PrintColorAt - 15 55 0 8
+rem PrintColorAt - 15 56 0 8
+rem PrintColorAt } 7 56 0 8
+rem PrintColorAt } 8 56 0 8
+rem PrintColorAt } 9 56 0 8
+rem PrintColorAt } 10 56 0 8
+rem PrintColorAt } 11 56 0 8
+rem PrintColorAt } 12 56 0 8
+rem PrintColorAt } 13 56 0 8
+rem PrintColorAt } 14 56 0 8
+rem PrintColorAt } 15 56 0 8
+rem PrintColorAt Menu Mest, b equals %b%. 11 29 0 9
+rem ShadeBoxAt 7 57 10 1 1
+rem ShadeBoxAt 16 18 1 40 1
+rem Locate 25 1
+rem PrintColorAt Welcome, %usar%. :) 29 1 15 1
+rem PrintColorAt {@@} 1 2 0 9
+rem rem Last color value is box, first is text, first real value is height,
+rem rem second one is width
+rem PrintColorAt MenuTest 1 8 0 9
+rem PrintColorAt Legacy 1 18 0 9
+rem PrintColorAt Folder System 1 26 0 9
+rem PrintColorAt Reload Desktop 1 41 0 9 
+rem MouseCMD 2,1,5,1 1,17,120,30 17,6,19,6 get
+if %result%==1 goto gui
+if %result%==2 goto gui
+if %result%==3 goto gui
+if %result%==0 goto CLI
+
+
+
+:word
+cls
+color 0a
+echo Welcome to the Jason Jaguar (tm) Inc. Office Word Processor :)
+echo Type all your text here, and it will be saved in the Jaguar DFS (Disk File System):
+:top
+set /p jaguartxt=
+pause
+echo %jaguartxt%>> "C:\JasonJaguarFileSystem\MainStorage(A)\Documents\JAGUARWORD.txt
+cls
+echo Saving...
+ping Localhost -n 2 >nul
+echo Saving..
+ping Localhost -n 2 >nul
+cls
+echo Document saving complete :) Your document can be found in the Documents folder of your Jason Jaguar Filesystem's "MainStorage(A)" Drive
+pause
+cls 
+goto wordbigmama
+
+:wordbigmama
+cls color 0a
+echo Would you like to write more, read a previously written note, clear the writing cache (deleting the document you had saved before), or go back to the Jaguar GUI?
+rem PrintColorAt Write more 13 50 0 9
+rem PrintColorAt Read what you've written 16 40 0 9
+rem PrintColorAt Clear Notepad Writing Cache 19 40 0 9
+rem PrintColorAt Return to GUI 22 49 0 9
+rem MouseCMD 50,13,59,13 40,16,63,16 40,19,66,19 49,22,61,22 get
+if %result%==1 goto word
+if %result%==2 goto readbdword
+if %result%==3 goto delpht
+if %result%==4 goto gui
+if %result%==0 goto CLI
+
+
+:readbdword
+color 0a
+type C:\JasonJaguarFileSystem\MainStorage(A)\Documents\JAGUARWORD.txt
+pause
+cls
+goto wordbigmama
+
+
+:delpht
+cls
+color 0a
+break>C:\JasonJaguarFileSystem\MainStorage(A)\Documents\JAGUARWORD.txt
+echo Cache cleared!
+pause
+goto wordbigmama
+
+
+:CL
+cls
+goto CLI
+
+:CLI
+color 0a
+echo.
+echo.
+echo Jason Jaguar, Ver. 2.0 Command Line Interface
+set /p CMD=@%usar%jaguarcmd}
+  
+if %CMD%==help goto helpcmd
+if %CMD%==? goto helpcmd
+if %CMD%==HELP goto helpcmd
+if %CMD%==RET goto biosboot
+if %CMD%==GUI goto gui
+if %CMD%==JAG goto lega
+if %CMD%==ABT goto abt
+if %CMD%==SYS goto infotus
+if %CMD%==WRD goto word
+if %CMD%==DIR goto directory
+if %CMD%==REM goto remlove
+if %CMD%==FLD goto filesys
+if %CMD%==EXT goto ext
+if %CMD%==CLK goto clk
+if %CMD%==SZE goto sizel
+if %CMD%==CLC goto calcu
+if %CMD%==ERR goto chkhelp
+if %CMD%==CLS goto ceeelless
+goto chkhelp
+
+
+:CLIUS
+color 0a
+echo.
+set /p CMD=@%usar%jaguarcmd}
+  
+if %CMD%==help goto helpcmd
+if %CMD%==? goto helpcmd
+if %CMD%==HELP goto helpcmd
+if %CMD%==RET goto biosboot
+if %CMD%==GUI goto gui
+if %CMD%==JAG goto lega
+if %CMD%==ABT goto abt
+if %CMD%==SYS goto infotus
+if %CMD%==WRD goto word
+if %CMD%==DIR goto directory
+if %CMD%==REM goto remlove
+if %CMD%==FLD goto filesys
+if %CMD%==EXT goto ext
+if %CMD%==CLK goto clk
+if %CMD%==SZE goto sizel
+if %CMD%==CLC goto calcu
+if %CMD%==ERR goto chkhelp
+if %CMD%==CLS goto ceeelless
+goto chkhelp
+
+
+:helpcmd
+echo RET     Directs the user to the main startup sequence for both new and returning users.
+echo GUI     Returns the user to Graphical Shell for Jason Jaguar.
+echo JAG     Directs the user to Jason Jaguar 1.2.9 for Legacy users.
+echo ABT     Displays the user's Operating System and FileSystem versions.
+echo SYS     Displays the system info for the computer.
+echo WRD     Directs the user to the Jason Jaguar Word Processor.
+echo DIR     Lets the user easily make directory folders.
+echo REM     Lets the user easily remove folders if they know the name of the folder.
+echo FLD     Opens the Terminal's Folder Browser App.
+echo EXT     Exits Jason Jaguar 2.0.
+echo CLK     Shows the date and time.
+echo SZE     Displays the size of the Main Storage Drive for Jason Jaguar.
+echo CLC     Directs the user to the calculator.
+echo ERR     Tests the error-throwing system for the CLI.
+echo CLS     Clears the Command Terminal menu
+
+
+:chkhelp
+echo ERR. Type "help" for more info.
+goto CLIUS
+
+
+:infotus
+cls
+echo.=======================
+echo     Jason Jaguar__OS_
+echo.=======================
+ECHO Machine:
+wmic computersystem get manufacturer,model,name
+ECHO CPU:
+wmic cpu get name,numberofcores
+ECHO BIOS:
+wmic bios get manufacturer,serialnumber,smbiosbiosversion
+ECHO RAM sticks:
+wmic memorychip where "devicelocator != 'SYSTEM ROM'" get capacity,devicelocator,manufacturer,partnumber
+ECHO OS: Jason Jaguar 2.0.1 Graphical User Shell
+ECHO Physical drives:
+wmic diskdrive get index,firmwarerevision,model,size
+ECHO Logical drives:
+wmic logicaldisk get description,deviceid,freespace,size,volumename
+ECHO Physical network interface(s):
+wmic NIC where "physicaladapter=TRUE" get MACAddress,ProductName | findstr /v /C:"Virtual"
+ECHO Currently active network interfaces:
+wmic nicconfig where ipenabled="TRUE" get description,macaddress,ipaddress,dhcpleaseobtained
+echo.=================================
+echo     @Copyright Jaguar.inc, 2024
+echo.=================================
+echo.
+goto CLIUS
+
+PAUSE
+goto CLIUS
+
+
+
+:abt
+echo OS: Jason Jaguar 2.0/FileSystem: 1.2
+goto CLIUS
+
+
+:directory
+cls
+set /p fyle=What would you like to name the directory folder?:
+
+if "%fyle%"=="" (
+  echo Please enter a name and try again.
+  pause
+  goto directory
+)
+
+:create_folder
+
+mkdir "C:\JasonJaguarFileSystem\MainStorage(A)\"%fyle%"
+ping Localhost -n 2 >nul
+echo Creating folder...
+ping Localhost -n 2 >nul
+echo Creating folder..
+ping Localhost -n 2 >nul
+cls
+goto chalm
+
+:chalm
+if exist "C:\JasonJaguarFileSystem\MainStorage(A)\"%fyle%"" echo Folder "%fyle%" created successfully!
+goto CLIUS
+if not exist "C:\JasonJaguarFileSystem\MainStorage(A)\"%fyle%"" goto sadface
+
+:sadface
+cls
+echo :( it didn't work
+pause
+goto directory
+
+
+:remlove
+cls
+set /p fyler=What's the name of the folder you want to delete?:
+
+if "%fyler%"=="" (
+  echo Please enter a name and try again.
+  pause
+  goto remlove
+)
+
+:delete_folder
+
+rmdir "C:\JasonJaguarFileSystem\MainStorage(A)\"%fyler%"
+ping Localhost -n 2 >nul
+echo Deleting folder...
+ping Localhost -n 2 >nul
+echo Deleting folder..
+ping Localhost -n 2 >nul
+cls
+goto cyhalm
+
+:cyhalm
+if not exist "C:\JasonJaguarFileSystem\MainStorage(A)\"%fyler%"" echo Folder "%fyler%" deleted successfully!
+goto CLIUS
+if exist "C:\JasonJaguarFileSystem\MainStorage(A)\"%fyler%"" goto siadface
+
+:siadface
+cls
+echo :( it didn't work
+pause
+goto remlove
+
+
+
+
+:ext
+exit
+
+
+:clk
+time /t
+date /t
+goto CLIUS
+
+
+:sizel
+dir C:\JasonJaguarFileSystem\MainStorage(A) /s
+pause
+goto CLIUS
+
+
+:ceeelless
+cls
+goto CLIUS
+
+
+
+
+:filesys
+cd C:\JasonJaguarFileSystem
+
+rem Select a file or folder browsing a directory tree made for Jason Jaguar OS 2.0
+rem Written by head programmers at Jason Jaguar Inc. Software Labs
+
+rem Usage examples of SelectFileOrFolder subroutine:
+
+call :SelectFileOrFolder file=
+echo/
+echo Selected file from *.* = "%file%"
+pause
+
+call :SelectFileOrFolder file=*.bat
+echo/
+echo Selected Batch file = "%file%"
+pause
+
+call :SelectFileOrFolder folder=/F
+echo/
+echo Selected folder = "%folder%"
+pause
+
+goto gui
+
+
+:SelectFileOrFolder resultVar [ "list of wildcards" | /F ]
+
+rem Process parameters
+set "files=*.*"
+if "%~1" neq "" (cd "%~1"
+   if /I "%~2" equ "/F" (set "files=") else set "files=%~2"
+)
+
+rem Set the number of lines per page, max 34
+set "pageSize=30"
+set "char=0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
+rem Load current directory contents
+set "name[1]=<DIR>  .."
+:ProcessThisDir
+set "numNames=1"
+for /D %%a in (*) do (
+   set /A numNames+=1
+   set "name[!numNames!]=<DIR>  %%a"
+)
+for %%a in (%files%) do (
+   set /A numNames+=1
+   set "name[!numNames!]=       %%a"
+)
+set /A numPages=(numNames-1)/pageSize+1
+
+rem Show directory contents, one page at a time
+set start=1
+:ShowPage
+set /A page=(start-1)/pageSize+1, end=start+pageSize-1
+if %end% gtr %numNames% set end=%numNames%
+cls
+echo Page %page%/%numPages% of %CD%
+echo/
+if %start% equ 1 (set base=0) else set "base=1"
+set /A lastOpt=pageSize+base, j=base
+for /L %%i in (%start%,1,%end%) do (
+   for %%j in (!j!) do echo     !char:~%%j,1! -  !name[%%i]!
+   set /A j+=1
+)
+echo/
+
+rem Assemble the get option message
+if %start% equ 1 (set "mssg=: ") else (set "mssg= (0=Previous page")
+if %end% lss %numNames% (
+   if "%mssg%" equ ": " (set "mssg= (") else set "mssg=%mssg%, "
+   set "mssg=!mssg!Z=Next page"
+)
+if "%mssg%" neq ": " set "mssg=%mssg%): "
+
+:GetOption
+choice /C "%char%" /N /M "Select directories or files%mssg%"
+if %errorlevel% equ 1 (
+   rem "0": Previous page or Parent directory
+   if %start% gtr 1 (
+      set /A start-=pageSize
+      goto ShowPage
+   ) else (
+      cd ..
+      goto ProcessThisDir
+   )
+)
+if %errorlevel% equ 36 (
+   rem "Z": Next page, if any
+   if %end% lss %numNames% (
+      set /A start+=pageSize
+      goto ShowPage
+   ) else (
+      goto GetOption
+   )
+)
+if %errorlevel% gtr %lastOpt% goto GetOption
+set /A option=start+%errorlevel%-1-base
+if %option% gtr %numNames% goto GetOption
+if defined files (
+   if "!name[%option%]:~0,5!" neq "<DIR>" goto endSelect
+) else (
+   choice /C OS /M "Open or Return to GUI from '!name[%option%]:~7!' folder"
+   if errorlevel 2 goto endSelect
+)
+cd "!name[%option%]:~7!"
+goto ProcessThisDir
+
+if %errorlevel% equ g goto gui
+
+:endSelect
+rem Return selected file/folder
+for %%a in ("!name[%option%]:~7!") do set "result=%%~Fa"
+endlocal & set "%~1=%result%
+goto gui
+
+
+
+
+filesys
+cls
+rem paintScreen 15
+rem ShadeBoxAt 3 1 27 120 2
+rem ShadeBoxAt 1 33 2 87 1
+rem ShadeBoxAt 2 34 1 87 2
+rem ShadeBoxAt 2 1 1 87 1
+rem Locate 25 1
+rem PrintCenter Welcome to Jason Jaguar 2.0! Check out the beta features and menus. 13 0 9
+rem ShadeBoxAt 14 28 1 66 1
+rem ShadeBoxAt 13 93 1 1 1
+rem PrintColorAt Jason Jaguar 2.0 GUI Beta VerTwo 1 88 0 9
+rem ShadeBoxAt 6 17 10 40 4
+rem ShadeBoxAt 12 20 1 2 4
+rem PrintColorAt *X* 6 17 15 12
+rem PrintColorAt Jason Jaguar - 2.0 GUI Environment{/} 6 20 0 9
+rem PrintColorAt { 7 17 0 8
+rem PrintColorAt { 8 17 0 8
+rem PrintColorAt { 9 17 0 8
+rem PrintColorAt { 10 17 0 8
+rem PrintColorAt { 11 17 0 8
+rem PrintColorAt { 12 17 0 8
+rem PrintColorAt { 13 17 0 8
+rem PrintColorAt { 14 17 0 8
+rem PrintColorAt { 15 17 0 8
+rem PrintColorAt - 15 18 0 8
+rem PrintColorAt - 15 19 0 8
+rem PrintColorAt - 15 20 0 8
+rem PrintColorAt - 15 21 0 8
+rem PrintColorAt - 15 22 0 8
+rem PrintColorAt - 15 23 0 8
+rem PrintColorAt - 15 24 0 8
+rem PrintColorAt - 15 25 0 8
+rem PrintColorAt - 15 26 0 8
+rem PrintColorAt - 15 27 0 8
+rem PrintColorAt - 15 28 0 8
+rem PrintColorAt - 15 29 0 8
+rem PrintColorAt - 15 30 0 8
+rem PrintColorAt - 15 31 0 8
+rem PrintColorAt - 15 32 0 8
+rem PrintColorAt - 15 33 0 8
+rem PrintColorAt - 15 34 0 8
+rem PrintColorAt - 15 35 0 8
+rem PrintColorAt - 15 36 0 8
+rem PrintColorAt - 15 37 0 8
+rem PrintColorAt - 15 38 0 8
+rem PrintColorAt - 15 39 0 8
+rem PrintColorAt - 15 40 0 8
+rem PrintColorAt - 15 41 0 8
+rem PrintColorAt - 15 42 0 8
+rem PrintColorAt - 15 43 0 8
+rem PrintColorAt - 15 44 0 8
+rem PrintColorAt - 15 45 0 8
+rem PrintColorAt - 15 46 0 8
+rem PrintColorAt - 15 47 0 8
+rem PrintColorAt - 15 48 0 8
+rem PrintColorAt - 15 49 0 8
+rem PrintColorAt - 15 50 0 8
+rem PrintColorAt - 15 51 0 8
+rem PrintColorAt - 15 52 0 8
+rem PrintColorAt - 15 53 0 8
+rem PrintColorAt - 15 54 0 8
+rem PrintColorAt - 15 55 0 8
+rem PrintColorAt - 15 56 0 8
+rem PrintColorAt } 7 56 0 8
+rem PrintColorAt } 8 56 0 8
+rem PrintColorAt } 9 56 0 8
+rem PrintColorAt } 10 56 0 8
+rem PrintColorAt } 11 56 0 8
+rem PrintColorAt } 12 56 0 8
+rem PrintColorAt } 13 56 0 8
+rem PrintColorAt } 14 56 0 8
+rem PrintColorAt } 15 56 0 8
+rem PrintColorAt Jason Jaguar FileSystem, Ver. 1.2 11 20 0 9
+rem Locate 25 1
+rem BrowseFiles %~dps0 C:\JasonJaguarFileSystem
+rem ShadeBoxAt 7 57 10 1 1
+rem ShadeBoxAt 16 18 1 40 1
+rem Locate 25 1
+rem PrintColorAt Welcome, %usar%. :) 29 1 15 1
+rem PrintColorAt {@@} 1 2 0 9
+rem rem Last color value is box, first is text, first real value is height,
+rem rem second one is width
+rem PrintColorAt MenuTest 1 8 0 9
+rem PrintColorAt Legacy 1 18 0 9
+rem PrintColorAt Folder System 1 26 0 9
+rem PrintColorAt Reload Desktop 1 41 0 9 
+rem MouseCMD 2,1,5,1 1,17,120,30 17,6,19,6 get
+if %result%==1 goto gui
+if %result%==2 goto gui
+if %result%==3 goto gui
+if %result%==0 goto CLI
+
+
+
+:lega
+cls
+color 0c
+set /p menu=Would you like to boot into Jason Jaguar Legacy DOS? Y/N
+
+if %menu%==Y goto jaguar1
+if %menu%==N goto gui
+
+
+:test2
+cls
+goto gui
+
+:test3
+cls
+goto gui
+
+
+:calcu
+cls
+color 0c
+echo.
+echo.
+echo.
+echo ________Calculator________
+echo.
+set /p expression= Enter expression to calculate:
+set /a ans=%expression%
+echo.
+echo = %ans%
+echo.
+pause
+cls
+
+set /p option=Do you want to go back to the Jaguar GUI, Y/N?
+if %option% == Y goto guiback
+if %option% == N goto calcu
+
+:guiback
+cls
+echo Okay, back to Jaguar!
+timeout 2 >nul
+goto gui
+
+
+
+
+
+
+:jaguar1
+cls
+rem PrintCenter Loading Jason Jaguar 1.2.9 Environment... 21 0 9
+rem CenterSelf
+set FGcol=10
+rem ChangeColor %FGcol% 0
+rem PrintBoxAt 15 51 3 20 2
+rem ChangeColor 0 %FGcol%
+
+rem Wait 500
+REM COPY FILES HERE
+
+rem ShadeBoxAt 16 52 1 2 8
+
+rem Wait 500
+REM COPY MORE FILES HERE
+
+rem ShadeBoxAt 16 54 1 2 8
+
+rem Wait 500
+REM COPY MORE FILES HERE
+
+rem ShadeBoxAt 16 56 1 2 8
+
+rem Wait 500
+REM COPY MORE FILES HERE
+
+rem ShadeBoxAt 16 58 1 2 8
+
+rem Wait 500
+REM COPY MORE FILES HERE
+
+rem ShadeBoxAt 16 60 1 2 8
+
+rem Wait 500
+REM COPY MORE FILES HERE
+
+rem ShadeBoxAt 16 62 1 2 8
+
+rem Wait 500
+REM COPY MORE FILES HERE
+
+rem ShadeBoxAt 16 64 1 2 8
+
+rem Wait 500
+REM COPY MORE FILES HERE
+
+rem ShadeBoxAt 16 66 1 2 8
+
+rem Wait 500
+REM COPY MORE FILES HERE
+
+rem ShadeBoxAt 16 68 1 2 8
+
+rem ClearColor
+rem Locate 30 1
+goto startup
+
 :startup
 cls
 color 0a
@@ -31,12 +1671,12 @@ echo -------------------------------------------
 echo What Would You Like To Do? Type the number.
 echo -------------------------------------------
 echo.
-echo -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-echo 1.System Info 2.Reboot Code 3.Date and time 4.antivirus 5.play game 6.Notepad 7.Internet Browser 8.RD Section 9.WAR!!! 10.Calculator 11.Tetris 1.0 12.The oregon trail 13.Exit 14.Chess 15.Minesweeper 16.Poketrion Force
-echo -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+echo --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+echo 1.System Info 2.Reboot Code 3.Date and time 4.antivirus 5.play game 6.Notepad 7.Internet Browser 8.RD Section 9.WAR!!! 10.Calculator 11.Tetris 1.0 12.The oregon trail 13.Exit 14.Chess 15.Minesweeper 16.Poketrion Force 17.Return to Jason Jaguar (tm) GUI Environment Runtime
+echo --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 set /p input=
-if %input% == 1 goto info
+if %input% == 1 goto infio
 if %input% == 2 goto reboot 
 if %input% == 3 goto date
 if %input% == 4 goto antivirus
@@ -52,8 +1692,9 @@ if %input% == 13 goto exit
 if %input% == 14 goto chess
 if %input% == 15 goto minesweep
 if %input% == 16 goto master
+if %input% == 17 goto gui
 
-:info
+:infio
 
 cls
 echo.=======================
@@ -2502,7 +4143,7 @@ if "!choose!" == "2" goto loadgame
 if "!choose!" == "3" goto config
 if "!choose!" == "4" goto tutorial
 if "!choose!" == "5" goto gameplayback
-if "!choose!" == "6" goto about
+if "!choose!" == "6" goto aboutal
 if "!choose!" == "7" exit
 goto menu
 
@@ -3751,7 +5392,7 @@ exit /b
 ::=============================================================================================
 
 
-:about
+:aboutal
 title Batch Chess v0.8 By Kolt Koding
 cls
 echo.
@@ -3787,7 +5428,7 @@ if /i "!choose!" == "b" goto menu
 if /i "!choose!" == "k" start http://www.koltkoding.tk/
 if /i "!choose!" == "y" start http://www.youtube.com/user/kolto101/videos
 if /i "!choose!" == "u" start http://www.koltkoding.tk/batchchess/
-goto about
+goto aboutal
 
 :config
 mode 80,30
