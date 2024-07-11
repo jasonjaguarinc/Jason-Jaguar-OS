@@ -2,7 +2,7 @@
 
 # (Skip a bit further if you wanna figure out how to get it working, and even further than that for how to use the GUI in 2.0 and up.)
 
-# (Sidenote: DO NOT CHANGE THE WINDOW SIZE FOR JASON JAGUAR 2.0 AND UP!!!! This will ruin all the functionality of the graphical parts of the software. Future versions will have fullscreen support and multiple resolution support, but in the current beta I've set the resolution just so it stays relatively simple. If you change it, please close the program and open it again.)
+(Sidenote: DO NOT CHANGE THE WINDOW SIZE FOR JASON JAGUAR 2.0 AND UP!!!! This will ruin all the functionality of the graphical parts of the software. Future versions will have fullscreen support and multiple resolution support, but in the current beta I've set the resolution just so it stays relatively simple. If you change it, please close the program and open it again.)
 
 In software today, many of the bigger languages reign supreme: Javascript, Python, C++, and many more. These comprise the bulk of the market since they have many attractive and powerful features that are portable and that people love working with...
 
@@ -11,14 +11,14 @@ HOWEVER, what if we could do something interesting without using these bigger an
 Introducing Jason Jaguar OS! A little batch shell that directs you to different programs I made within just the batch Windows CMD language. No VBScript, no JScript, nothing other than some batch and external commands. What's the best part? It's incredibly integrated, meaning everything you do from startup only requires the user to compile 1 batch file or EXE. I do the rest behind the scenes, making it easy for first-time users to jump right in to Jason Jaguar OS and makes it extremely operational on Windows computers of all varieties. No dropping DLLs in random locations just for one function, no re-routing directories to get things to link properly, this one program in just thousands of lines of Batch + External commands can do the work that takes other Batch Operating Shells more than 10 different "EXE"s and bat files to get running. Try now, make the dream of an easy batch OS a thing of the past!
 
 
-# Programs included for 2.0:
+# Programs included for 2.1:
 
 - Inbuilt support for all of Jason Jaguar 1.2.9 and therefore all its apps, as you can run it from the GUI and terminal
 - A non-GUI folder explorer that lets you navigate the Jason Jaguar FileSystem
 - A Systen info log, which in GUI funnels to a .txt doc in the MainStorage(A) drive and in terminal lists it on the screen without sending to a .txt
 - A date & time button, labelled 'Date'.
-- A Calculator
-- A batch word processor that lets you write on one line, read it back in batch (semi-poorly, out to fix later), and clear the document to write new things in place on the JAGUARWORD.txt doc saved in the "Documents" folder. The "Documents" folder is stored in the "MainStorage(A)" drive of the "JasonJaguarFileSystem" folder, which is located on the root of your C: drive
+- A Single-digit Calculator
+- A batch word processor that lets you write for multiple lines and clear the document to write new things in place on the JAGUARWORD.txt doc saved in the "Documents" folder. The "Documents" folder is stored in the "MainStorage(A)" drive of the "JasonJaguarFileSystem" folder, which is located on the root of your C: drive
 - and a full Jason Jaguar Command Terminal Interface, the first of its kind in Jason Jaguar Operating Shells
 
 
