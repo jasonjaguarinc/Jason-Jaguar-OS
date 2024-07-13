@@ -20,6 +20,7 @@ REM BFCPEWINDOWHEIGHT=30
 REM BFCPEWINDOWWIDTH=120
 REM BFCPEWTITLE=Jason Jaguar 2.0.1 GUI UPDATE
 REM BFCPEOPTIONEND
+@echo off
 
 setlocal EnableDelayedExpansion
 
@@ -626,6 +627,7 @@ goto gui
 
 
 :gui
+set /p usar=<C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\UserPass\username.txt
 title Jason Jaguar 2.0 GUI
 cls
 rem PaintScreen 15
@@ -666,18 +668,8 @@ if %result%==0 goto CLI
 
 
 :test
-cls
-rem paintScreen 15
-rem ShadeBoxAt 3 1 27 120 2
-rem ShadeBoxAt 1 33 2 87 1
-rem ShadeBoxAt 2 34 1 87 2
-rem ShadeBoxAt 2 1 1 87 1
 rem Locate 25 1
-rem PrintCenter Welcome to Jason Jaguar 2.0! Check out the beta features and menus. 13 0 9
-rem ShadeBoxAt 14 28 1 66 1
-rem ShadeBoxAt 13 93 1 1 1
 rem ShadeBoxAt 2 2 12 11 4
-rem PrintColorAt Jason Jaguar 2.0 GUI Beta VerTwo 1 88 0 9
 rem PrintColorAt { 2 2 0 9
 rem PrintColorAt { 3 2 0 9
 rem PrintColorAt { 4 2 0 9
@@ -719,15 +711,8 @@ rem PrintColorAt Sysinfo 3 3 15 1
 rem PrintColorAt About 5 3 15 1
 rem PrintColorAt Date 7 3 15 1
 rem PrintColorAt Spec 9 3 15 1
-rem Locate 25 1
-rem PrintColorAt Welcome, %usar%. :) 29 1 15 1 
-rem PrintColorAt {@@} 1 2 15 9
 rem rem Last color value is box, first is text, first real value is height,
 rem rem second one is width
-rem PrintColorAt MenuTest 1 8 0 9
-rem PrintColorAt Legacy 1 18 0 9
-rem PrintColorAt Folder System 1 26 0 9
-rem PrintColorAt Reload Desktop 1 41 0 9 
 rem MouseCMD 3,3,9,3 3,5,7,5 3,7,6,7 3,9,6,9 1,14,120,30 2,1,5,1 get
 
 if %result%==1 goto info
@@ -766,16 +751,8 @@ goto gui
 
 
 :about
-rem paintScreen 15
-rem ShadeBoxAt 3 1 27 120 2
-rem ShadeBoxAt 1 33 2 87 1
-rem ShadeBoxAt 2 34 1 87 2
-rem ShadeBoxAt 2 1 1 87 1
 rem Locate 25 1
-rem PrintCenter Welcome to Jason Jaguar 2.0! Check out the beta features and menus. 13 0 9
-rem ShadeBoxAt 14 28 1 66 1
-rem ShadeBoxAt 13 93 1 1 1
-rem PrintColorAt Jason Jaguar 2.0 GUI Beta VerTwo 1 88 0 9
+rem ShadeBoxAt 2 2 23 23 2
 rem ShadeBoxAt 6 17 10 40 4
 rem ShadeBoxAt 12 20 1 2 4
 rem PrintColorAt *X* 6 17 15 12
@@ -841,15 +818,8 @@ rem PrintColorAt Jason Jaguar 2.0 Beta Build Ver Two 9 19 15 1
 rem PrintColorAt Technical Demonstration Test 12 22 15 1
 rem ShadeBoxAt 7 57 10 1 1
 rem ShadeBoxAt 16 18 1 40 1
-rem Locate 25 1
-rem PrintColorAt Welcome, %usar%. :) 29 1 15 1
-rem PrintColorAt {@@} 1 2 0 9
 rem rem Last color value is box, first is text, first real value is height,
 rem rem second one is width
-rem PrintColorAt MenuTest 1 8 0 9
-rem PrintColorAt Legacy 1 18 0 9
-rem PrintColorAt Folder System 1 26 0 9
-rem PrintColorAt Reload Desktop 1 41 0 9 
 rem MouseCMD 2,1,5,1 1,17,120,30 17,6,19,6 get
 if %result%==1 goto gui
 if %result%==2 goto gui
@@ -858,17 +828,8 @@ if %result%==0 goto CLI
 
 
 :dateus
-cls
-rem paintScreen 15
-rem ShadeBoxAt 3 1 27 120 2
-rem ShadeBoxAt 1 33 2 87 1
-rem ShadeBoxAt 2 34 1 87 2
-rem ShadeBoxAt 2 1 1 87 1
 rem Locate 25 1
-rem PrintCenter Welcome to Jason Jaguar 2.0! Check out the beta features and menus. 13 0 9
-rem ShadeBoxAt 14 28 1 66 1
-rem ShadeBoxAt 13 93 1 1 1
-rem PrintColorAt Jason Jaguar 2.0 GUI Beta VerTwo 1 88 0 9
+rem ShadeBoxAt 2 2 23 23 2
 for /F "tokens=2" %%i in ('date /t') do set mydate=%%i
 set mytime=%time%
 rem ShadeBoxAt 6 17 10 40 4
@@ -936,15 +897,8 @@ rem PrintColorAt The date is %mydate%, 9 24 15 1
 rem PrintColorAt and the time is %mytime%. 12 22 15 1
 rem ShadeBoxAt 7 57 10 1 1
 rem ShadeBoxAt 16 18 1 40 1
-rem Locate 25 1
-rem PrintColorAt Welcome, %usar%. :) 29 1 15 1
-rem PrintColorAt {@@} 1 2 0 9
 rem rem Last color value is box, first is text, first real value is height,
 rem rem second one is width
-rem PrintColorAt MenuTest 1 8 0 9
-rem PrintColorAt Legacy 1 18 0 9
-rem PrintColorAt Folder System 1 26 0 9
-rem PrintColorAt Reload Desktop 1 41 0 9 
 rem MouseCMD 2,1,5,1 1,17,120,30 17,6,19,6 get
 if %result%==1 goto gui
 if %result%==2 goto gui
@@ -954,62 +908,9 @@ if %result%==0 goto CLI
 
 
 :spec
-cls
-rem paintScreen 15
-rem ShadeBoxAt 3 1 27 120 2
-rem ShadeBoxAt 1 33 2 87 1
-rem ShadeBoxAt 2 34 1 87 2
-rem ShadeBoxAt 2 1 1 87 1
 rem Locate 25 1
-rem PrintCenter Welcome to Jason Jaguar 2.0! Check out the beta features and menus. 13 0 9
-rem ShadeBoxAt 14 28 1 66 1
-rem ShadeBoxAt 13 93 1 1 1
-rem ShadeBoxAt 2 2 12 11 4
 rem ShadeBoxAt 9 9 12 11 4
 rem ShadeBoxAt 9 10 4 5 4
-rem PrintColorAt Jason Jaguar 2.0 GUI Beta VerTwo 1 88 0 9
-rem PrintColorAt { 2 2 0 9
-rem PrintColorAt { 3 2 0 9
-rem PrintColorAt { 4 2 0 9
-rem PrintColorAt { 5 2 0 9
-rem PrintColorAt { 6 2 0 9
-rem PrintColorAt { 7 2 0 9
-rem PrintColorAt { 8 2 0 9
-rem PrintColorAt { 9 2 0 9
-rem PrintColorAt { 10 2 0 9
-rem PrintColorAt { 11 2 0 9
-rem PrintColorAt { 12 2 0 9
-rem PrintColorAt { 13 2 0 9
-rem PrintColorAt - 13 2 0 9
-rem PrintColorAt - 13 3 0 9
-rem PrintColorAt - 13 4 0 9
-rem PrintColorAt - 13 5 0 9
-rem PrintColorAt - 13 6 0 9
-rem PrintColorAt - 13 7 0 9
-rem PrintColorAt - 13 8 0 9
-rem PrintColorAt - 13 9 0 9
-rem PrintColorAt - 13 10 0 9
-rem PrintColorAt - 13 11 0 9
-rem PrintColorAt - 13 12 0 9
-rem PrintColorAt } 2 12 0 9
-rem PrintColorAt } 3 12 0 9
-rem PrintColorAt } 4 12 0 9
-rem PrintColorAt } 5 12 0 9
-rem PrintColorAt } 6 12 0 9
-rem PrintColorAt } 7 12 0 9
-rem PrintColorAt } 8 12 0 9
-rem PrintColorAt } 9 12 0 9
-rem PrintColorAt } 10 12 0 9
-rem PrintColorAt } 11 12 0 9
-rem PrintColorAt } 12 12 0 9
-rem PrintColorAt - 13 12 0 9
-rem ShadeBoxAt 14 3 1 11 1
-rem ShadeBoxAt 3 13 12 1 1
-rem PrintColorAt Sysinfo 3 3 15 1
-rem PrintColorAt About 5 3 15 1
-rem PrintColorAt Date 7 3 15 1
-rem PrintColorAt Spec 9 3 15 1
-rem Locate 25 1
 rem PrintColorAt { 9 9 0 9
 rem PrintColorAt { 10 9 0 9
 rem PrintColorAt { 11 9 0 9
@@ -1053,14 +954,8 @@ rem PrintColorAt CMD 14 10 15 1
 rem PrintColorAt Folders 16 10 15 1
 rem ShadeBoxAt 21 10 1 11 1
 rem ShadeBoxAt 10 20 12 1 1
-rem PrintColorAt Welcome, %usar%. :) 29 1 15 1 
-rem PrintColorAt {@@} 1 2 15 9
 rem rem Last color value is box, first is text, first real value is height,
 rem rem second one is width
-rem PrintColorAt MenuTest 1 8 0 9
-rem PrintColorAt Legacy 1 18 0 9
-rem PrintColorAt Folder System 1 26 0 9
-rem PrintColorAt Reload Desktop 1 41 0 9 
 rem MouseCMD 3,3,9,3 3,5,7,5 3,7,6,7 3,9,6,9 1,21,120,30 2,1,5,1 10,10,13,10 10,12,13,12 10,14,13,14 10,16,16,16 1,21,120,30 get
 
 if %result%==1 goto info
@@ -1076,98 +971,6 @@ if %result%==10 goto filesys
 if %result%==11 goto gui
 if %result%==0 goto CLI
 
-
-:mest
-set b=7
-cls
-rem paintScreen 15
-rem ShadeBoxAt 3 1 27 120 2
-rem ShadeBoxAt 1 33 2 87 1
-rem ShadeBoxAt 2 34 1 87 2
-rem ShadeBoxAt 2 1 1 87 1
-rem Locate 25 1
-rem PrintCenter Welcome to Jason Jaguar 2.0! Check out the beta features and menus. 13 0 9
-rem ShadeBoxAt 14 28 1 66 1
-rem ShadeBoxAt 13 93 1 1 1
-rem PrintColorAt Jason Jaguar 2.0 GUI Beta VerTwo 1 88 0 9
-rem ShadeBoxAt 6 17 10 40 4
-rem ShadeBoxAt 12 20 1 2 4
-rem PrintColorAt *X* 6 17 15 12
-rem PrintColorAt Jason Jaguar - 2.0 GUI Environment{/} 6 20 0 9
-rem PrintColorAt { 7 17 0 8
-rem PrintColorAt { 8 17 0 8
-rem PrintColorAt { 9 17 0 8
-rem PrintColorAt { 10 17 0 8
-rem PrintColorAt { 11 17 0 8
-rem PrintColorAt { 12 17 0 8
-rem PrintColorAt { 13 17 0 8
-rem PrintColorAt { 14 17 0 8
-rem PrintColorAt { 15 17 0 8
-rem PrintColorAt - 15 18 0 8
-rem PrintColorAt - 15 19 0 8
-rem PrintColorAt - 15 20 0 8
-rem PrintColorAt - 15 21 0 8
-rem PrintColorAt - 15 22 0 8
-rem PrintColorAt - 15 23 0 8
-rem PrintColorAt - 15 24 0 8
-rem PrintColorAt - 15 25 0 8
-rem PrintColorAt - 15 26 0 8
-rem PrintColorAt - 15 27 0 8
-rem PrintColorAt - 15 28 0 8
-rem PrintColorAt - 15 29 0 8
-rem PrintColorAt - 15 30 0 8
-rem PrintColorAt - 15 31 0 8
-rem PrintColorAt - 15 32 0 8
-rem PrintColorAt - 15 33 0 8
-rem PrintColorAt - 15 34 0 8
-rem PrintColorAt - 15 35 0 8
-rem PrintColorAt - 15 36 0 8
-rem PrintColorAt - 15 37 0 8
-rem PrintColorAt - 15 38 0 8
-rem PrintColorAt - 15 39 0 8
-rem PrintColorAt - 15 40 0 8
-rem PrintColorAt - 15 41 0 8
-rem PrintColorAt - 15 42 0 8
-rem PrintColorAt - 15 43 0 8
-rem PrintColorAt - 15 44 0 8
-rem PrintColorAt - 15 45 0 8
-rem PrintColorAt - 15 46 0 8
-rem PrintColorAt - 15 47 0 8
-rem PrintColorAt - 15 48 0 8
-rem PrintColorAt - 15 49 0 8
-rem PrintColorAt - 15 50 0 8
-rem PrintColorAt - 15 51 0 8
-rem PrintColorAt - 15 52 0 8
-rem PrintColorAt - 15 53 0 8
-rem PrintColorAt - 15 54 0 8
-rem PrintColorAt - 15 55 0 8
-rem PrintColorAt - 15 56 0 8
-rem PrintColorAt } 7 56 0 8
-rem PrintColorAt } 8 56 0 8
-rem PrintColorAt } 9 56 0 8
-rem PrintColorAt } 10 56 0 8
-rem PrintColorAt } 11 56 0 8
-rem PrintColorAt } 12 56 0 8
-rem PrintColorAt } 13 56 0 8
-rem PrintColorAt } 14 56 0 8
-rem PrintColorAt } 15 56 0 8
-rem PrintColorAt Menu Mest, b equals %b%. 11 29 0 9
-rem ShadeBoxAt 7 57 10 1 1
-rem ShadeBoxAt 16 18 1 40 1
-rem Locate 25 1
-rem PrintColorAt Welcome, %usar%. :) 29 1 15 1
-rem PrintColorAt {@@} 1 2 0 9
-rem rem Last color value is box, first is text, first real value is height,
-rem rem second one is width
-rem PrintColorAt MenuTest 1 8 0 9
-rem PrintColorAt Legacy 1 18 0 9
-rem PrintColorAt Folder System 1 26 0 9
-rem PrintColorAt Reload Desktop 1 41 0 9 
-rem MouseCMD 2,1,5,1 1,17,120,30 17,6,19,6 get
-if %result%==1 goto gui
-if %result%==2 goto gui
-if %result%==3 goto gui
-if %result%==0 goto CLI
 
 
 
@@ -1575,100 +1378,6 @@ goto gui
 
 
 
-filesys
-cls
-rem paintScreen 15
-rem ShadeBoxAt 3 1 27 120 2
-rem ShadeBoxAt 1 33 2 87 1
-rem ShadeBoxAt 2 34 1 87 2
-rem ShadeBoxAt 2 1 1 87 1
-rem Locate 25 1
-rem PrintCenter Welcome to Jason Jaguar 2.0! Check out the beta features and menus. 13 0 9
-rem ShadeBoxAt 14 28 1 66 1
-rem ShadeBoxAt 13 93 1 1 1
-rem PrintColorAt Jason Jaguar 2.0 GUI Beta VerTwo 1 88 0 9
-rem ShadeBoxAt 6 17 10 40 4
-rem ShadeBoxAt 12 20 1 2 4
-rem PrintColorAt *X* 6 17 15 12
-rem PrintColorAt Jason Jaguar - 2.0 GUI Environment{/} 6 20 0 9
-rem PrintColorAt { 7 17 0 8
-rem PrintColorAt { 8 17 0 8
-rem PrintColorAt { 9 17 0 8
-rem PrintColorAt { 10 17 0 8
-rem PrintColorAt { 11 17 0 8
-rem PrintColorAt { 12 17 0 8
-rem PrintColorAt { 13 17 0 8
-rem PrintColorAt { 14 17 0 8
-rem PrintColorAt { 15 17 0 8
-rem PrintColorAt - 15 18 0 8
-rem PrintColorAt - 15 19 0 8
-rem PrintColorAt - 15 20 0 8
-rem PrintColorAt - 15 21 0 8
-rem PrintColorAt - 15 22 0 8
-rem PrintColorAt - 15 23 0 8
-rem PrintColorAt - 15 24 0 8
-rem PrintColorAt - 15 25 0 8
-rem PrintColorAt - 15 26 0 8
-rem PrintColorAt - 15 27 0 8
-rem PrintColorAt - 15 28 0 8
-rem PrintColorAt - 15 29 0 8
-rem PrintColorAt - 15 30 0 8
-rem PrintColorAt - 15 31 0 8
-rem PrintColorAt - 15 32 0 8
-rem PrintColorAt - 15 33 0 8
-rem PrintColorAt - 15 34 0 8
-rem PrintColorAt - 15 35 0 8
-rem PrintColorAt - 15 36 0 8
-rem PrintColorAt - 15 37 0 8
-rem PrintColorAt - 15 38 0 8
-rem PrintColorAt - 15 39 0 8
-rem PrintColorAt - 15 40 0 8
-rem PrintColorAt - 15 41 0 8
-rem PrintColorAt - 15 42 0 8
-rem PrintColorAt - 15 43 0 8
-rem PrintColorAt - 15 44 0 8
-rem PrintColorAt - 15 45 0 8
-rem PrintColorAt - 15 46 0 8
-rem PrintColorAt - 15 47 0 8
-rem PrintColorAt - 15 48 0 8
-rem PrintColorAt - 15 49 0 8
-rem PrintColorAt - 15 50 0 8
-rem PrintColorAt - 15 51 0 8
-rem PrintColorAt - 15 52 0 8
-rem PrintColorAt - 15 53 0 8
-rem PrintColorAt - 15 54 0 8
-rem PrintColorAt - 15 55 0 8
-rem PrintColorAt - 15 56 0 8
-rem PrintColorAt } 7 56 0 8
-rem PrintColorAt } 8 56 0 8
-rem PrintColorAt } 9 56 0 8
-rem PrintColorAt } 10 56 0 8
-rem PrintColorAt } 11 56 0 8
-rem PrintColorAt } 12 56 0 8
-rem PrintColorAt } 13 56 0 8
-rem PrintColorAt } 14 56 0 8
-rem PrintColorAt } 15 56 0 8
-rem PrintColorAt Jason Jaguar FileSystem, Ver. 1.2 11 20 0 9
-rem Locate 25 1
-rem BrowseFiles %~dps0 C:\JasonJaguarFileSystem
-rem ShadeBoxAt 7 57 10 1 1
-rem ShadeBoxAt 16 18 1 40 1
-rem Locate 25 1
-rem PrintColorAt Welcome, %usar%. :) 29 1 15 1
-rem PrintColorAt {@@} 1 2 0 9
-rem rem Last color value is box, first is text, first real value is height,
-rem rem second one is width
-rem PrintColorAt MenuTest 1 8 0 9
-rem PrintColorAt Legacy 1 18 0 9
-rem PrintColorAt Folder System 1 26 0 9
-rem PrintColorAt Reload Desktop 1 41 0 9 
-rem MouseCMD 2,1,5,1 1,17,120,30 17,6,19,6 get
-if %result%==1 goto gui
-if %result%==2 goto gui
-if %result%==3 goto gui
-if %result%==0 goto CLI
-
-
 
 :lega
 cls
@@ -1688,36 +1397,16 @@ cls
 goto gui
 
 
-:calcu
-cls
-if exist C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\mathinput.txt goto mahincalc
 
+:calcu
+if exist C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\mathinput.txt goto mahincalc
 
 :mahincalc
 echo.:>C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\calc.txt
 echo.:>C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\calc2.txt
 echo.:>C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\mathinput.txt
-cls
-rem PaintScreen 15
-rem ShadeBoxAt 3 1 27 120 2
-rem ShadeBoxAt 1 33 2 87 1
-rem ShadeBoxAt 2 34 1 87 2
-rem ShadeBoxAt 2 1 1 87 1
 rem Locate 25 1
-rem PrintCenter Welcome to Jason Jaguar 2.0! Check out the beta features and menus. 13 0 9
-rem ShadeBoxAt 14 28 1 66 1
-rem ShadeBoxAt 13 93 1 1 1
-rem PrintColorAt Jason Jaguar 2.0 GUI Beta VerTwo 1 88 0 9
-rem PrintColorAt Welcome, %usar%. :) 29 1 15 1
-rem PrintColorAt {@@} 1 2 0 9
-rem rem Last color value is box, first is text, first real value is height,
-rem rem second one is width
-rem rem WIDTH THEN HEIGHT FOR COORDINATES THOUGH
-rem PrintColorAt MenuTest 1 8 0 9
-rem PrintColorAt Legacy 1 18 0 9
-rem PrintColorAt Folder System 1 26 0 9
-rem PrintColorAt Reload Desktop 1 41 0 9 
-rem Locate 8 12
+rem ShadeBoxAt 2 2 23 23 2
 rem ShadeBoxAt 6 17 10 40 4
 rem ShadeBoxAt 12 20 1 2 4
 rem PrintColorAt .1. 7 19 15 1
@@ -1810,113 +1499,7 @@ if %result%==12 goto gui
 if %result%==0 goto CLI
 echo:%result%>C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\calc.txt
 
-
-
 :gyolf
-rem PaintScreen 15
-rem ShadeBoxAt 3 1 27 120 2
-rem ShadeBoxAt 1 33 2 87 1
-rem ShadeBoxAt 2 34 1 87 2
-rem ShadeBoxAt 2 1 1 87 1
-rem Locate 25 1
-rem PrintCenter Welcome to Jason Jaguar 2.0! Check out the beta features and menus. 13 0 9
-rem ShadeBoxAt 14 28 1 66 1
-rem ShadeBoxAt 13 93 1 1 1
-rem PrintColorAt Jason Jaguar 2.0 GUI Beta VerTwo 1 88 0 9
-rem PrintColorAt Welcome, %usar%. :) 29 1 15 1
-rem PrintColorAt {@@} 1 2 0 9
-rem rem Last color value is box, first is text, first real value is height,
-rem rem second one is width
-rem rem WIDTH THEN HEIGHT FOR COORDINATES THOUGH
-rem PrintColorAt MenuTest 1 8 0 9
-rem PrintColorAt Legacy 1 18 0 9
-rem PrintColorAt Folder System 1 26 0 9
-rem PrintColorAt Reload Desktop 1 41 0 9 
-rem Locate 8 12
-rem ShadeBoxAt 6 17 10 40 4
-rem ShadeBoxAt 12 20 1 2 4
-rem PrintColorAt .1. 7 19 15 1
-rem PrintColorAt .2. 9 19 15 1
-rem PrintColorAt .3. 11 19 15 1
-rem PrintColorAt .4. 13 19 15 1 
-rem PrintColorAt .5. 7 23 15 1
-rem PrintColorAt .6. 9 23 15 1
-rem PrintColorAt .7. 11 23 15 1
-rem PrintColorAt .8. 13 23 15 1
-rem PrintColorAt .9. 7 27 15 1
-rem PrintColorAt ./. 13 31 15 1
-rem PrintColorAt .+. 7 31 15 1
-rem PrintColorAt .-. 9 31 15 1
-rem PrintColorAt .*. 11 31 15 1
-rem PrintColorAt *X* 6 17 15 12
-rem PrintColorAt Jason Jaguar - 2.0 GUI Calculator {/} 6 20 0 9
-rem PrintColorAt { 7 17 0 8
-rem PrintColorAt { 8 17 0 8
-rem PrintColorAt { 9 17 0 8
-rem PrintColorAt { 10 17 0 8
-rem PrintColorAt { 11 17 0 8
-rem PrintColorAt { 12 17 0 8
-rem PrintColorAt { 13 17 0 8
-rem PrintColorAt { 14 17 0 8
-rem PrintColorAt { 15 17 0 8
-rem PrintColorAt - 15 18 0 8
-rem PrintColorAt - 15 19 0 8
-rem PrintColorAt - 15 20 0 8
-rem PrintColorAt - 15 21 0 8
-rem PrintColorAt - 15 22 0 8
-rem PrintColorAt - 15 23 0 8
-rem PrintColorAt - 15 24 0 8
-rem PrintColorAt - 15 25 0 8
-rem PrintColorAt - 15 26 0 8
-rem PrintColorAt - 15 27 0 8
-rem PrintColorAt - 15 28 0 8
-rem PrintColorAt - 15 29 0 8
-rem PrintColorAt - 15 30 0 8
-rem PrintColorAt - 15 31 0 8
-rem PrintColorAt - 15 32 0 8
-rem PrintColorAt - 15 33 0 8
-rem PrintColorAt - 15 34 0 8
-rem PrintColorAt - 15 35 0 8
-rem PrintColorAt - 15 36 0 8
-rem PrintColorAt - 15 37 0 8
-rem PrintColorAt - 15 38 0 8
-rem PrintColorAt - 15 39 0 8
-rem PrintColorAt - 15 40 0 8
-rem PrintColorAt - 15 41 0 8
-rem PrintColorAt - 15 42 0 8
-rem PrintColorAt - 15 43 0 8
-rem PrintColorAt - 15 44 0 8
-rem PrintColorAt - 15 45 0 8
-rem PrintColorAt - 15 46 0 8
-rem PrintColorAt - 15 47 0 8
-rem PrintColorAt - 15 48 0 8
-rem PrintColorAt - 15 49 0 8
-rem PrintColorAt - 15 50 0 8
-rem PrintColorAt - 15 51 0 8
-rem PrintColorAt - 15 52 0 8
-rem PrintColorAt - 15 53 0 8
-rem PrintColorAt - 15 54 0 8
-rem PrintColorAt - 15 55 0 8
-rem PrintColorAt - 15 56 0 8
-rem PrintColorAt } 7 56 0 8
-rem PrintColorAt } 8 56 0 8
-rem PrintColorAt } 9 56 0 8
-rem PrintColorAt } 10 56 0 8
-rem PrintColorAt } 11 56 0 8
-rem PrintColorAt } 12 56 0 8
-rem PrintColorAt } 13 56 0 8
-rem PrintColorAt } 14 56 0 8
-rem PrintColorAt } 15 56 0 8
-rem ShadeBoxAt 7 57 10 1 1
-rem ShadeBoxAt 16 18 1 40 1
-rem PrintColorAt : 7 36 0 0
-rem PrintColorAt : 8 36 0 0
-rem PrintColorAt : 9 36 0 0
-rem PrintColorAt : 10 36 0 0
-rem PrintColorAt : 11 36 0 0
-rem PrintColorAt : 12 36 0 0
-rem PrintColorAt : 13 36 0 0
-rem PrintColorAt : 14 36 0 0
 rem printColorAt %result% 8 39 15 1
 rem MouseCMD 31,7,33,7 31,9,33,9 31,11,33,11 31,13,33,13 17,6,19,6 1,16,120,30 2,1,5,1 get
 if %result%==1 goto plush
@@ -1928,118 +1511,10 @@ if %result%==6 goto gui
 if %result%==7 goto gui
 if %result%==0 goto CLI
 
-
-
-
 :plush
-cls
-rem PaintScreen 15
-rem ShadeBoxAt 3 1 27 120 2
-rem ShadeBoxAt 1 33 2 87 1
-rem ShadeBoxAt 2 34 1 87 2
-rem ShadeBoxAt 2 1 1 87 1
-rem Locate 25 1
-rem PrintCenter Welcome to Jason Jaguar 2.0! Check out the beta features and menus. 13 0 9
-rem ShadeBoxAt 14 28 1 66 1
-rem ShadeBoxAt 13 93 1 1 1
-rem PrintColorAt Jason Jaguar 2.0 GUI Beta VerTwo 1 88 0 9
-rem PrintColorAt Welcome, %usar%. :) 29 1 15 1
-rem PrintColorAt {@@} 1 2 0 9
-rem rem Last color value is box, first is text, first real value is height,
-rem rem second one is width
-rem rem WIDTH THEN HEIGHT FOR COORDINATES THOUGH
-rem PrintColorAt MenuTest 1 8 0 9
-rem PrintColorAt Legacy 1 18 0 9
-rem PrintColorAt Folder System 1 26 0 9
-rem PrintColorAt Reload Desktop 1 41 0 9 
 echo:+>C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\mathinput.txt
 set /p mathinput=<C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\mathinput.txt
 set /p answer1=<C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\calc.txt
-rem Locate 8 12
-rem ShadeBoxAt 6 17 10 40 4
-rem ShadeBoxAt 12 20 1 2 4
-rem PrintColorAt .1. 7 19 15 1
-rem PrintColorAt .2. 9 19 15 1
-rem PrintColorAt .3. 11 19 15 1
-rem PrintColorAt .4. 13 19 15 1 
-rem PrintColorAt .5. 7 23 15 1
-rem PrintColorAt .6. 9 23 15 1
-rem PrintColorAt .7. 11 23 15 1
-rem PrintColorAt .8. 13 23 15 1
-rem PrintColorAt .9. 7 27 15 1
-rem PrintColorAt ./. 13 31 15 1
-rem PrintColorAt .+. 7 31 15 1
-rem PrintColorAt .-. 9 31 15 1
-rem PrintColorAt .*. 11 31 15 1
-rem PrintColorAt *X* 6 17 15 12
-rem PrintColorAt Jason Jaguar - 2.0 GUI Calculator {/} 6 20 0 9
-rem PrintColorAt { 7 17 0 8
-rem PrintColorAt { 8 17 0 8
-rem PrintColorAt { 9 17 0 8
-rem PrintColorAt { 10 17 0 8
-rem PrintColorAt { 11 17 0 8
-rem PrintColorAt { 12 17 0 8
-rem PrintColorAt { 13 17 0 8
-rem PrintColorAt { 14 17 0 8
-rem PrintColorAt { 15 17 0 8
-rem PrintColorAt - 15 18 0 8
-rem PrintColorAt - 15 19 0 8
-rem PrintColorAt - 15 20 0 8
-rem PrintColorAt - 15 21 0 8
-rem PrintColorAt - 15 22 0 8
-rem PrintColorAt - 15 23 0 8
-rem PrintColorAt - 15 24 0 8
-rem PrintColorAt - 15 25 0 8
-rem PrintColorAt - 15 26 0 8
-rem PrintColorAt - 15 27 0 8
-rem PrintColorAt - 15 28 0 8
-rem PrintColorAt - 15 29 0 8
-rem PrintColorAt - 15 30 0 8
-rem PrintColorAt - 15 31 0 8
-rem PrintColorAt - 15 32 0 8
-rem PrintColorAt - 15 33 0 8
-rem PrintColorAt - 15 34 0 8
-rem PrintColorAt - 15 35 0 8
-rem PrintColorAt - 15 36 0 8
-rem PrintColorAt - 15 37 0 8
-rem PrintColorAt - 15 38 0 8
-rem PrintColorAt - 15 39 0 8
-rem PrintColorAt - 15 40 0 8
-rem PrintColorAt - 15 41 0 8
-rem PrintColorAt - 15 42 0 8
-rem PrintColorAt - 15 43 0 8
-rem PrintColorAt - 15 44 0 8
-rem PrintColorAt - 15 45 0 8
-rem PrintColorAt - 15 46 0 8
-rem PrintColorAt - 15 47 0 8
-rem PrintColorAt - 15 48 0 8
-rem PrintColorAt - 15 49 0 8
-rem PrintColorAt - 15 50 0 8
-rem PrintColorAt - 15 51 0 8
-rem PrintColorAt - 15 52 0 8
-rem PrintColorAt - 15 53 0 8
-rem PrintColorAt - 15 54 0 8
-rem PrintColorAt - 15 55 0 8
-rem PrintColorAt - 15 56 0 8
-rem PrintColorAt } 7 56 0 8
-rem PrintColorAt } 8 56 0 8
-rem PrintColorAt } 9 56 0 8
-rem PrintColorAt } 10 56 0 8
-rem PrintColorAt } 11 56 0 8
-rem PrintColorAt } 12 56 0 8
-rem PrintColorAt } 13 56 0 8
-rem PrintColorAt } 14 56 0 8
-rem PrintColorAt } 15 56 0 8
-rem ShadeBoxAt 7 57 10 1 1
-rem ShadeBoxAt 16 18 1 40 1
-rem PrintColorAt : 7 36 0 0
-rem PrintColorAt : 8 36 0 0
-rem PrintColorAt : 9 36 0 0
-rem PrintColorAt : 10 36 0 0
-rem PrintColorAt : 11 36 0 0
-rem PrintColorAt : 12 36 0 0
-rem PrintColorAt : 13 36 0 0
-rem PrintColorAt : 14 36 0 0
 rem PrintColorAt %answer1% 8 39 15 1
 rem PrintColorAt %mathinput% 8 43 15 1
 rem MouseCMD 19,7,21,7 19,9,21,9 19,11,21,11 19,13,21,13 23,7,25,7 23,9,25,9 23,11,25,11 23,13,25,13 27,7,29,7 17,6,19,6 1,16,120,30 2,1,5,1 get
@@ -2050,128 +1525,16 @@ if %result%==11 goto gui
 if %result%==12 goto gui
 if %result%==0 goto CLI
 
-
-
 :ahnsar1
 set /p mathinput=<C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\mathinput.txt
 set /p answer1=<C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\calc.txt
 set /p answer2=<C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\calc2.txt
 goto addcommand
 
-
-
-
-
-
 :siubtract
-cls
-rem PaintScreen 15
-rem ShadeBoxAt 3 1 27 120 2
-rem ShadeBoxAt 1 33 2 87 1
-rem ShadeBoxAt 2 34 1 87 2
-rem ShadeBoxAt 2 1 1 87 1
-rem Locate 25 1
-rem PrintCenter Welcome to Jason Jaguar 2.0! Check out the beta features and menus. 13 0 9
-rem ShadeBoxAt 14 28 1 66 1
-rem ShadeBoxAt 13 93 1 1 1
-rem PrintColorAt Jason Jaguar 2.0 GUI Beta VerTwo 1 88 0 9
-rem PrintColorAt Welcome, %usar%. :) 29 1 15 1
-rem PrintColorAt {@@} 1 2 0 9
-rem rem Last color value is box, first is text, first real value is height,
-rem rem second one is width
-rem rem WIDTH THEN HEIGHT FOR COORDINATES THOUGH
-rem PrintColorAt MenuTest 1 8 0 9
-rem PrintColorAt Legacy 1 18 0 9
-rem PrintColorAt Folder System 1 26 0 9
-rem PrintColorAt Reload Desktop 1 41 0 9 
 echo:->C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\mathinput.txt
 set /p mathinput=<C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\mathinput.txt
 set /p answer1=<C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\calc.txt
-rem Locate 8 12
-rem ShadeBoxAt 6 17 10 40 4
-rem ShadeBoxAt 12 20 1 2 4
-rem PrintColorAt .1. 7 19 15 1
-rem PrintColorAt .2. 9 19 15 1
-rem PrintColorAt .3. 11 19 15 1
-rem PrintColorAt .4. 13 19 15 1 
-rem PrintColorAt .5. 7 23 15 1
-rem PrintColorAt .6. 9 23 15 1
-rem PrintColorAt .7. 11 23 15 1
-rem PrintColorAt .8. 13 23 15 1
-rem PrintColorAt .9. 7 27 15 1
-rem PrintColorAt ./. 13 31 15 1
-rem PrintColorAt .+. 7 31 15 1
-rem PrintColorAt .-. 9 31 15 1
-rem PrintColorAt .*. 11 31 15 1
-rem PrintColorAt *X* 6 17 15 12
-rem PrintColorAt Jason Jaguar - 2.0 GUI Calculator {/} 6 20 0 9
-rem PrintColorAt { 7 17 0 8
-rem PrintColorAt { 8 17 0 8
-rem PrintColorAt { 9 17 0 8
-rem PrintColorAt { 10 17 0 8
-rem PrintColorAt { 11 17 0 8
-rem PrintColorAt { 12 17 0 8
-rem PrintColorAt { 13 17 0 8
-rem PrintColorAt { 14 17 0 8
-rem PrintColorAt { 15 17 0 8
-rem PrintColorAt - 15 18 0 8
-rem PrintColorAt - 15 19 0 8
-rem PrintColorAt - 15 20 0 8
-rem PrintColorAt - 15 21 0 8
-rem PrintColorAt - 15 22 0 8
-rem PrintColorAt - 15 23 0 8
-rem PrintColorAt - 15 24 0 8
-rem PrintColorAt - 15 25 0 8
-rem PrintColorAt - 15 26 0 8
-rem PrintColorAt - 15 27 0 8
-rem PrintColorAt - 15 28 0 8
-rem PrintColorAt - 15 29 0 8
-rem PrintColorAt - 15 30 0 8
-rem PrintColorAt - 15 31 0 8
-rem PrintColorAt - 15 32 0 8
-rem PrintColorAt - 15 33 0 8
-rem PrintColorAt - 15 34 0 8
-rem PrintColorAt - 15 35 0 8
-rem PrintColorAt - 15 36 0 8
-rem PrintColorAt - 15 37 0 8
-rem PrintColorAt - 15 38 0 8
-rem PrintColorAt - 15 39 0 8
-rem PrintColorAt - 15 40 0 8
-rem PrintColorAt - 15 41 0 8
-rem PrintColorAt - 15 42 0 8
-rem PrintColorAt - 15 43 0 8
-rem PrintColorAt - 15 44 0 8
-rem PrintColorAt - 15 45 0 8
-rem PrintColorAt - 15 46 0 8
-rem PrintColorAt - 15 47 0 8
-rem PrintColorAt - 15 48 0 8
-rem PrintColorAt - 15 49 0 8
-rem PrintColorAt - 15 50 0 8
-rem PrintColorAt - 15 51 0 8
-rem PrintColorAt - 15 52 0 8
-rem PrintColorAt - 15 53 0 8
-rem PrintColorAt - 15 54 0 8
-rem PrintColorAt - 15 55 0 8
-rem PrintColorAt - 15 56 0 8
-rem PrintColorAt } 7 56 0 8
-rem PrintColorAt } 8 56 0 8
-rem PrintColorAt } 9 56 0 8
-rem PrintColorAt } 10 56 0 8
-rem PrintColorAt } 11 56 0 8
-rem PrintColorAt } 12 56 0 8
-rem PrintColorAt } 13 56 0 8
-rem PrintColorAt } 14 56 0 8
-rem PrintColorAt } 15 56 0 8
-rem ShadeBoxAt 7 57 10 1 1
-rem ShadeBoxAt 16 18 1 40 1
-rem PrintColorAt : 7 36 0 0
-rem PrintColorAt : 8 36 0 0
-rem PrintColorAt : 9 36 0 0
-rem PrintColorAt : 10 36 0 0
-rem PrintColorAt : 11 36 0 0
-rem PrintColorAt : 12 36 0 0
-rem PrintColorAt : 13 36 0 0
-rem PrintColorAt : 14 36 0 0
 rem PrintColorAt %answer1% 8 39 15 1
 rem PrintColorAt %mathinput% 8 43 15 1
 rem MouseCMD 19,7,21,7 19,9,21,9 19,11,21,11 19,13,21,13 23,7,25,7 23,9,25,9 23,11,25,11 23,13,25,13 27,7,29,7 17,6,19,6 1,16,120,30 2,1,5,1 get
@@ -2182,127 +1545,16 @@ if %result%==11 goto gui
 if %result%==12 goto gui
 if %result%==0 goto CLI 
 
-
-
 :ahnsar2
 set /p mathinput=<C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\mathinput.txt
 set /p answer1=<C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\calc.txt
 set /p answer2=<C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\calc2.txt
 goto subtractcommand
 
-
-
-
-
 :myultiply
-cls
-rem PaintScreen 15
-rem ShadeBoxAt 3 1 27 120 2
-rem ShadeBoxAt 1 33 2 87 1
-rem ShadeBoxAt 2 34 1 87 2
-rem ShadeBoxAt 2 1 1 87 1
-rem Locate 25 1
-rem PrintCenter Welcome to Jason Jaguar 2.0! Check out the beta features and menus. 13 0 9
-rem ShadeBoxAt 14 28 1 66 1
-rem ShadeBoxAt 13 93 1 1 1
-rem PrintColorAt Jason Jaguar 2.0 GUI Beta VerTwo 1 88 0 9
-rem PrintColorAt Welcome, %usar%. :) 29 1 15 1
-rem PrintColorAt {@@} 1 2 0 9
-rem rem Last color value is box, first is text, first real value is height,
-rem rem second one is width
-rem rem WIDTH THEN HEIGHT FOR COORDINATES THOUGH
-rem PrintColorAt MenuTest 1 8 0 9
-rem PrintColorAt Legacy 1 18 0 9
-rem PrintColorAt Folder System 1 26 0 9
-rem PrintColorAt Reload Desktop 1 41 0 9 
 echo:*>C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\mathinput.txt
 set /p mathinput=<C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\mathinput.txt
 set /p answer1=<C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\calc.txt
-rem Locate 8 12
-rem ShadeBoxAt 6 17 10 40 4
-rem ShadeBoxAt 12 20 1 2 4
-rem PrintColorAt .1. 7 19 15 1
-rem PrintColorAt .2. 9 19 15 1
-rem PrintColorAt .3. 11 19 15 1
-rem PrintColorAt .4. 13 19 15 1 
-rem PrintColorAt .5. 7 23 15 1
-rem PrintColorAt .6. 9 23 15 1
-rem PrintColorAt .7. 11 23 15 1
-rem PrintColorAt .8. 13 23 15 1
-rem PrintColorAt .9. 7 27 15 1
-rem PrintColorAt ./. 13 31 15 1
-rem PrintColorAt .+. 7 31 15 1
-rem PrintColorAt .-. 9 31 15 1
-rem PrintColorAt .*. 11 31 15 1
-rem PrintColorAt *X* 6 17 15 12
-rem PrintColorAt Jason Jaguar - 2.0 GUI Calculator {/} 6 20 0 9
-rem PrintColorAt { 7 17 0 8
-rem PrintColorAt { 8 17 0 8
-rem PrintColorAt { 9 17 0 8
-rem PrintColorAt { 10 17 0 8
-rem PrintColorAt { 11 17 0 8
-rem PrintColorAt { 12 17 0 8
-rem PrintColorAt { 13 17 0 8
-rem PrintColorAt { 14 17 0 8
-rem PrintColorAt { 15 17 0 8
-rem PrintColorAt - 15 18 0 8
-rem PrintColorAt - 15 19 0 8
-rem PrintColorAt - 15 20 0 8
-rem PrintColorAt - 15 21 0 8
-rem PrintColorAt - 15 22 0 8
-rem PrintColorAt - 15 23 0 8
-rem PrintColorAt - 15 24 0 8
-rem PrintColorAt - 15 25 0 8
-rem PrintColorAt - 15 26 0 8
-rem PrintColorAt - 15 27 0 8
-rem PrintColorAt - 15 28 0 8
-rem PrintColorAt - 15 29 0 8
-rem PrintColorAt - 15 30 0 8
-rem PrintColorAt - 15 31 0 8
-rem PrintColorAt - 15 32 0 8
-rem PrintColorAt - 15 33 0 8
-rem PrintColorAt - 15 34 0 8
-rem PrintColorAt - 15 35 0 8
-rem PrintColorAt - 15 36 0 8
-rem PrintColorAt - 15 37 0 8
-rem PrintColorAt - 15 38 0 8
-rem PrintColorAt - 15 39 0 8
-rem PrintColorAt - 15 40 0 8
-rem PrintColorAt - 15 41 0 8
-rem PrintColorAt - 15 42 0 8
-rem PrintColorAt - 15 43 0 8
-rem PrintColorAt - 15 44 0 8
-rem PrintColorAt - 15 45 0 8
-rem PrintColorAt - 15 46 0 8
-rem PrintColorAt - 15 47 0 8
-rem PrintColorAt - 15 48 0 8
-rem PrintColorAt - 15 49 0 8
-rem PrintColorAt - 15 50 0 8
-rem PrintColorAt - 15 51 0 8
-rem PrintColorAt - 15 52 0 8
-rem PrintColorAt - 15 53 0 8
-rem PrintColorAt - 15 54 0 8
-rem PrintColorAt - 15 55 0 8
-rem PrintColorAt - 15 56 0 8
-rem PrintColorAt } 7 56 0 8
-rem PrintColorAt } 8 56 0 8
-rem PrintColorAt } 9 56 0 8
-rem PrintColorAt } 10 56 0 8
-rem PrintColorAt } 11 56 0 8
-rem PrintColorAt } 12 56 0 8
-rem PrintColorAt } 13 56 0 8
-rem PrintColorAt } 14 56 0 8
-rem PrintColorAt } 15 56 0 8
-rem ShadeBoxAt 7 57 10 1 1
-rem ShadeBoxAt 16 18 1 40 1
-rem PrintColorAt : 7 36 0 0
-rem PrintColorAt : 8 36 0 0
-rem PrintColorAt : 9 36 0 0
-rem PrintColorAt : 10 36 0 0
-rem PrintColorAt : 11 36 0 0
-rem PrintColorAt : 12 36 0 0
-rem PrintColorAt : 13 36 0 0
-rem PrintColorAt : 14 36 0 0
 rem PrintColorAt %answer1% 8 39 15 1
 rem PrintColorAt %mathinput% 8 43 15 1
 rem MouseCMD 19,7,21,7 19,9,21,9 19,11,21,11 19,13,21,13 23,7,25,7 23,9,25,9 23,11,25,11 23,13,25,13 27,7,29,7 17,6,19,6 1,16,120,30 2,1,5,1 get
@@ -2312,7 +1564,6 @@ if %result%==10 goto gui
 if %result%==11 goto gui
 if %result%==12 goto gui 
 if %result%==0 goto CLI
-
 
 :ahnsar3
 set /p mathinput=<C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\mathinput.txt
@@ -2320,250 +1571,31 @@ set /p answer1=<C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\calc.txt
 set /p answer2=<C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\calc2.txt
 goto multiplycommand
 
-
-
-
-
 :divdied
-cls
-rem PaintScreen 15
-rem ShadeBoxAt 3 1 27 120 2
-rem ShadeBoxAt 1 33 2 87 1
-rem ShadeBoxAt 2 34 1 87 2
-rem ShadeBoxAt 2 1 1 87 1
-rem Locate 25 1
-rem PrintCenter Welcome to Jason Jaguar 2.0! Check out the beta features and menus. 13 0 9
-rem ShadeBoxAt 14 28 1 66 1
-rem ShadeBoxAt 13 93 1 1 1
-rem PrintColorAt Jason Jaguar 2.0 GUI Beta VerTwo 1 88 0 9
-rem PrintColorAt Welcome, %usar%. :) 29 1 15 1
-rem PrintColorAt {@@} 1 2 0 9
-rem rem Last color value is box, first is text, first real value is height,
-rem rem second one is width
-rem rem WIDTH THEN HEIGHT FOR COORDINATES THOUGH
-rem PrintColorAt MenuTest 1 8 0 9
-rem PrintColorAt Legacy 1 18 0 9
-rem PrintColorAt Folder System 1 26 0 9
-rem PrintColorAt Reload Desktop 1 41 0 9 
 echo:/>C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\mathinput.txt
 set /p mathinput=<C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\mathinput.txt
 set /p answer1=<C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\calc.txt
-rem Locate 8 12
-rem ShadeBoxAt 6 17 10 40 4
-rem ShadeBoxAt 12 20 1 2 4
-rem PrintColorAt .1. 7 19 15 1
-rem PrintColorAt .2. 9 19 15 1
-rem PrintColorAt .3. 11 19 15 1
-rem PrintColorAt .4. 13 19 15 1 
-rem PrintColorAt .5. 7 23 15 1
-rem PrintColorAt .6. 9 23 15 1
-rem PrintColorAt .7. 11 23 15 1
-rem PrintColorAt .8. 13 23 15 1
-rem PrintColorAt .9. 7 27 15 1
-rem PrintColorAt ./. 13 31 15 1
-rem PrintColorAt .+. 7 31 15 1
-rem PrintColorAt .-. 9 31 15 1
-rem PrintColorAt .*. 11 31 15 1
-rem PrintColorAt *X* 6 17 15 12
-rem PrintColorAt Jason Jaguar - 2.0 GUI Calculator {/} 6 20 0 9
-rem PrintColorAt { 7 17 0 8
-rem PrintColorAt { 8 17 0 8
-rem PrintColorAt { 9 17 0 8
-rem PrintColorAt { 10 17 0 8
-rem PrintColorAt { 11 17 0 8
-rem PrintColorAt { 12 17 0 8
-rem PrintColorAt { 13 17 0 8
-rem PrintColorAt { 14 17 0 8
-rem PrintColorAt { 15 17 0 8
-rem PrintColorAt - 15 18 0 8
-rem PrintColorAt - 15 19 0 8
-rem PrintColorAt - 15 20 0 8
-rem PrintColorAt - 15 21 0 8
-rem PrintColorAt - 15 22 0 8
-rem PrintColorAt - 15 23 0 8
-rem PrintColorAt - 15 24 0 8
-rem PrintColorAt - 15 25 0 8
-rem PrintColorAt - 15 26 0 8
-rem PrintColorAt - 15 27 0 8
-rem PrintColorAt - 15 28 0 8
-rem PrintColorAt - 15 29 0 8
-rem PrintColorAt - 15 30 0 8
-rem PrintColorAt - 15 31 0 8
-rem PrintColorAt - 15 32 0 8
-rem PrintColorAt - 15 33 0 8
-rem PrintColorAt - 15 34 0 8
-rem PrintColorAt - 15 35 0 8
-rem PrintColorAt - 15 36 0 8
-rem PrintColorAt - 15 37 0 8
-rem PrintColorAt - 15 38 0 8
-rem PrintColorAt - 15 39 0 8
-rem PrintColorAt - 15 40 0 8
-rem PrintColorAt - 15 41 0 8
-rem PrintColorAt - 15 42 0 8
-rem PrintColorAt - 15 43 0 8
-rem PrintColorAt - 15 44 0 8
-rem PrintColorAt - 15 45 0 8
-rem PrintColorAt - 15 46 0 8
-rem PrintColorAt - 15 47 0 8
-rem PrintColorAt - 15 48 0 8
-rem PrintColorAt - 15 49 0 8
-rem PrintColorAt - 15 50 0 8
-rem PrintColorAt - 15 51 0 8
-rem PrintColorAt - 15 52 0 8
-rem PrintColorAt - 15 53 0 8
-rem PrintColorAt - 15 54 0 8
-rem PrintColorAt - 15 55 0 8
-rem PrintColorAt - 15 56 0 8
-rem PrintColorAt } 7 56 0 8
-rem PrintColorAt } 8 56 0 8
-rem PrintColorAt } 9 56 0 8
-rem PrintColorAt } 10 56 0 8
-rem PrintColorAt } 11 56 0 8
-rem PrintColorAt } 12 56 0 8
-rem PrintColorAt } 13 56 0 8
-rem PrintColorAt } 14 56 0 8
-rem PrintColorAt } 15 56 0 8
-rem ShadeBoxAt 7 57 10 1 1
-rem ShadeBoxAt 16 18 1 40 1
-rem PrintColorAt : 7 36 0 0
-rem PrintColorAt : 8 36 0 0
-rem PrintColorAt : 9 36 0 0
-rem PrintColorAt : 10 36 0 0
-rem PrintColorAt : 11 36 0 0
-rem PrintColorAt : 12 36 0 0
-rem PrintColorAt : 13 36 0 0
-rem PrintColorAt : 14 36 0 0
 rem PrintColorAt %answer1% 8 39 15 1
 rem PrintColorAt %mathinput% 8 43 15 1
 rem MouseCMD 19,7,21,7 19,9,21,9 19,11,21,11 19,13,21,13 23,7,25,7 23,9,25,9 23,11,25,11 23,13,25,13 27,7,29,7 17,6,19,6 1,16,120,30 2,1,5,1 get
 echo:%result%>C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\calc2.txt
-if %result%==LEQ 9 goto ahnsar3
+if %result%==LEQ 9 goto ahnsar4
 if %result%==10 goto gui
 if %result%==11 goto gui
 if %result%==12 goto gui 
 if %result%==0 goto CLI
 
-
-:ahnsar
+:ahnsar4
 set /p mathinput=<C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\mathinput.txt
 set /p answer1=<C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\calc.txt
 set /p answer2=<C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\calc2.txt
 goto dividecommand
 
-
-
-
-
-
-
-
 :addcommand
-rem PaintScreen 15
-rem ShadeBoxAt 3 1 27 120 2
-rem ShadeBoxAt 1 33 2 87 1
-rem ShadeBoxAt 2 34 1 87 2
-rem ShadeBoxAt 2 1 1 87 1
-rem Locate 25 1
-rem PrintCenter Welcome to Jason Jaguar 2.0! Check out the beta features and menus. 13 0 9
-rem ShadeBoxAt 14 28 1 66 1
-rem ShadeBoxAt 13 93 1 1 1
-rem PrintColorAt Jason Jaguar 2.0 GUI Beta VerTwo 1 88 0 9
-rem PrintColorAt Welcome, %usar%. :) 29 1 15 1
-rem PrintColorAt {@@} 1 2 0 9
-rem rem Last color value is box, first is text, first real value is height,
-rem rem second one is width
-rem rem WIDTH THEN HEIGHT FOR COORDINATES THOUGH
-rem PrintColorAt MenuTest 1 8 0 9
-rem PrintColorAt Legacy 1 18 0 9
-rem PrintColorAt Folder System 1 26 0 9
-rem PrintColorAt Reload Desktop 1 41 0 9 
-rem Locate 8 12
-rem ShadeBoxAt 6 17 10 40 4
-rem ShadeBoxAt 12 20 1 2 4
-rem PrintColorAt .1. 7 19 15 1
-rem PrintColorAt .2. 9 19 15 1
-rem PrintColorAt .3. 11 19 15 1
-rem PrintColorAt .4. 13 19 15 1 
-rem PrintColorAt .5. 7 23 15 1
-rem PrintColorAt .6. 9 23 15 1
-rem PrintColorAt .7. 11 23 15 1
-rem PrintColorAt .8. 13 23 15 1
-rem PrintColorAt .9. 7 27 15 1
-rem PrintColorAt ./. 13 31 15 1
-rem PrintColorAt .+. 7 31 15 1
-rem PrintColorAt .-. 9 31 15 1
-rem PrintColorAt .*. 11 31 15 1
-rem PrintColorAt *X* 6 17 15 12
-rem PrintColorAt Jason Jaguar - 2.0 GUI Calculator {/} 6 20 0 9
-rem PrintColorAt { 7 17 0 8
-rem PrintColorAt { 8 17 0 8
-rem PrintColorAt { 9 17 0 8
-rem PrintColorAt { 10 17 0 8
-rem PrintColorAt { 11 17 0 8
-rem PrintColorAt { 12 17 0 8
-rem PrintColorAt { 13 17 0 8
-rem PrintColorAt { 14 17 0 8
-rem PrintColorAt { 15 17 0 8
-rem PrintColorAt - 15 18 0 8
-rem PrintColorAt - 15 19 0 8
-rem PrintColorAt - 15 20 0 8
-rem PrintColorAt - 15 21 0 8
-rem PrintColorAt - 15 22 0 8
-rem PrintColorAt - 15 23 0 8
-rem PrintColorAt - 15 24 0 8
-rem PrintColorAt - 15 25 0 8
-rem PrintColorAt - 15 26 0 8
-rem PrintColorAt - 15 27 0 8
-rem PrintColorAt - 15 28 0 8
-rem PrintColorAt - 15 29 0 8
-rem PrintColorAt - 15 30 0 8
-rem PrintColorAt - 15 31 0 8
-rem PrintColorAt - 15 32 0 8
-rem PrintColorAt - 15 33 0 8
-rem PrintColorAt - 15 34 0 8
-rem PrintColorAt - 15 35 0 8
-rem PrintColorAt - 15 36 0 8
-rem PrintColorAt - 15 37 0 8
-rem PrintColorAt - 15 38 0 8
-rem PrintColorAt - 15 39 0 8
-rem PrintColorAt - 15 40 0 8
-rem PrintColorAt - 15 41 0 8
-rem PrintColorAt - 15 42 0 8
-rem PrintColorAt - 15 43 0 8
-rem PrintColorAt - 15 44 0 8
-rem PrintColorAt - 15 45 0 8
-rem PrintColorAt - 15 46 0 8
-rem PrintColorAt - 15 47 0 8
-rem PrintColorAt - 15 48 0 8
-rem PrintColorAt - 15 49 0 8
-rem PrintColorAt - 15 50 0 8
-rem PrintColorAt - 15 51 0 8
-rem PrintColorAt - 15 52 0 8
-rem PrintColorAt - 15 53 0 8
-rem PrintColorAt - 15 54 0 8
-rem PrintColorAt - 15 55 0 8
-rem PrintColorAt - 15 56 0 8
-rem PrintColorAt } 7 56 0 8
-rem PrintColorAt } 8 56 0 8
-rem PrintColorAt } 9 56 0 8
-rem PrintColorAt } 10 56 0 8
-rem PrintColorAt } 11 56 0 8
-rem PrintColorAt } 12 56 0 8
-rem PrintColorAt } 13 56 0 8
-rem PrintColorAt } 14 56 0 8
-rem PrintColorAt } 15 56 0 8
-rem ShadeBoxAt 7 57 10 1 1
-rem ShadeBoxAt 16 18 1 40 1
-rem PrintColorAt : 7 36 0 0
-rem PrintColorAt : 8 36 0 0
-rem PrintColorAt : 9 36 0 0
-rem PrintColorAt : 10 36 0 0
-rem PrintColorAt : 11 36 0 0
-rem PrintColorAt : 12 36 0 0
-rem PrintColorAt : 13 36 0 0
-rem PrintColorAt : 14 36 0 0
 rem Add %answer1% %answer2%
-rem printColorAt your answer is %result% 10 39 15 1
+rem PrintColorAt %answer2% 8 47 15 1
+rem PrintColorAt your answer is: 10 39 15 1
+rem PrintColorAt %result% 12 39 15 1
 rem MouseCMD 19,7,21,7 19,9,21,9 19,11,21,11 19,13,21,13 23,7,25,7 23,9,25,9 23,11,25,11 23,13,25,13 27,7,29,7 17,6,19,6 1,16,120,30 2,1,5,1 get
 if %result%==LEQ 9 goto gyobah4
 if %result%==10 goto gui
@@ -2571,118 +1603,14 @@ if %result%==11 goto gui
 if %result%==12 goto gui
 if %result%==0 goto CLI
 
-
 :gyobah4
 goto mahincalc
 
-
 :subtractcommand
-rem PaintScreen 15
-rem ShadeBoxAt 3 1 27 120 2
-rem ShadeBoxAt 1 33 2 87 1
-rem ShadeBoxAt 2 34 1 87 2
-rem ShadeBoxAt 2 1 1 87 1
-rem Locate 25 1
-rem PrintCenter Welcome to Jason Jaguar 2.0! Check out the beta features and menus. 13 0 9
-rem ShadeBoxAt 14 28 1 66 1
-rem ShadeBoxAt 13 93 1 1 1
-rem PrintColorAt Jason Jaguar 2.0 GUI Beta VerTwo 1 88 0 9
-rem PrintColorAt Welcome, %usar%. :) 29 1 15 1
-rem PrintColorAt {@@} 1 2 0 9
-rem rem Last color value is box, first is text, first real value is height,
-rem rem second one is width
-rem rem WIDTH THEN HEIGHT FOR COORDINATES THOUGH
-rem PrintColorAt MenuTest 1 8 0 9
-rem PrintColorAt Legacy 1 18 0 9
-rem PrintColorAt Folder System 1 26 0 9
-rem PrintColorAt Reload Desktop 1 41 0 9 
-rem Locate 8 12
-rem ShadeBoxAt 6 17 10 40 4
-rem ShadeBoxAt 12 20 1 2 4
-rem PrintColorAt .1. 7 19 15 1
-rem PrintColorAt .2. 9 19 15 1
-rem PrintColorAt .3. 11 19 15 1
-rem PrintColorAt .4. 13 19 15 1 
-rem PrintColorAt .5. 7 23 15 1
-rem PrintColorAt .6. 9 23 15 1
-rem PrintColorAt .7. 11 23 15 1
-rem PrintColorAt .8. 13 23 15 1
-rem PrintColorAt .9. 7 27 15 1
-rem PrintColorAt ./. 13 31 15 1
-rem PrintColorAt .+. 7 31 15 1
-rem PrintColorAt .-. 9 31 15 1
-rem PrintColorAt .*. 11 31 15 1
-rem PrintColorAt *X* 6 17 15 12
-rem PrintColorAt Jason Jaguar - 2.0 GUI Calculator {/} 6 20 0 9
-rem PrintColorAt { 7 17 0 8
-rem PrintColorAt { 8 17 0 8
-rem PrintColorAt { 9 17 0 8
-rem PrintColorAt { 10 17 0 8
-rem PrintColorAt { 11 17 0 8
-rem PrintColorAt { 12 17 0 8
-rem PrintColorAt { 13 17 0 8
-rem PrintColorAt { 14 17 0 8
-rem PrintColorAt { 15 17 0 8
-rem PrintColorAt - 15 18 0 8
-rem PrintColorAt - 15 19 0 8
-rem PrintColorAt - 15 20 0 8
-rem PrintColorAt - 15 21 0 8
-rem PrintColorAt - 15 22 0 8
-rem PrintColorAt - 15 23 0 8
-rem PrintColorAt - 15 24 0 8
-rem PrintColorAt - 15 25 0 8
-rem PrintColorAt - 15 26 0 8
-rem PrintColorAt - 15 27 0 8
-rem PrintColorAt - 15 28 0 8
-rem PrintColorAt - 15 29 0 8
-rem PrintColorAt - 15 30 0 8
-rem PrintColorAt - 15 31 0 8
-rem PrintColorAt - 15 32 0 8
-rem PrintColorAt - 15 33 0 8
-rem PrintColorAt - 15 34 0 8
-rem PrintColorAt - 15 35 0 8
-rem PrintColorAt - 15 36 0 8
-rem PrintColorAt - 15 37 0 8
-rem PrintColorAt - 15 38 0 8
-rem PrintColorAt - 15 39 0 8
-rem PrintColorAt - 15 40 0 8
-rem PrintColorAt - 15 41 0 8
-rem PrintColorAt - 15 42 0 8
-rem PrintColorAt - 15 43 0 8
-rem PrintColorAt - 15 44 0 8
-rem PrintColorAt - 15 45 0 8
-rem PrintColorAt - 15 46 0 8
-rem PrintColorAt - 15 47 0 8
-rem PrintColorAt - 15 48 0 8
-rem PrintColorAt - 15 49 0 8
-rem PrintColorAt - 15 50 0 8
-rem PrintColorAt - 15 51 0 8
-rem PrintColorAt - 15 52 0 8
-rem PrintColorAt - 15 53 0 8
-rem PrintColorAt - 15 54 0 8
-rem PrintColorAt - 15 55 0 8
-rem PrintColorAt - 15 56 0 8
-rem PrintColorAt } 7 56 0 8
-rem PrintColorAt } 8 56 0 8
-rem PrintColorAt } 9 56 0 8
-rem PrintColorAt } 10 56 0 8
-rem PrintColorAt } 11 56 0 8
-rem PrintColorAt } 12 56 0 8
-rem PrintColorAt } 13 56 0 8
-rem PrintColorAt } 14 56 0 8
-rem PrintColorAt } 15 56 0 8
-rem ShadeBoxAt 7 57 10 1 1
-rem ShadeBoxAt 16 18 1 40 1
-rem PrintColorAt : 7 36 0 0
-rem PrintColorAt : 8 36 0 0
-rem PrintColorAt : 9 36 0 0
-rem PrintColorAt : 10 36 0 0
-rem PrintColorAt : 11 36 0 0
-rem PrintColorAt : 12 36 0 0
-rem PrintColorAt : 13 36 0 0
-rem PrintColorAt : 14 36 0 0
 rem Subtract %answer1% %answer2%
-rem printColorAt your answer is %result% 10 39 15 1
+rem PrintColorAt %answer2% 8 47 15 1
+rem PrintColorAt your answer is: 10 39 15 1
+rem PrintColorAt %result% 12 39 15 1
 rem MouseCMD 19,7,21,7 19,9,21,9 19,11,21,11 19,13,21,13 23,7,25,7 23,9,25,9 23,11,25,11 23,13,25,13 27,7,29,7 17,6,19,6 1,16,120,30 2,1,5,1 get
 if %result%==LEQ 9 goto gyobah3
 if %result%==10 goto gui
@@ -2690,117 +1618,14 @@ if %result%==11 goto gui
 if %result%==12 goto gui
 if %result%==0 goto CLI
 
-
 :gyobah3
 goto mahincalc
 
 :multiplycommand
-rem PaintScreen 15
-rem ShadeBoxAt 3 1 27 120 2
-rem ShadeBoxAt 1 33 2 87 1
-rem ShadeBoxAt 2 34 1 87 2
-rem ShadeBoxAt 2 1 1 87 1
-rem Locate 25 1
-rem PrintCenter Welcome to Jason Jaguar 2.0! Check out the beta features and menus. 13 0 9
-rem ShadeBoxAt 14 28 1 66 1
-rem ShadeBoxAt 13 93 1 1 1
-rem PrintColorAt Jason Jaguar 2.0 GUI Beta VerTwo 1 88 0 9
-rem PrintColorAt Welcome, %usar%. :) 29 1 15 1
-rem PrintColorAt {@@} 1 2 0 9
-rem rem Last color value is box, first is text, first real value is height,
-rem rem second one is width
-rem rem WIDTH THEN HEIGHT FOR COORDINATES THOUGH
-rem PrintColorAt MenuTest 1 8 0 9
-rem PrintColorAt Legacy 1 18 0 9
-rem PrintColorAt Folder System 1 26 0 9
-rem PrintColorAt Reload Desktop 1 41 0 9 
-rem Locate 8 12
-rem ShadeBoxAt 6 17 10 40 4
-rem ShadeBoxAt 12 20 1 2 4
-rem PrintColorAt .1. 7 19 15 1
-rem PrintColorAt .2. 9 19 15 1
-rem PrintColorAt .3. 11 19 15 1
-rem PrintColorAt .4. 13 19 15 1 
-rem PrintColorAt .5. 7 23 15 1
-rem PrintColorAt .6. 9 23 15 1
-rem PrintColorAt .7. 11 23 15 1
-rem PrintColorAt .8. 13 23 15 1
-rem PrintColorAt .9. 7 27 15 1
-rem PrintColorAt ./. 13 31 15 1
-rem PrintColorAt .+. 7 31 15 1
-rem PrintColorAt .-. 9 31 15 1
-rem PrintColorAt .*. 11 31 15 1
-rem PrintColorAt *X* 6 17 15 12
-rem PrintColorAt Jason Jaguar - 2.0 GUI Calculator {/} 6 20 0 9
-rem PrintColorAt { 7 17 0 8
-rem PrintColorAt { 8 17 0 8
-rem PrintColorAt { 9 17 0 8
-rem PrintColorAt { 10 17 0 8
-rem PrintColorAt { 11 17 0 8
-rem PrintColorAt { 12 17 0 8
-rem PrintColorAt { 13 17 0 8
-rem PrintColorAt { 14 17 0 8
-rem PrintColorAt { 15 17 0 8
-rem PrintColorAt - 15 18 0 8
-rem PrintColorAt - 15 19 0 8
-rem PrintColorAt - 15 20 0 8
-rem PrintColorAt - 15 21 0 8
-rem PrintColorAt - 15 22 0 8
-rem PrintColorAt - 15 23 0 8
-rem PrintColorAt - 15 24 0 8
-rem PrintColorAt - 15 25 0 8
-rem PrintColorAt - 15 26 0 8
-rem PrintColorAt - 15 27 0 8
-rem PrintColorAt - 15 28 0 8
-rem PrintColorAt - 15 29 0 8
-rem PrintColorAt - 15 30 0 8
-rem PrintColorAt - 15 31 0 8
-rem PrintColorAt - 15 32 0 8
-rem PrintColorAt - 15 33 0 8
-rem PrintColorAt - 15 34 0 8
-rem PrintColorAt - 15 35 0 8
-rem PrintColorAt - 15 36 0 8
-rem PrintColorAt - 15 37 0 8
-rem PrintColorAt - 15 38 0 8
-rem PrintColorAt - 15 39 0 8
-rem PrintColorAt - 15 40 0 8
-rem PrintColorAt - 15 41 0 8
-rem PrintColorAt - 15 42 0 8
-rem PrintColorAt - 15 43 0 8
-rem PrintColorAt - 15 44 0 8
-rem PrintColorAt - 15 45 0 8
-rem PrintColorAt - 15 46 0 8
-rem PrintColorAt - 15 47 0 8
-rem PrintColorAt - 15 48 0 8
-rem PrintColorAt - 15 49 0 8
-rem PrintColorAt - 15 50 0 8
-rem PrintColorAt - 15 51 0 8
-rem PrintColorAt - 15 52 0 8
-rem PrintColorAt - 15 53 0 8
-rem PrintColorAt - 15 54 0 8
-rem PrintColorAt - 15 55 0 8
-rem PrintColorAt - 15 56 0 8
-rem PrintColorAt } 7 56 0 8
-rem PrintColorAt } 8 56 0 8
-rem PrintColorAt } 9 56 0 8
-rem PrintColorAt } 10 56 0 8
-rem PrintColorAt } 11 56 0 8
-rem PrintColorAt } 12 56 0 8
-rem PrintColorAt } 13 56 0 8
-rem PrintColorAt } 14 56 0 8
-rem PrintColorAt } 15 56 0 8
-rem ShadeBoxAt 7 57 10 1 1
-rem ShadeBoxAt 16 18 1 40 1
-rem PrintColorAt : 7 36 0 0
-rem PrintColorAt : 8 36 0 0
-rem PrintColorAt : 9 36 0 0
-rem PrintColorAt : 10 36 0 0
-rem PrintColorAt : 11 36 0 0
-rem PrintColorAt : 12 36 0 0
-rem PrintColorAt : 13 36 0 0
-rem PrintColorAt : 14 36 0 0
 rem Multiply %answer1% %answer2%
-rem printColorAt your answer is %result% 10 39 15 1
+rem PrintColorAt %answer2% 8 47 15 1
+rem PrintColorAt your answer is: 10 39 15 1
+rem PrintColorAt %result% 12 39 15 1
 rem MouseCMD 19,7,21,7 19,9,21,9 19,11,21,11 19,13,21,13 23,7,25,7 23,9,25,9 23,11,25,11 23,13,25,13 27,7,29,7 17,6,19,6 1,16,120,30 2,1,5,1 get
 if %result%==LEQ 9 goto gyobah2
 if %result%==10 goto gui
@@ -2812,112 +1637,10 @@ if %result%==0 goto CLI
 goto mahincalc
 
 :dividecommand
-rem PaintScreen 15
-rem ShadeBoxAt 3 1 27 120 2
-rem ShadeBoxAt 1 33 2 87 1
-rem ShadeBoxAt 2 34 1 87 2
-rem ShadeBoxAt 2 1 1 87 1
-rem Locate 25 1
-rem PrintCenter Welcome to Jason Jaguar 2.0! Check out the beta features and menus. 13 0 9
-rem ShadeBoxAt 14 28 1 66 1
-rem ShadeBoxAt 13 93 1 1 1
-rem PrintColorAt Jason Jaguar 2.0 GUI Beta VerTwo 1 88 0 9
-rem PrintColorAt Welcome, %usar%. :) 29 1 15 1
-rem PrintColorAt {@@} 1 2 0 9
-rem rem Last color value is box, first is text, first real value is height,
-rem rem second one is width
-rem rem WIDTH THEN HEIGHT FOR COORDINATES THOUGH
-rem PrintColorAt MenuTest 1 8 0 9
-rem PrintColorAt Legacy 1 18 0 9
-rem PrintColorAt Folder System 1 26 0 9
-rem PrintColorAt Reload Desktop 1 41 0 9 
-rem Locate 8 12
-rem ShadeBoxAt 6 17 10 40 4
-rem ShadeBoxAt 12 20 1 2 4
-rem PrintColorAt .1. 7 19 15 1
-rem PrintColorAt .2. 9 19 15 1
-rem PrintColorAt .3. 11 19 15 1
-rem PrintColorAt .4. 13 19 15 1 
-rem PrintColorAt .5. 7 23 15 1
-rem PrintColorAt .6. 9 23 15 1
-rem PrintColorAt .7. 11 23 15 1
-rem PrintColorAt .8. 13 23 15 1
-rem PrintColorAt .9. 7 27 15 1
-rem PrintColorAt ./. 13 31 15 1
-rem PrintColorAt .+. 7 31 15 1
-rem PrintColorAt .-. 9 31 15 1
-rem PrintColorAt .*. 11 31 15 1
-rem PrintColorAt *X* 6 17 15 12
-rem PrintColorAt Jason Jaguar - 2.0 GUI Calculator {/} 6 20 0 9
-rem PrintColorAt { 7 17 0 8
-rem PrintColorAt { 8 17 0 8
-rem PrintColorAt { 9 17 0 8
-rem PrintColorAt { 10 17 0 8
-rem PrintColorAt { 11 17 0 8
-rem PrintColorAt { 12 17 0 8
-rem PrintColorAt { 13 17 0 8
-rem PrintColorAt { 14 17 0 8
-rem PrintColorAt { 15 17 0 8
-rem PrintColorAt - 15 18 0 8
-rem PrintColorAt - 15 19 0 8
-rem PrintColorAt - 15 20 0 8
-rem PrintColorAt - 15 21 0 8
-rem PrintColorAt - 15 22 0 8
-rem PrintColorAt - 15 23 0 8
-rem PrintColorAt - 15 24 0 8
-rem PrintColorAt - 15 25 0 8
-rem PrintColorAt - 15 26 0 8
-rem PrintColorAt - 15 27 0 8
-rem PrintColorAt - 15 28 0 8
-rem PrintColorAt - 15 29 0 8
-rem PrintColorAt - 15 30 0 8
-rem PrintColorAt - 15 31 0 8
-rem PrintColorAt - 15 32 0 8
-rem PrintColorAt - 15 33 0 8
-rem PrintColorAt - 15 34 0 8
-rem PrintColorAt - 15 35 0 8
-rem PrintColorAt - 15 36 0 8
-rem PrintColorAt - 15 37 0 8
-rem PrintColorAt - 15 38 0 8
-rem PrintColorAt - 15 39 0 8
-rem PrintColorAt - 15 40 0 8
-rem PrintColorAt - 15 41 0 8
-rem PrintColorAt - 15 42 0 8
-rem PrintColorAt - 15 43 0 8
-rem PrintColorAt - 15 44 0 8
-rem PrintColorAt - 15 45 0 8
-rem PrintColorAt - 15 46 0 8
-rem PrintColorAt - 15 47 0 8
-rem PrintColorAt - 15 48 0 8
-rem PrintColorAt - 15 49 0 8
-rem PrintColorAt - 15 50 0 8
-rem PrintColorAt - 15 51 0 8
-rem PrintColorAt - 15 52 0 8
-rem PrintColorAt - 15 53 0 8
-rem PrintColorAt - 15 54 0 8
-rem PrintColorAt - 15 55 0 8
-rem PrintColorAt - 15 56 0 8
-rem PrintColorAt } 7 56 0 8
-rem PrintColorAt } 8 56 0 8
-rem PrintColorAt } 9 56 0 8
-rem PrintColorAt } 10 56 0 8
-rem PrintColorAt } 11 56 0 8
-rem PrintColorAt } 12 56 0 8
-rem PrintColorAt } 13 56 0 8
-rem PrintColorAt } 14 56 0 8
-rem PrintColorAt } 15 56 0 8
-rem ShadeBoxAt 7 57 10 1 1
-rem ShadeBoxAt 16 18 1 40 1
-rem PrintColorAt : 7 36 0 0
-rem PrintColorAt : 8 36 0 0
-rem PrintColorAt : 9 36 0 0
-rem PrintColorAt : 10 36 0 0
-rem PrintColorAt : 11 36 0 0
-rem PrintColorAt : 12 36 0 0
-rem PrintColorAt : 13 36 0 0
-rem PrintColorAt : 14 36 0 0
 rem Divide %answer1% %answer2%
-rem printColorAt your answer is %result% 10 39 15 1
+rem PrintColorAt %answer2% 8 47 15 1
+rem PrintColorAt your answer is: 10 39 15 1
+rem PrintColorAt %result% 12 39 15 1
 rem MouseCMD 19,7,21,7 19,9,21,9 19,11,21,11 19,13,21,13 23,7,25,7 23,9,25,9 23,11,25,11 23,13,25,13 27,7,29,7 17,6,19,6 1,16,120,30 2,1,5,1 get
 if %result%==LEQ 9 goto gyobah
 if %result%==10 goto gui
@@ -2925,10 +1648,8 @@ if %result%==11 goto gui
 if %result%==12 goto gui
 if %result%==0 goto CLI
 
-
 :gyobah
 goto mahincalc
-
 
 
 
