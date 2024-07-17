@@ -1,7 +1,7 @@
 @ECHO OFF
 REM BFCPEOPTIONSTART
 REM Advanced BAT to EXE Converter www.BatToExeConverter.com
-REM BFCPEEXE=C:\Users\jason\OneDrive\Desktop\Jason Jaguar Operating System 2.0 Early Beta (Software Compatibility Release).exe
+REM BFCPEEXE=C:\Users\jason\OneDrive\Desktop\Jason Jaguar Operating System 2.1.1 Beta Update Release.exe
 REM BFCPEICON=C:\Program Files (x86)\Advanced BAT to EXE Converter v4.61\ab2econv461\icons\windows_95_98_logo_with_shading_by_archi_techi_d8x2ybr_fullview_6Jn_icon.ico
 REM BFCPEICONINDEX=-1
 REM BFCPEEMBEDDISPLAY=0
@@ -9,8 +9,8 @@ REM BFCPEEMBEDDELETE=1
 REM BFCPEADMINEXE=0
 REM BFCPEINVISEXE=0
 REM BFCPEVERINCLUDE=1
-REM BFCPEVERVERSION=0.2.1.0
-REM BFCPEVERPRODUCT=Jason Jaguar OS 2.0.1 GUI UPDATE
+REM BFCPEVERVERSION=0.2.1.1
+REM BFCPEVERPRODUCT=Jason Jaguar OS 2.1.1 GUI UPDATE
 REM BFCPEVERDESC=A beta for our GUI, don't leak!
 REM BFCPEVERCOMPANY=Jason Jaguar Inc. 
 REM BFCPEVERCOPYRIGHT=Copyright Info
@@ -18,7 +18,7 @@ REM BFCPEWINDOWCENTER=1
 REM BFCPEDISABLEQE=0
 REM BFCPEWINDOWHEIGHT=30
 REM BFCPEWINDOWWIDTH=120
-REM BFCPEWTITLE=Jason Jaguar 2.0.1 GUI UPDATE
+REM BFCPEWTITLE=Jason Jaguar 2.1.1 GUI UPDATE
 REM BFCPEOPTIONEND
 @echo off
 
@@ -415,7 +415,7 @@ rem ShadeBoxAt 18 41 1 40 2
 rem Wait 500
 rem ClearColor
 rem Locate 30 1
-rem PrintCenter 2.0 OPERATING GUI 24 0 9
+rem PrintCenter 2.1.1 OPERATING GUI 24 0 9
 pause
 goto madepass
 
@@ -430,7 +430,7 @@ rem PaintScreen 1
 rem ShadeBoxAt 6 17 10 40 4
 rem ShadeBoxAt 12 20 1 2 4
 rem PrintColorAt *X* 6 17 15 12
-rem PrintColorAt Jason Jaguar - 2.0 GUI Environment{/} 6 20 0 9
+rem PrintColorAt Jason Jaguar - 2.1 GUI Environment{/} 6 20 0 9
 rem PrintColorAt { 7 17 0 8
 rem PrintColorAt { 8 17 0 8
 rem PrintColorAt { 9 17 0 8
@@ -491,7 +491,7 @@ rem PrintColorAt } 15 56 0 8
 rem ShadeBoxAt 7 57 10 1 1
 rem ShadeBoxAt 16 18 1 40 1
 rem ShadeBoxAt 13 20 1 34 3
-rem PrintColorAt Welcome to Jason Jaguar 2.0 :) 9 19 15 1
+rem PrintColorAt Welcome to Jason Jaguar 2.1.1 :) 9 19 15 1
 rem PrintColorAt Input your username: 12 19 15 1
 rem PrintColorAt { 13 19 0 9
 rem GetInput
@@ -557,7 +557,7 @@ pause
 cls
 rem PaintScreen 1
 set /p usar=<C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\UserPass\username.txt
-rem PrintCenter Great, welcome %usar%. Enjoy Jason Jaguar 2.0 :) 15 15 0
+rem PrintCenter Great, welcome %usar%. Enjoy Jason Jaguar 2.1.1 :) 15 15 0
 echo.
 pause
 goto loadingsys
@@ -569,7 +569,7 @@ rem WHEN MAKING VARIABLES, NO UPPERCASE, WHEN MAKING EQUALS FOR OPTION, NO SPACE
 :loadingsys
 cls
 set /p usar=<C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\UserPass\username.txt
-rem PrintCenter Loading Jason Jaguar 2.0 GUI Environment... 21 0 9
+rem PrintCenter Loading Jason Jaguar 2.1.1 GUI Environment... 21 0 9
 rem CenterSelf
 set FGcol=10
 rem ChangeColor %FGcol% 0
@@ -628,7 +628,7 @@ goto gui
 
 :gui
 set /p usar=<C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\UserPass\username.txt
-title Jason Jaguar 2.0 GUI
+title Jason Jaguar 2.1.1 GUI
 cls
 rem PaintScreen 15
 rem ShadeBoxAt 3 1 27 120 2
@@ -636,10 +636,10 @@ rem ShadeBoxAt 1 33 2 87 1
 rem ShadeBoxAt 2 34 1 87 2
 rem ShadeBoxAt 2 1 1 87 1
 rem Locate 25 1
-rem PrintCenter Welcome to Jason Jaguar 2.0! Check out the beta features and menus. 13 0 9
-rem ShadeBoxAt 14 28 1 66 1
-rem ShadeBoxAt 13 93 1 1 1
-rem PrintColorAt Jason Jaguar 2.0 GUI Beta VerTwo 1 88 0 9
+rem PrintCenter Welcome to Jason Jaguar 2.1 :) Check out the beta features and menus. 13 0 9
+rem ShadeBoxAt 14 27 1 69 1
+rem ShadeBoxAt 13 95 1 1 1
+rem PrintColorAt Jason Jaguar 2.1.1 GUI Beta Ver11 1 88 0 9
 rem PrintColorAt Welcome, %usar%. :) 29 1 15 1
 rem PrintColorAt {@@} 1 2 0 9
 rem rem Last color value is box, first is text, first real value is height,
@@ -728,13 +728,13 @@ if %result%==0 goto CLI
 :info
 cls
 echo.================================
-echo     Jason Jaguar__OS_2.0__GUI
+echo     Jason Jaguar__OS_2.1.1__GUI
 echo.================================
 wmic computersystem get manufacturer,model,name >C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\sysinfo.txt
 wmic cpu get name,numberofcores >>C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\sysinfo.txt
 wmic bios get manufacturer,serialnumber,smbiosbiosversion >>C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\sysinfo.txt
 wmic memorychip where "devicelocator != 'SYSTEM ROM'" get capacity,devicelocator,manufacturer,partnumber >>C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\sysinfo.txt
-ECHO OS: Jason Jaguar 2.0.1 Graphical User Shell >>C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\sysinfo.txt
+ECHO OS: Jason Jaguar 2.1.1 Graphical User Shell >>C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\sysinfo.txt
 wmic diskdrive get index,firmwarerevision,model,size >>C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\sysinfo.txt
 wmic logicaldisk get description,deviceid,freespace,size,volumename >>C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\sysinfo.txt
 wmic NIC where "physicaladapter=TRUE" get MACAddress,ProductName | findstr /v /C:"Virtual" >>C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\sysinfo.txt
@@ -756,7 +756,7 @@ rem ShadeBoxAt 2 2 23 23 2
 rem ShadeBoxAt 6 17 10 40 4
 rem ShadeBoxAt 12 20 1 2 4
 rem PrintColorAt *X* 6 17 15 12
-rem PrintColorAt Jason Jaguar - 2.0 GUI Environment{/} 6 20 0 9
+rem PrintColorAt Jason Jaguar - 2.1 GUI Environment{/} 6 20 0 9
 rem PrintColorAt { 7 17 0 8
 rem PrintColorAt { 8 17 0 8
 rem PrintColorAt { 9 17 0 8
@@ -814,7 +814,7 @@ rem PrintColorAt } 12 56 0 8
 rem PrintColorAt } 13 56 0 8
 rem PrintColorAt } 14 56 0 8
 rem PrintColorAt } 15 56 0 8
-rem PrintColorAt Jason Jaguar 2.0 Beta Build Ver Two 9 19 15 1
+rem PrintColorAt Jason Jaguar 2.1.1 Beta Build Update 9 19 15 1
 rem PrintColorAt Technical Demonstration Test 12 22 15 1
 rem ShadeBoxAt 7 57 10 1 1
 rem ShadeBoxAt 16 18 1 40 1
@@ -835,7 +835,7 @@ set mytime=%time%
 rem ShadeBoxAt 6 17 10 40 4
 rem ShadeBoxAt 12 20 1 2 4
 rem PrintColorAt *X* 6 17 15 12
-rem PrintColorAt Jason Jaguar - 2.0 GUI Environment{/} 6 20 0 9
+rem PrintColorAt Jason Jaguar - 2.1 GUI Environment{/} 6 20 0 9
 rem PrintColorAt { 7 17 0 8
 rem PrintColorAt { 8 17 0 8
 rem PrintColorAt { 9 17 0 8
@@ -967,7 +967,7 @@ if %result%==6 goto gui
 if %result%==7 goto calcu
 if %result%==8 goto word
 if %result%==9 goto CL
-if %result%==10 goto filesys
+if %result%==10 goto backupfilesys
 if %result%==11 goto gui
 if %result%==0 goto CLI
 
@@ -1056,27 +1056,44 @@ goto CLI
 color 0a
 echo.
 echo.
-echo Jason Jaguar, Ver. 2.0 Command Line Interface
+echo Jason Jaguar, Ver. 2.1.1 Command Line Interface
 set /p CMD=@%usar%jaguarcmd}
   
 if %CMD%==help goto helpcmd
 if %CMD%==? goto helpcmd
 if %CMD%==HELP goto helpcmd
 if %CMD%==RET goto biosboot
+if %CMD%==ret goto biosboot
 if %CMD%==GUI goto gui
+if %CMD%==gui goto gui
 if %CMD%==JAG goto lega
+if %CMD%==jag goto lega
 if %CMD%==ABT goto abt
+if %CMD%==abt goto abt
 if %CMD%==SYS goto infotus
+if %CMD%==sys goto infotus
 if %CMD%==WRD goto word
+if %CMD%==wrd goto word
 if %CMD%==DIR goto directory
+if %CMD%==dir goto directory
 if %CMD%==REM goto remlove
-if %CMD%==FLD goto filesys
+if %CMD%==rem goto remlove
+if %CMD%==FLD goto backupfilesys
+if %CMD%==fld goto backupfilesys
+if %CMD%==TRE goto fyletree
+if %CMD%==tre goto fyletree
 if %CMD%==EXT goto ext
+if %CMD%==ext goto ext
 if %CMD%==CLK goto clk
+if %CMD%==clk goto clk
 if %CMD%==SZE goto sizel
+if %CMD%==sze goto sizel
 if %CMD%==CLC goto calcu
+if %CMD%==clc goto calcu
 if %CMD%==ERR goto chkhelp
+if %CMD%==err goto chkhelp
 if %CMD%==CLS goto ceeelless
+if %CMD%==cls goto ceeelless
 goto chkhelp
 
 
@@ -1089,20 +1106,37 @@ if %CMD%==help goto helpcmd
 if %CMD%==? goto helpcmd
 if %CMD%==HELP goto helpcmd
 if %CMD%==RET goto biosboot
+if %CMD%==ret goto biosboot
 if %CMD%==GUI goto gui
+if %CMD%==gui goto gui
 if %CMD%==JAG goto lega
+if %CMD%==jag goto lega
 if %CMD%==ABT goto abt
+if %CMD%==abt goto abt
 if %CMD%==SYS goto infotus
+if %CMD%==sys goto infotus
 if %CMD%==WRD goto word
+if %CMD%==wrd goto word
 if %CMD%==DIR goto directory
+if %CMD%==dir goto directory
 if %CMD%==REM goto remlove
-if %CMD%==FLD goto filesys
+if %CMD%==rem goto remlove
+if %CMD%==FLD goto backupfilesys
+if %CMD%==fld goto backupfilesys
+if %CMD%==TRE goto fyletree
+if %CMD%==tre goto fyletree
 if %CMD%==EXT goto ext
+if %CMD%==ext goto ext
 if %CMD%==CLK goto clk
+if %CMD%==clk goto clk
 if %CMD%==SZE goto sizel
+if %CMD%==sze goto sizel
 if %CMD%==CLC goto calcu
+if %CMD%==clc goto calcu
 if %CMD%==ERR goto chkhelp
+if %CMD%==err goto chkhelp
 if %CMD%==CLS goto ceeelless
+if %CMD%==cls goto ceeelless
 goto chkhelp
 
 
@@ -1115,8 +1149,9 @@ echo SYS     Displays the system info for the computer.
 echo WRD     Directs the user to the Jason Jaguar Word Processor.
 echo DIR     Lets the user easily make directory folders.
 echo REM     Lets the user easily remove folders if they know the name of the folder.
-echo FLD     Opens the Terminal's Folder Browser App.
-echo EXT     Exits Jason Jaguar 2.0.
+echo TRE     Opens the Terminal's file browser, including an in-depth directory tree for the (A) drive.
+echo FLD     Opens the secondary non-clickable Terminal Folder Browser App.
+echo EXT     Exits Jason Jaguar 2.1.1
 echo CLK     Shows the date and time.
 echo SZE     Displays the size of the Main Storage Drive for Jason Jaguar.
 echo CLC     Directs the user to the calculator.
@@ -1125,7 +1160,7 @@ echo CLS     Clears the Command Terminal menu
 
 
 :chkhelp
-echo ERR. Type "help" for more info.
+echo ERR. Type "help" or "?" for more info.
 goto CLIUS
 
 
@@ -1142,7 +1177,7 @@ ECHO BIOS:
 wmic bios get manufacturer,serialnumber,smbiosbiosversion
 ECHO RAM sticks:
 wmic memorychip where "devicelocator != 'SYSTEM ROM'" get capacity,devicelocator,manufacturer,partnumber
-ECHO OS: Jason Jaguar 2.0.1 Graphical User Shell
+ECHO OS: Jason Jaguar 2.1.1 Graphical User Shell
 ECHO Physical drives:
 wmic diskdrive get index,firmwarerevision,model,size
 ECHO Logical drives:
@@ -1163,16 +1198,22 @@ goto CLIUS
 
 
 :abt
-echo OS: Jason Jaguar 2.0/FileSystem: 1.2
+echo =================================================
+echo OS: Jason Jaguar 2.1.1 Graphical Operating System
+echo.=================================================
+echo.
+echo.====================================
+echo Jason Jaguar FileSystem Version: 1.4
+echo.====================================
 goto CLIUS
 
 
 :directory
 cls
-set /p fyle=What would you like to name the directory folder?:
+set /p fyle=@%usar%jaguarcmd}What would you like to name the directory folder?:
 
 if "%fyle%"=="" (
-  echo Please enter a name and try again.
+  echo @%usar%jaguarcmd}Please enter a name and try again.
   pause
   goto directory
 )
@@ -1189,13 +1230,13 @@ cls
 goto chalm
 
 :chalm
-if exist "C:\JasonJaguarFileSystem\MainStorage(A)\"%fyle%"" echo Folder "%fyle%" created successfully!
+if exist "C:\JasonJaguarFileSystem\MainStorage(A)\"%fyle%"" echo @%usar%jaguarcmd}Directory created successfully.
 goto CLIUS
 if not exist "C:\JasonJaguarFileSystem\MainStorage(A)\"%fyle%"" goto sadface
 
 :sadface
 cls
-echo :( it didn't work
+echo @%usar%jaguarcmd}Directory not found.
 pause
 goto directory
 
@@ -1239,6 +1280,61 @@ goto remlove
 exit
 
 
+:fyletree
+TREE C:\JasonJaguarFileSystem\MainStorage(A) /A /F
+set /p replar=@%usar%jaguarcmd}Open file in any tree directory? Y/N
+
+if %replar% EQU Y goto opanfyle1
+if %replar% EQU y goto opanfyle1
+if %replar% EQU N goto CLIUS
+if %replar% EQU n goto CLIUS
+goto CLIUS
+
+
+:opanfyle1
+cd C:\JasonJaguarFileSystem\MainStorage(A)\
+set /p poan=@%usar%jaguarcmd}Directory name?
+
+if exist %poan% goto tarballs1
+if not exist %poan% goto insalad1
+
+
+:tarballs1
+cd C:\JasonJaguarFileSystem\MainStorage(A)\%poan%
+
+set /p poan2=@%usar%jaguarcmd}File? (Press 0 to return to File Tree and Browser)
+
+if %poan2% == 0 goto fyletree
+if exist %poan2% goto fylevew1
+if not exist %poan2% goto insalad2
+
+
+:fylevew1
+echo.===================================
+echo %poan2%, found in %poan% directory.
+echo.===================================
+echo.
+echo.====================================
+type %poan2%
+echo.===================================
+echo.
+CHOICE /C 1 /N /M "@%usar%jaguarcmd}Press "1" to return to the FileSystem."
+
+IF %ERRORLEVEL% EQU 1 goto fyletree
+goto fyletree
+
+
+:insalad1
+echo @%usar%jaguarcmd}Invalid or insufficient file path.
+goto opanfyle1
+
+:insalad2
+echo @%usar%jaguarcmd}Invalid or insufficient file name.
+goto tarballs1
+
+
+
+
 :clk
 time /t
 date /t
@@ -1257,8 +1353,64 @@ goto CLIUS
 
 
 
-
 :filesys
+cls
+color 0a
+TREE C:\JasonJaguarFileSystem\MainStorage(A) /A /F
+set /p replar=@%usar%jaguarcmd}Open file in any tree directory? Y/N
+
+if %replar% EQU Y goto opanfyle2
+if %replar% EQU y goto opanfyle2
+if %replar% EQU N goto GUI
+if %replar% EQU n goto GUI
+goto GUI
+
+
+:opanfyle2
+cd C:\JasonJaguarFileSystem\MainStorage(A)\
+set /p poan=@%usar%jaguarcmd}Directory name?
+
+if exist %poan% goto tarballs2
+if not exist %poan% goto insalad3
+
+
+:tarballs2
+cd C:\JasonJaguarFileSystem\MainStorage(A)\%poan%
+
+set /p poan2=@%usar%jaguarcmd}File? (Press 0 to return to File Tree and Browser)
+
+if %poan2% == 0 goto filesys
+if exist %poan2% goto fylevew4
+if not exist %poan2% goto insalad4
+
+
+:fylevew4
+echo.===================================
+echo %poan2%, found in %poan% directory.
+echo.===================================
+echo.
+echo.====================================
+type %poan2%
+echo.===================================
+echo.
+CHOICE /C 1 /N /M "@%usar%jaguarcmd}Press "1" to return to the FileSystem."
+
+IF %ERRORLEVEL% EQU 1 goto filesys
+goto filesys
+
+
+:insalad3
+echo @%usar%jaguarcmd}Invalid or insufficient file path.
+goto opanfyle2
+
+:insalad4
+echo @%usar%jaguarcmd}Invalid or insufficient file name.
+goto tarballs2
+
+
+
+
+:backupfilesys
 cd C:\JasonJaguarFileSystem
 
 rem Select a file or folder browsing a directory tree made for Jason Jaguar OS 2.0
@@ -1423,7 +1575,7 @@ rem PrintColorAt .+. 7 31 15 1
 rem PrintColorAt .-. 9 31 15 1
 rem PrintColorAt .*. 11 31 15 1
 rem PrintColorAt *X* 6 17 15 12
-rem PrintColorAt Jason Jaguar - 2.0 GUI Calculator {/} 6 20 0 9
+rem PrintColorAt Jason Jaguar - 2.1 GUI Calculator {/} 6 20 0 9
 rem PrintColorAt { 7 17 0 8
 rem PrintColorAt { 8 17 0 8
 rem PrintColorAt { 9 17 0 8
