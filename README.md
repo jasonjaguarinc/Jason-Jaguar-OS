@@ -11,7 +11,7 @@ HOWEVER, what if we could do something interesting without using these bigger an
 Introducing Jason Jaguar OS! A little batch shell that directs you to different programs I made within just the batch Windows CMD language. No VBScript, no JScript, nothing other than some batch and external commands. What's the best part? It's incredibly integrated, meaning everything you do from startup only requires the user to compile 1 batch file or EXE. I do the rest behind the scenes, making it easy for first-time users to jump right in to Jason Jaguar OS and makes it extremely operational on Windows computers of all varieties. No dropping DLLs in random locations just for one function, no re-routing directories to get things to link properly, this one program in just thousands of lines of Batch + External commands can do the work that takes other Batch Operating Shells more than 10 different "EXE"s and bat files to get running. Try now, make the dream of an easy batch OS a thing of the past!
 
 
-# Programs included for 2.2:
+# Features included for 2.2:
 
 - Inbuilt support for all of Jason Jaguar 1.2.9 and therefore all its apps, as you can run it from the GUI and terminal
 - A non-GUI folder explorer that lets you navigate the Jason Jaguar FileSystem
