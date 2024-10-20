@@ -11,15 +11,21 @@ HOWEVER, what if we could do something interesting without using these bigger an
 Introducing Jason Jaguar OS! A little batch shell that directs you to different programs I made within just the batch Windows CMD language. No VBScript, no JScript, nothing other than some batch and external commands. What's the best part? It's incredibly integrated, meaning everything you do from startup only requires the user to compile 1 batch file or EXE. I do the rest behind the scenes, making it easy for first-time users to jump right in to Jason Jaguar OS and makes it extremely operational on Windows computers of all varieties. No dropping DLLs in random locations just for one function, no re-routing directories to get things to link properly, this one program in just thousands of lines of Batch + External commands can do the work that takes other Batch Operating Shells more than 10 different "EXE"s and bat files to get running. Try now, make the dream of an easy batch OS a thing of the past!
 
 
-# Programs included for 2.1:
+# Programs included for 2.2:
 
 - Inbuilt support for all of Jason Jaguar 1.2.9 and therefore all its apps, as you can run it from the GUI and terminal
 - A non-GUI folder explorer that lets you navigate the Jason Jaguar FileSystem
 - A Systen info log, which in GUI funnels to a .txt doc in the MainStorage(A) drive and in terminal lists it on the screen without sending to a .txt
 - A date & time button, labelled 'Date'.
-- A Single-digit Calculator
+- A Single-digit Calculator that never needs to refresh the screen
 - A batch word processor that lets you write for multiple lines and clear the document to write new things in place on the JAGUARWORD.txt doc saved in the "Documents" folder. The "Documents" folder is stored in the "MainStorage(A)" drive of the "JasonJaguarFileSystem" folder, which is located on the root of your C: drive
-- and a full Jason Jaguar Command Terminal Interface, the first of its kind in Jason Jaguar Operating Shells
+- A full Jason Jaguar Command Terminal Interface, the first of its kind in Jason Jaguar Operating Shells
+- The new MultiFile multitasking system, 100% programmed by me
+- Extremely improved screen refreshing code, so now no matter what it never needs to refresh the entire screen and blind you outside of coming back from DOS-only programs
+- Paired down amounts of code, learning how to do this as I'm getting better at refining my work
+- The ability to reinstall the OS from both the Jaguar command prompt terminal and the GUI from the Spec menu
+- A clock with the date on the bottom right that updates when the desktop does
+- And a few general QOL and stability improvements!
 
 
 
