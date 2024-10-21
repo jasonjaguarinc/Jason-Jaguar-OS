@@ -1,7 +1,7 @@
 @ECHO OFF
 REM BFCPEOPTIONSTART
 REM Advanced BAT to EXE Converter www.BatToExeConverter.com
-REM BFCPEEXE=C:\Users\Snu 2.1\Downloads\Jason Jaguar Operating System 2.2 Public Release.exe
+REM BFCPEEXE=C:\Users\Snu 2.1\Downloads\Jason Jaguar Operating System 2.2.1 Public Patched Release.exe
 REM BFCPEICON=
 REM BFCPEICONINDEX=1
 REM BFCPEEMBEDDISPLAY=0
@@ -9,8 +9,8 @@ REM BFCPEEMBEDDELETE=1
 REM BFCPEADMINEXE=0
 REM BFCPEINVISEXE=0
 REM BFCPEVERINCLUDE=1
-REM BFCPEVERVERSION=2.2.0.0
-REM BFCPEVERPRODUCT=Jason Jaguar OS 2.2 MultiFile OS
+REM BFCPEVERVERSION=2.2.1.0
+REM BFCPEVERPRODUCT=Jason Jaguar OS 2.2.1 MultiFile OS
 REM BFCPEVERDESC=The world's most advanced OS!
 REM BFCPEVERCOMPANY=Jason Jaguar Inc. 
 REM BFCPEVERCOPYRIGHT=Jason Jaguar Inc. Labs 1983 (C)
@@ -18,7 +18,7 @@ REM BFCPEWINDOWCENTER=1
 REM BFCPEDISABLEQE=0
 REM BFCPEWINDOWHEIGHT=30
 REM BFCPEWINDOWWIDTH=120
-REM BFCPEWTITLE=Jason Jaguar 2.2 GUI MultiFile System
+REM BFCPEWTITLE=Jason Jaguar 2.2.1 GUI MultiFile System
 REM BFCPEOPTIONEND
 @echo off
 
@@ -29,8 +29,8 @@ set flagID=""
 
 :biosboot
 color 08
-if exist C:\JasonJaguarFileSystem goto cheloice
-if not exist C:\JasonJaguarFileSystem goto create1
+if exist C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\UserPass goto cheloice
+if not exist C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\UserPass goto create1
 
 :create1
 mkdir C:\JasonJaguarFileSystem
@@ -101,6 +101,7 @@ if not exist C:\JasonJaguarFileSystem\MainStorage(A) goto create2
 
 
 :create2
+mkdir C:\JasonJaguarFileSystem\App(B)
 mkdir C:\JasonJaguarFileSystem\MainStorage(A)
 cls
 rem PrintCenter Creating Jason Jaguar FileSystem... 21 0 9
@@ -879,9 +880,9 @@ goto gui
 :about
 set taskID=Abot
 set flagID=about
-rem Locate 25 1
 rem ShadeBoxAt 2 63 1 11 1
 rem ShadeBoxAt 3 63 6 12 2
+rem ShadeBoxAt 5 25 1 10 2
 rem ShadeBoxAt 2 2 23 23 2
 rem ShadeBoxAt 6 17 10 40 4
 rem ShadeBoxAt 12 20 1 2 4
@@ -962,9 +963,10 @@ if %result%==0 goto CLI
 :dateus
 set taskID=Date
 set flagID=dateus
-rem Locate 25 1
 rem ShadeBoxAt 2 63 1 11 1
 rem ShadeBoxAt 3 63 6 12 2
+rem ShadeBoxAt 5 25 1 10 2
+rem Locate 25 1
 rem ShadeBoxAt 2 2 23 23 2
 for /F "tokens=2" %%i in ('date /t') do set mydate=%%i
 set mytime=%time%
@@ -1030,7 +1032,7 @@ rem PrintColorAt } 13 56 0 8
 rem PrintColorAt } 14 56 0 8
 rem PrintColorAt } 15 56 0 8
 rem PrintColorAt The date is %mydate%, 9 24 15 1
-rem PrintColorAt and the time is %mytime%. 12 22 15 1
+rem PrintColorAt and the time is %hour%:%minute% %ampm%. 12 22 15 1
 rem ShadeBoxAt 7 57 10 1 1
 rem ShadeBoxAt 16 18 1 40 1
 rem PrintColorAt %taskID% 1 63 15 1
@@ -1091,7 +1093,7 @@ rem ShadeBoxAt 13 10 2 4 4
 rem PrintColorAt Calc 10 10 15 1
 rem PrintColorAt Word 12 10 15 1
 rem PrintColorAt CMD 14 10 15 1
-rem PrintColorAt Folders 16 10 15 1
+rem PrintColorAt Appinst 16 10 15 1
 rem PrintColorAt Reinst 18 10 15 1
 rem ShadeBoxAt 21 10 1 11 1
 rem ShadeBoxAt 10 20 12 1 1
@@ -1107,7 +1109,7 @@ if %result%==6 goto snui
 if %result%==7 goto calcu
 if %result%==8 goto word
 if %result%==9 goto CL
-if %result%==10 goto backupfilesys
+if %result%==10 goto apprun
 if %result%==11 goto snui
 if %result%==12 goto multifinder
 if %result%==13 goto reinst
@@ -1117,9 +1119,10 @@ if %result%==0 goto CLI
 :reinst
 set taskID=Rein
 set flagID=reinst
-rem Locate 25 1
 rem ShadeBoxAt 2 63 1 11 1
 rem ShadeBoxAt 3 63 6 12 2
+rem ShadeBoxAt 5 25 1 10 2
+rem Locate 25 1
 rem ShadeBoxAt 2 2 23 23 2
 rem ShadeBoxAt 6 17 10 40 4
 rem ShadeBoxAt 12 20 1 2 4
@@ -1376,8 +1379,8 @@ if %CMD%==DIR goto directory
 if %CMD%==dir goto directory
 if %CMD%==REM goto remlove
 if %CMD%==rem goto remlove
-if %CMD%==FLD goto backupfilesys
-if %CMD%==fld goto backupfilesys
+if %CMD%==APP goto appruncmd
+if %CMD%==app goto appruncmd
 if %CMD%==TRE goto fyletree
 if %CMD%==tre goto fyletree
 if %CMD%==EXT goto ext
@@ -1386,14 +1389,16 @@ if %CMD%==CLK goto clk
 if %CMD%==clk goto clk
 if %CMD%==SZE goto sizel
 if %CMD%==sze goto sizel
-if %CMD%==CLC goto calcu
-if %CMD%==clc goto calcu
+if %CMD%==CLC goto clialc
+if %CMD%==clc goto clialc
 if %CMD%==ERR goto chkhelp
 if %CMD%==err goto chkhelp
 if %CMD%==CLS goto ceeelless
 if %CMD%==cls goto ceeelless
 if %CMD%==RNS goto rinset
 if %CMD%==rns goto rinset
+if %CMD%==COD goto jagcode
+if %CMD%==cod goto jagcode
 goto chkhelp
 
 
@@ -1421,8 +1426,8 @@ if %CMD%==DIR goto directory
 if %CMD%==dir goto directory
 if %CMD%==REM goto remlove
 if %CMD%==rem goto remlove
-if %CMD%==FLD goto backupfilesys
-if %CMD%==fld goto backupfilesys
+if %CMD%==APP goto appruncmd
+if %CMD%==app goto appruncmd
 if %CMD%==TRE goto fyletree
 if %CMD%==tre goto fyletree
 if %CMD%==EXT goto ext
@@ -1431,14 +1436,16 @@ if %CMD%==CLK goto clk
 if %CMD%==clk goto clk
 if %CMD%==SZE goto sizel
 if %CMD%==sze goto sizel
-if %CMD%==CLC goto calcu
-if %CMD%==clc goto calcu
+if %CMD%==CLC goto clialc
+if %CMD%==clc goto clialc
 if %CMD%==ERR goto chkhelp
 if %CMD%==err goto chkhelp
 if %CMD%==CLS goto ceeelless
 if %CMD%==cls goto ceeelless
 if %CMD%==RNS goto rinset
 if %CMD%==rns goto rinset
+if %CMD%==COD goto jagcode
+if %CMD%==cod goto jagcode
 goto chkhelp
 
 
@@ -1451,20 +1458,45 @@ echo SYS     Displays the system info for the computer.
 echo WRD     Directs the user to the Jason Jaguar Word Processor.
 echo DIR     Lets the user easily make directory folders.
 echo REM     Lets the user easily remove folders if they know the name of the folder.
-echo TRE     Opens the Terminal's file browser, including an in-depth directory tree for the (A) drive.
-echo FLD     Opens the secondary non-clickable Terminal Folder Browser App.
+echo TRE     Opens the Terminal's file browser, including an in-depth directory tree for the FileSystem drives.
+echo APP     Runs software from the external App(B) drive.
 echo EXT     Exits Jason Jaguar 2.2.
 echo CLK     Shows the date and time.
-echo SZE     Displays the size of the Main Storage Drive for Jason Jaguar.
+echo SZE     Displays the size of the FileSystem drives for Jason Jaguar.
 echo CLC     Directs the user to the calculator.
 echo ERR     Tests the error-throwing system for the CLI.
 echo CLS     Clears the Command Terminal menu.
 echo RNS     Reinstalls the Jason Jaguar 2.2 GUI OS and FileSystem.
+echo COD     Directs the user to the Code Builder, which allows them to write a full Jason Jaguar-compatible program within the terminal.
 
 
 
 :chkhelp
 echo ERR. Type "help" or "?" for more info.
+goto CLIUS
+
+
+:clialc
+cls
+echo.
+echo.
+echo.
+echo ________Calculator________
+echo.
+set /p expression= Enter expression to calculate:
+set /a ans=%expression%
+echo.
+echo = %ans%
+echo.
+pause
+cls
+
+set /p option=Do you want to go back to the Jaguar DOS Command Terminal, Y/N?
+if %option% == Y goto guiback
+if %option% == N goto clialc
+
+:guiback
+cls
 goto CLIUS
 
 
@@ -1498,6 +1530,90 @@ goto CLIUS
 
 PAUSE
 goto CLIUS
+
+
+:appruncmd
+color 0a
+CHOICE /C 12 /N /M "Would you like to run software from the App(B) drive? [Press 1 for yes, 2 to go back to the Command Terminal]"
+
+
+IF %ERRORLEVEL% EQU 2 GOTO CLIUSUS
+IF %ERRORLEVEL% EQU 1 GOTO soffy
+
+
+
+:jagcode
+cls
+color 0a
+set "color=%_color_choice%"
+set "_file=0"
+set "output_file=C:\JasonJaguarFileSystem\App(B)\app.bat"
+goto go_back1
+:go_back1
+if not exist "%output_file%" (
+  echo. > "%output_file%"
+)
+
+cls
+echo Welcome to the Jason Jaguar (tm) Inc. Code Builder :)
+echo Write your Jason Jaguar-compatible code here, and it will be saved in the Jaguar DFS (Disk File System)'s App(B) drive to be later installed and run.
+echo (Make sure not to make any typos, there is no delete function implemented which is very annoying)
+echo.
+echo @. Save and exit the Jason Jaguar CODE BUILDER
+echo *. Change text color
+echo #. Clear CODE BUILDER Writing Cache
+echo:
+echo       CODE BUILDER 1.2:
+echo =========================================
+type "%output_file%"
+echo =========================================
+
+set /p "_txt="
+if "%_txt%" == "@" (
+  goto :go_out1
+) else if "%_txt%" == "*" (
+  goto :go_color1
+) else if "%_txt%" == "#" (
+  echo. > "%output_file%"
+) else (
+  echo % >> "%output_file%"
+  for /f "delims=" %%g in ("%_txt%") do echo %%~g >> "%output_file%"
+)
+
+goto :go_back1
+
+:go_out1
+echo Saved to "%output_file%".
+pause
+goto CLI
+
+
+:go_color1
+cls & title ******* CHANGE TEXT COLOR *******
+
+echo Select a text color (1-9):
+echo 1 - Blue
+echo 2 - Green
+echo 3 - Cyan
+echo 4 - Red
+echo 5 - Magenta
+echo 6 - Brown
+echo 7 - Gray
+echo 8 - Light Gray
+echo 9 - Light Blue
+
+set /p "_color_choice="
+if "%_color_choice%" LEQ 9 (
+  color %_color_choice%
+  echo Text color changed to %_color_choice%.
+  pause
+) else (
+  echo Invalid color choice.
+  pause
+)
+
+goto go_back1
+
 
 
 
@@ -1585,7 +1701,7 @@ exit
 
 
 :fyletree
-TREE C:\JasonJaguarFileSystem\MainStorage(A) /A /F
+TREE C:\JasonJaguarFileSystem\ /A /F
 set /p replar=@%usar%jaguarcmd}Open file in any tree directory? Y/N
 
 if %replar% EQU Y goto opanfyle1
@@ -1596,7 +1712,7 @@ goto CLIUS
 
 
 :opanfyle1
-cd C:\JasonJaguarFileSystem\MainStorage(A)\
+cd C:\JasonJaguarFileSystem\
 set /p poan=@%usar%jaguarcmd}Directory name?
 
 if exist %poan% goto tarballs1
@@ -1604,7 +1720,7 @@ if not exist %poan% goto insalad1
 
 
 :tarballs1
-cd C:\JasonJaguarFileSystem\MainStorage(A)\%poan%
+cd C:\JasonJaguarFileSystem\%poan%
 
 set /p poan2=@%usar%jaguarcmd}File? (Press 0 to return to File Tree and Browser)
 
@@ -1646,7 +1762,7 @@ goto CLIUS
 
 
 :sizel
-dir C:\JasonJaguarFileSystem\MainStorage(A) /s
+dir C:\JasonJaguarFileSystem\ /s
 pause
 goto CLIUS
 
@@ -1660,7 +1776,7 @@ goto CLIUS
 :filesys
 cls
 color 0a
-TREE C:\JasonJaguarFileSystem\MainStorage(A) /A /F
+TREE C:\JasonJaguarFileSystem\ /A /F
 set /p replar=@%usar%jaguarcmd}Open file in any tree directory? Y/N
 
 if %replar% EQU Y goto opanfyle2
@@ -1671,7 +1787,7 @@ goto GUI
 
 
 :opanfyle2
-cd C:\JasonJaguarFileSystem\MainStorage(A)\
+cd C:\JasonJaguarFileSystem\
 set /p poan=@%usar%jaguarcmd}Directory name?
 
 if exist %poan% goto tarballs2
@@ -1679,7 +1795,7 @@ if not exist %poan% goto insalad3
 
 
 :tarballs2
-cd C:\JasonJaguarFileSystem\MainStorage(A)\%poan%
+cd C:\JasonJaguarFileSystem\%poan%
 
 set /p poan2=@%usar%jaguarcmd}File? (Press 0 to return to File Tree and Browser)
 
@@ -1714,122 +1830,176 @@ goto tarballs2
 
 
 
-:backupfilesys
-cd C:\JasonJaguarFileSystem
+:apprun
+set taskID=Game
+set flagID=apprun
+rem ShadeBoxAt 2 63 1 11 1
+rem ShadeBoxAt 3 63 6 12 2
+rem ShadeBoxAt 5 25 1 10 2
+rem ShadeBoxAt 2 2 23 23 2
+rem ShadeBoxAt 6 17 10 40 4
+rem ShadeBoxAt 12 20 1 2 4
+rem PrintColorAt *X* 6 17 15 12
+rem PrintColorAt Jason Jaguar - 2.2 GUI Environment{/} 6 20 0 9
+rem PrintColorAt { 7 17 0 8
+rem PrintColorAt { 8 17 0 8
+rem PrintColorAt { 9 17 0 8
+rem PrintColorAt { 10 17 0 8
+rem PrintColorAt { 11 17 0 8
+rem PrintColorAt { 12 17 0 8
+rem PrintColorAt { 13 17 0 8
+rem PrintColorAt { 14 17 0 8
+rem PrintColorAt { 15 17 0 8
+rem PrintColorAt - 15 18 0 8
+rem PrintColorAt - 15 19 0 8
+rem PrintColorAt - 15 20 0 8
+rem PrintColorAt - 15 21 0 8
+rem PrintColorAt - 15 22 0 8
+rem PrintColorAt - 15 23 0 8
+rem PrintColorAt - 15 24 0 8
+rem PrintColorAt - 15 25 0 8
+rem PrintColorAt - 15 26 0 8
+rem PrintColorAt - 15 27 0 8
+rem PrintColorAt - 15 28 0 8
+rem PrintColorAt - 15 29 0 8
+rem PrintColorAt - 15 30 0 8
+rem PrintColorAt - 15 31 0 8
+rem PrintColorAt - 15 32 0 8
+rem PrintColorAt - 15 33 0 8
+rem PrintColorAt - 15 34 0 8
+rem PrintColorAt - 15 35 0 8
+rem PrintColorAt - 15 36 0 8
+rem PrintColorAt - 15 37 0 8
+rem PrintColorAt - 15 38 0 8
+rem PrintColorAt - 15 39 0 8
+rem PrintColorAt - 15 40 0 8
+rem PrintColorAt - 15 41 0 8
+rem PrintColorAt - 15 42 0 8
+rem PrintColorAt - 15 43 0 8
+rem PrintColorAt - 15 44 0 8
+rem PrintColorAt - 15 45 0 8
+rem PrintColorAt - 15 46 0 8
+rem PrintColorAt - 15 47 0 8
+rem PrintColorAt - 15 48 0 8
+rem PrintColorAt - 15 49 0 8
+rem PrintColorAt - 15 50 0 8
+rem PrintColorAt - 15 51 0 8
+rem PrintColorAt - 15 52 0 8
+rem PrintColorAt - 15 53 0 8
+rem PrintColorAt - 15 54 0 8
+rem PrintColorAt - 15 55 0 8
+rem PrintColorAt - 15 56 0 8
+rem PrintColorAt } 7 56 0 8
+rem PrintColorAt } 8 56 0 8
+rem PrintColorAt } 9 56 0 8
+rem PrintColorAt } 10 56 0 8
+rem PrintColorAt } 11 56 0 8
+rem PrintColorAt } 12 56 0 8
+rem PrintColorAt } 13 56 0 8
+rem PrintColorAt } 14 56 0 8
+rem PrintColorAt } 15 56 0 8
+rem PrintColorAt Would you like to run software 9 18 15 1
+rem PrintColorAt from an external drive? 11 20 15 1
+rem PrintColorAt *Yes* 13 24 15 12
+rem PrintColorAt *No* 13 40 15 12
+rem ShadeBoxAt 7 57 10 1 1
+rem ShadeBoxAt 16 18 1 40 1
+rem PrintColorAt %taskID% 1 63 15 1
+rem rem Last color value is box, first is text, first real value is height,
+rem rem second one is width
+rem MouseCMD 2,1,5,1 1,17,120,30 17,6,19,6 63,1,66,1 24,13,28,13 40,13,43,13 get
+if %result%==1 goto snui
+if %result%==2 goto snui
+if %result%==3 goto snui
+if %result%==4 goto multifinder
+if %result%==5 goto soffy
+if %result%==6 goto snui
+if %result%==0 goto CLI
 
-rem Select a file or folder browsing a directory tree made for Jason Jaguar OS 2.0
-rem Written by head programmers at Jason Jaguar Inc. Software Labs
-
-rem Usage examples of SelectFileOrFolder subroutine:
-
-call :SelectFileOrFolder file=
-echo/
-echo Selected file from *.* = "%file%"
-pause
-
-call :SelectFileOrFolder file=*.bat
-echo/
-echo Selected Batch file = "%file%"
-pause
-
-call :SelectFileOrFolder folder=/F
-echo/
-echo Selected folder = "%folder%"
-pause
-
-goto gui
 
 
-:SelectFileOrFolder resultVar [ "list of wildcards" | /F ]
 
-rem Process parameters
-set "files=*.*"
-if "%~1" neq "" (cd "%~1"
-   if /I "%~2" equ "/F" (set "files=") else set "files=%~2"
-)
+:soffy
+if exist C:\JasonJaguarFileSystem\App(B)\app.bat goto soffycorrect
+if not exist C:\JasonJaguarFileSystem\App(B)\app.bat goto soffyincorrect
 
-rem Set the number of lines per page, max 34
-set "pageSize=30"
-set "char=0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-
-rem Load current directory contents
-set "name[1]=<DIR>  .."
-:ProcessThisDir
-set "numNames=1"
-for /D %%a in (*) do (
-   set /A numNames+=1
-   set "name[!numNames!]=<DIR>  %%a"
-)
-for %%a in (%files%) do (
-   set /A numNames+=1
-   set "name[!numNames!]=       %%a"
-)
-set /A numPages=(numNames-1)/pageSize+1
-
-rem Show directory contents, one page at a time
-set start=1
-:ShowPage
-set /A page=(start-1)/pageSize+1, end=start+pageSize-1
-if %end% gtr %numNames% set end=%numNames%
+:soffyincorrect
 cls
-echo Page %page%/%numPages% of %CD%
-echo/
-if %start% equ 1 (set base=0) else set "base=1"
-set /A lastOpt=pageSize+base, j=base
-for /L %%i in (%start%,1,%end%) do (
-   for %%j in (!j!) do echo     !char:~%%j,1! -  !name[%%i]!
-   set /A j+=1
-)
-echo/
+rem PrintCenter Sorry, no external software detected as written. :( You will now return to the GUI. 15 0 9
+pause
+goto GUI
 
-rem Assemble the get option message
-if %start% equ 1 (set "mssg=: ") else (set "mssg= (0=Previous page")
-if %end% lss %numNames% (
-   if "%mssg%" equ ": " (set "mssg= (") else set "mssg=%mssg%, "
-   set "mssg=!mssg!Z=Next page"
-)
-if "%mssg%" neq ": " set "mssg=%mssg%): "
 
-:GetOption
-choice /C "%char%" /N /M "Select directories or files%mssg%"
-if %errorlevel% equ 1 (
-   rem "0": Previous page or Parent directory
-   if %start% gtr 1 (
-      set /A start-=pageSize
-      goto ShowPage
-   ) else (
-      cd ..
-      goto ProcessThisDir
-   )
-)
-if %errorlevel% equ 36 (
-   rem "Z": Next page, if any
-   if %end% lss %numNames% (
-      set /A start+=pageSize
-      goto ShowPage
-   ) else (
-      goto GetOption
-   )
-)
-if %errorlevel% gtr %lastOpt% goto GetOption
-set /A option=start+%errorlevel%-1-base
-if %option% gtr %numNames% goto GetOption
-if defined files (
-   if "!name[%option%]:~0,5!" neq "<DIR>" goto endSelect
-) else (
-   choice /C OS /M "Open or Return to GUI from '!name[%option%]:~7!' folder"
-   if errorlevel 2 goto endSelect
-)
-cd "!name[%option%]:~7!"
-goto ProcessThisDir
+:soffycorrect
+cls
+rem PrintCenter Installing external software for booting... 21 0 9
+rem CenterSelf
+set FGcol=10
+rem ChangeColor %FGcol% 0
+rem PrintBoxAt 15 51 3 20 2
+rem ChangeColor 0 %FGcol%
 
-if %errorlevel% equ g goto gui
+rem Wait 50
+REM COPY FILES HERE
 
-:endSelect
-rem Return selected file/folder
-for %%a in ("!name[%option%]:~7!") do set "result=%%~Fa"
-endlocal & set "%~1=%result%
+rem ShadeBoxAt 16 52 1 2 8
+
+rem Wait 50
+REM COPY MORE FILES HERE
+
+rem ShadeBoxAt 16 54 1 2 8
+
+rem Wait 50
+REM COPY MORE FILES HERE
+
+rem ShadeBoxAt 16 56 1 2 8
+
+rem Wait 50
+REM COPY MORE FILES HERE
+
+rem ShadeBoxAt 16 58 1 2 8
+
+rem Wait 50
+REM COPY MORE FILES HERE
+
+rem ShadeBoxAt 16 60 1 2 8
+
+rem Wait 50
+REM COPY MORE FILES HERE
+
+rem ShadeBoxAt 16 62 1 2 8
+
+rem Wait 50
+REM COPY MORE FILES HERE
+
+rem ShadeBoxAt 16 64 1 2 8
+
+rem Wait 50
+REM COPY MORE FILES HERE
+
+rem ShadeBoxAt 16 66 1 2 8
+
+rem Wait 50
+REM COPY MORE FILES HERE
+
+rem ShadeBoxAt 16 68 1 2 8
+
+rem ClearColor
+rem Locate 30 1
+rem PrintCenter Your Jason Jaguar external software is installed! 23 0 9
+pause
+rem PrintCenter Your OS will now boot into the program until it is terminated. 26 0 9
+pause
+cd C:\JasonJaguarFileSystem\App(B)
+cls
+color 0a
+call app.bat
+cls
+echo The external program has terminated. You will now return to the GUI
+pause
 goto gui
+
+
 
 
 
@@ -1874,9 +2044,10 @@ set flagID=calcu
 echo.:>C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\calc.txt
 echo.:>C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\calc2.txt
 echo.:>C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\mathinput.txt
-rem Locate 25 1
 rem ShadeBoxAt 2 63 1 11 1
 rem ShadeBoxAt 3 63 6 12 2
+rem ShadeBoxAt 5 25 1 10 2
+rem Locate 25 1
 rem ShadeBoxAt 2 2 23 23 2
 rem ShadeBoxAt 6 17 10 40 4
 rem ShadeBoxAt 12 20 1 2 4
@@ -1972,6 +2143,10 @@ if %result%==13 goto multifinder
 if %result%==0 goto CLI
 echo:%result%>C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\calc.txt
 
+:gotogyolf
+goto gyolf
+
+
 :snucalc
 rem ShadeBoxAt 7 37 7 19 4
 rem MouseCMD 19,7,21,7 19,9,21,9 19,11,21,11 19,13,21,13 23,7,25,7 23,9,25,9 23,11,25,11 23,13,25,13 27,7,29,7 17,6,19,6 1,16,120,30 2,1,5,1 63,1,66,1 get
@@ -1982,6 +2157,7 @@ if %result%==12 goto snui
 if %result%==13 goto multifinder
 if %result%==0 goto CLI
 echo:%result%>C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\calc.txt
+
 
 :gyolf
 rem printColorAt %result% 8 39 15 1
@@ -2161,6 +2337,7 @@ if %result%==0 goto CLI
 
 :gyobah
 goto snucalc
+
 
 
 
@@ -6788,6 +6965,7 @@ goto menu
 
 REM 01001001 01100110 00100000 01111001 01101111 01110101 00100000 01100011 01100001 01101110 00100000 01110010 01100101 01100001 01100100 00100000 01110100 01101000 01101001 01110011 00101100 00100000 01111001 01101111 01110101 01110010 00100000 01100001 00100000 01100010 01101001 01100111 00100000 01100110 01100001 01110100 00100000 01101110 01100101 01110010 01100100 00101110 00100000 01100010 01110101 01110100 00100000 01110011 01101111 00100000 01100001 01101101 00100000 01101001 00100000 01100011 01100001 01110101 01110011 01100101 00100000 01101001 00100000 01110111 01110010 01101111 01110100 01100101 00100000 01110100 01101000 01101001 01110011 00101110
 REM Alright, read this and then use the development kit of this OS, and start porting to other PC's.
+
 
 
 
