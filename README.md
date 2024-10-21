@@ -16,7 +16,7 @@ Introducing Jason Jaguar OS! A little batch shell that directs you to different 
 - Inbuilt support for all of Jason Jaguar 1.2.9 and therefore all its apps, as you can run it from the GUI and terminal
 - A non-GUI folder explorer that lets you navigate the Jason Jaguar FileSystem
 - A Systen info log, which in GUI funnels to a .txt doc in the MainStorage(A) drive and in terminal lists it on the screen without sending to a .txt
-- A date & time button, labelled 'Date'.
+- A date & time button, labelled 'Date'
 - A Single-digit Calculator that never needs to refresh the screen
 - A batch word processor that lets you write for multiple lines and clear the document to write new things in place on the JAGUARWORD.txt doc saved in the "Documents" folder. The "Documents" folder is stored in the "MainStorage(A)" drive of the "JasonJaguarFileSystem" folder, which is located on the root of your C: drive
 - A full Jason Jaguar Command Terminal Interface, the first of its kind in Jason Jaguar Operating Shells
@@ -25,6 +25,8 @@ Introducing Jason Jaguar OS! A little batch shell that directs you to different 
 - Paired down amounts of code, learning how to do this as I'm getting better at refining my work
 - The ability to reinstall the OS from both the Jaguar command prompt terminal and the GUI from the Spec menu
 - A clock with the date on the bottom right that updates when the desktop does
+- External Batch software support to load non-standard OS in-built software
+- An in-built Code Builder to write external apps for Jason Jaguar OS, located in the Jaguar Command Terminal
 - And a few general QOL and stability improvements!
 
 
