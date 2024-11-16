@@ -13,6 +13,7 @@ Introducing Jason Jaguar OS! A little batch shell that directs you to different 
 
 # Features included for 2.2.1:
 
+- A functional Graphical User Interface, or clickable GUI, that's been fully implemented and programmed in by me with window-drawing routines
 - Inbuilt support for all of Jason Jaguar 1.2.9 and therefore all its apps, as you can run it from the GUI and terminal
 - A non-GUI folder explorer that lets you navigate the Jason Jaguar FileSystem
 - A Systen info log, which in GUI funnels to a .txt doc in the MainStorage(A) drive and in terminal lists it on the screen without sending to a .txt
