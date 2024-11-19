@@ -796,6 +796,7 @@ rem ShadeBoxAt 3 63 6 12 2
 rem ShadeBoxAt 5 25 1 10 2
 rem ShadeBoxAt 2 2 23 23 2
 rem ShadeBoxAt 2 2 24 74 2
+rem PrintCenter Welcome to Jason Jaguar 2 . 3 :) Check out the beta features and menus. 13 0 9
 rem ShadeBoxAt 6 17 10 40 4
 rem ShadeBoxAt 12 20 1 2 4
 rem PrintColorAt *X* 6 17 15 12
@@ -1321,6 +1322,7 @@ rem ShadeBoxAt 3 63 6 12 2
 rem ShadeBoxAt 5 25 1 10 2
 rem ShadeBoxAt 2 2 23 23 2
 rem ShadeBoxAt 2 2 24 74 2
+rem PrintCenter Welcome to Jason Jaguar 2 . 3 :) Check out the beta features and menus. 13 0 9
 rem ShadeBoxAt 6 17 10 40 4
 rem ShadeBoxAt 12 20 1 2 4
 rem PrintColorAt *X* 6 17 15 12
@@ -1409,6 +1411,7 @@ rem ShadeBoxAt 2 2 23 23 2
 rem ShadeBoxAt 2 2 24 74 2
 for /F "tokens=2" %%i in ('date /t') do set mydate=%%i
 set mytime=%time%
+rem PrintCenter Welcome to Jason Jaguar 2 . 3 :) Check out the beta features and menus. 13 0 9
 rem ShadeBoxAt 6 17 10 40 4
 rem ShadeBoxAt 12 20 1 2 4
 rem PrintColorAt *X* 6 17 15 12
@@ -1564,6 +1567,7 @@ rem ShadeBoxAt 5 25 1 10 2
 rem Locate 25 1
 rem ShadeBoxAt 2 2 23 23 2
 rem ShadeBoxAt 2 2 24 74 2
+rem PrintCenter Welcome to Jason Jaguar 2 . 3 :) Check out the beta features and menus. 13 0 9
 rem ShadeBoxAt 6 17 10 40 4
 rem ShadeBoxAt 12 20 1 2 4
 rem PrintColorAt *X* 6 17 15 12
@@ -5169,6 +5173,7 @@ rem ShadeBoxAt 5 25 1 10 2
 rem Locate 25 1
 rem ShadeBoxAt 2 2 23 23 2
 rem ShadeBoxAt 2 2 24 74 2
+rem PrintCenter Welcome to Jason Jaguar 2 . 3 :) Check out the beta features and menus. 13 0 9
 rem ShadeBoxAt 6 17 10 40 4
 rem ShadeBoxAt 12 20 1 2 4
 rem PrintColorAt .1. 7 19 15 1
