@@ -11,7 +11,7 @@ HOWEVER, what if we could do something interesting without using these bigger an
 Introducing Jason Jaguar OS! A little batch shell that directs you to different programs I made within just the batch Windows CMD language. No VBScript, no JScript, nothing other than some batch and external commands. What's the best part? It's incredibly integrated, meaning everything you do from startup only requires the user to compile 1 batch file or EXE. I do the rest behind the scenes, making it easy for first-time users to jump right in to Jason Jaguar OS and makes it extremely operational on Windows computers of all varieties. No dropping DLLs in random locations just for one function, no re-routing directories to get things to link properly, this one program in just thousands of lines of Batch + External commands can do the work that takes other Batch Operating Shells more than 10 different "EXE"s and bat files to get running. Try now, make the dream of an easy batch OS a thing of the past!
 
 
-# Features included for 2.2.1:
+# Features included for 2.3:
 
 - A functional Graphical User Interface, or clickable GUI, that's been fully implemented and programmed in by me with window-drawing routines
 - Inbuilt support for all of Jason Jaguar 1.2.9 and therefore all its apps, as you can run it from the GUI and terminal
@@ -28,6 +28,11 @@ Introducing Jason Jaguar OS! A little batch shell that directs you to different 
 - A clock with the date on the bottom right that updates when the desktop does
 - External Batch software support to load non-standard OS in-built software
 - An in-built Code Builder to write external apps for Jason Jaguar OS, located in the Jaguar Command Terminal
+- The Jaguar FileSystem PathFinder, finally allowing the user to navigate their Jaguar FileSystem graphically
+- The PathFinder window includes the first minimize/maximizing buttons on a Jaguar OS window, allowing the user to make it the size they prefer while browsing their files and folders
+- A first for Jaguar OS releases, a new menu bar function called the "Special" menu. Only three applications have a special menu so far, which are the Calculator, PathFinder, and Bubble Popper, but they allow easier ways for the user to do special things with their apps. These could include resetting a window that's not working properly or opening the exact drive location you want to find. Browsing with the Special menu makes Jaguar OS a much easier and faster operating shell.
+- A new desktop toy called "Bubble Popper", which lets the user pop "O"s in a small window. I wanted to add something fun to the OS, so I added a small bubbler popper thing to give it more to do.
+- New colors for text! It now looks more stylish and easy on the eyes in many of the menus and dropdowns, including the PathFinder.
 - And a few general QOL and stability improvements!
 
 
