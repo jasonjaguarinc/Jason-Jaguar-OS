@@ -771,6 +771,7 @@ if %result%==0 goto CLI
 :jagblock
 rem ShadeBoxAt 2 63 1 11 1
 rem ShadeBoxAt 3 63 6 12 2
+rem PrintColorAt Reload Desktop 1 41 0 9
 rem PrintColorAt File 1 63 15 1
 rem MouseCMD 2,1,5,1 8,1,15,1 18,1,23,1 26,1,38,1 41,1,54,1 63,1,66,1 get
 
