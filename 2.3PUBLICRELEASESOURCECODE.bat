@@ -1,7 +1,7 @@
 @ECHO OFF
 REM BFCPEOPTIONSTART
 REM Advanced BAT to EXE Converter www.BatToExeConverter.com
-REM BFCPEEXE=C:\Users\jason\Downloads\Jason Jaguar Operating System 2.3 MultiFile Operating System.exe
+REM BFCPEEXE=C:\Users\Snu 2.1\Downloads\Jason Jaguar 2.x Upgrade Versions\Jason Jaguar Operating System 2.3 ZDOS BACKUP MultiFile Operating System.exe
 REM BFCPEICON=
 REM BFCPEICONINDEX=1
 REM BFCPEEMBEDDISPLAY=0
@@ -385,6 +385,8 @@ if %DOO%==CLK goto clk2
 if %DOO%==clk goto clk2
 if %DOO%==INS goto jstart
 if %DOO%==ins goto jstart
+if %DOO%==DOS goto CL
+if %DOO%==dos goto CL
 if %DOO%==ERR goto peehelpchk
 if %DOO%==err goto peehelpchk
 if %DOO%==CLS goto clessw
@@ -408,6 +410,8 @@ if %DOO%==CLK goto clk2
 if %DOO%==clk goto clk2
 if %DOO%==INS goto jstart
 if %DOO%==ins goto jstart
+if %DOO%==DOS goto CL
+if %DOO%==dos goto CL
 if %DOO%==ERR goto peehelpchk
 if %DOO%==err goto peehelpchk
 if %DOO%==CLS goto clessw
@@ -421,6 +425,7 @@ goto peehelpchk
 :prehelp2
 echo EXT     Exits JaguarDOS and uninitializes any Operating System or Shell.
 echo INS     Boots into an installed copy of Jason Jaguar 2.3 GUI OS.
+echo DOS     Boots into an installed copy of JaguarDOS 2.3.
 echo CLK     Shows the date and time.
 echo ERR     Tests the error-throwing system for JaguarDOS.
 echo CLS     Clears the Command Terminal menu.
@@ -1818,10 +1823,11 @@ rem PrintColorAt Sysinfo 3 3 15 1
 rem PrintColorAt About 5 3 0 9
 rem PrintColorAt Date 7 3 0 3
 rem PrintColorAt Spec 9 3 0 11
+rem PrintColorAt Backup 11 3 15 5
 rem PrintColorAt File 1 63 15 1
 rem rem Last color value is box, first is text, first real value is height,
 rem rem second one is width
-rem MouseCMD 3,3,9,3 3,5,7,5 3,7,6,7 3,9,6,9 1,14,120,30 2,1,5,1 63,1,66,1 get
+rem MouseCMD 3,3,9,3 3,5,7,5 3,7,6,7 3,9,6,9 1,14,120,30 2,1,5,1 63,1,66,1 3,11,8,11 get
 if %result%==1 goto info
 if %result%==2 goto about
 if %result%==3 goto dateus
@@ -1829,7 +1835,172 @@ if %result%==4 goto spec
 if %result%==5 goto snui
 if %result%==6 goto snui
 if %result%==7 goto multifinder
+if %result%==8 goto fsysbackup
 if %result%==0 goto CLI
+
+
+
+
+:fsysbackup
+set taskID=Bkup
+set flagID=fsysbackup
+rem ShadeBoxAt 2 63 1 11 1
+rem ShadeBoxAt 3 63 6 12 2
+rem ShadeBoxAt 5 25 1 10 2
+rem Locate 25 1
+rem ShadeBoxAt 2 2 23 23 2
+rem ShadeBoxAt 2 2 24 74 2
+rem PrintCenter Welcome to Jason Jaguar 2 . 3 :) Check out the beta features and menus. 13 0 9
+rem ShadeBoxAt 6 17 10 40 4
+rem ShadeBoxAt 12 20 1 2 4
+rem PrintColorAt *X* 6 17 15 12
+rem PrintColorAt Jason Jaguar - 2.3 GUI Environment{/} 6 20 0 9
+rem PrintColorAt { 7 17 0 8
+rem PrintColorAt { 8 17 0 8
+rem PrintColorAt { 9 17 0 8
+rem PrintColorAt { 10 17 0 8
+rem PrintColorAt { 11 17 0 8
+rem PrintColorAt { 12 17 0 8
+rem PrintColorAt { 13 17 0 8
+rem PrintColorAt { 14 17 0 8
+rem PrintColorAt { 15 17 0 8
+rem PrintColorAt - 15 18 0 8
+rem PrintColorAt - 15 19 0 8
+rem PrintColorAt - 15 20 0 8
+rem PrintColorAt - 15 21 0 8
+rem PrintColorAt - 15 22 0 8
+rem PrintColorAt - 15 23 0 8
+rem PrintColorAt - 15 24 0 8
+rem PrintColorAt - 15 25 0 8
+rem PrintColorAt - 15 26 0 8
+rem PrintColorAt - 15 27 0 8
+rem PrintColorAt - 15 28 0 8
+rem PrintColorAt - 15 29 0 8
+rem PrintColorAt - 15 30 0 8
+rem PrintColorAt - 15 31 0 8
+rem PrintColorAt - 15 32 0 8
+rem PrintColorAt - 15 33 0 8
+rem PrintColorAt - 15 34 0 8
+rem PrintColorAt - 15 35 0 8
+rem PrintColorAt - 15 36 0 8
+rem PrintColorAt - 15 37 0 8
+rem PrintColorAt - 15 38 0 8
+rem PrintColorAt - 15 39 0 8
+rem PrintColorAt - 15 40 0 8
+rem PrintColorAt - 15 41 0 8
+rem PrintColorAt - 15 42 0 8
+rem PrintColorAt - 15 43 0 8
+rem PrintColorAt - 15 44 0 8
+rem PrintColorAt - 15 45 0 8
+rem PrintColorAt - 15 46 0 8
+rem PrintColorAt - 15 47 0 8
+rem PrintColorAt - 15 48 0 8
+rem PrintColorAt - 15 49 0 8
+rem PrintColorAt - 15 50 0 8
+rem PrintColorAt - 15 51 0 8
+rem PrintColorAt - 15 52 0 8
+rem PrintColorAt - 15 53 0 8
+rem PrintColorAt - 15 54 0 8
+rem PrintColorAt - 15 55 0 8
+rem PrintColorAt - 15 56 0 8
+rem PrintColorAt } 7 56 0 8
+rem PrintColorAt } 8 56 0 8
+rem PrintColorAt } 9 56 0 8
+rem PrintColorAt } 10 56 0 8
+rem PrintColorAt } 11 56 0 8
+rem PrintColorAt } 12 56 0 8
+rem PrintColorAt } 13 56 0 8
+rem PrintColorAt } 14 56 0 8
+rem PrintColorAt } 15 56 0 8
+rem PrintColorAt Are you sure you want to backup 8 19 15 1
+rem PrintColorAt Your Jason Jaguar FileSystem? 10 19 15 1
+rem PrintColorAt *Yes* 13 24 15 12
+rem PrintColorAt *No* 13 40 15 12
+rem ShadeBoxAt 7 57 10 1 1
+rem ShadeBoxAt 16 18 1 40 1
+rem PrintColorAt %taskID% 1 63 15 1
+rem rem Last color value is box, first is text, first real value is height,
+rem rem second one is width
+rem MouseCMD 2,1,5,1 1,17,120,30 17,6,19,6 63,1,66,1 24,13,28,13 40,13,43,13 get
+if %result%==1 goto snui
+if %result%==2 goto snui
+if %result%==3 goto snui
+if %result%==4 goto multifinder
+if %result%==5 goto jaguarbacklup
+if %result%==6 goto snui
+if %result%==0 goto CLI
+
+
+
+
+
+
+:jaguarbacklup
+xcopy C:\JasonJaguarFileSystem C:\JasonJaguarFileSystemBackup /E /H /C /I
+cls
+rem PrintCenter Backing up the Jason Jaguar FileSystem... 21 0 9
+rem CenterSelf
+set FGcol=10
+rem ChangeColor %FGcol% 0
+rem PrintBoxAt 15 51 3 20 2
+rem ChangeColor 0 %FGcol%
+
+rem Wait 50
+REM COPY FILES HERE
+
+rem ShadeBoxAt 16 52 1 2 8
+
+rem Wait 50
+REM COPY MORE FILES HERE
+
+rem ShadeBoxAt 16 54 1 2 8
+
+rem Wait 50
+REM COPY MORE FILES HERE
+
+rem ShadeBoxAt 16 56 1 2 8
+
+rem Wait 50
+REM COPY MORE FILES HERE
+
+rem ShadeBoxAt 16 58 1 2 8
+
+rem Wait 50
+REM COPY MORE FILES HERE
+
+rem ShadeBoxAt 16 60 1 2 8
+
+rem Wait 50
+REM COPY MORE FILES HERE
+
+rem ShadeBoxAt 16 62 1 2 8
+
+rem Wait 50
+REM COPY MORE FILES HERE
+
+rem ShadeBoxAt 16 64 1 2 8
+
+rem Wait 50
+REM COPY MORE FILES HERE
+
+rem ShadeBoxAt 16 66 1 2 8
+
+rem Wait 50
+REM COPY MORE FILES HERE
+
+rem ShadeBoxAt 16 68 1 2 8
+
+rem ClearColor
+rem Locate 30 1
+rem PrintCenter Jason Jaguar FileSystem backed up! 23 0 9
+pause
+rem PrintCenter Your FileSystem is now backed up in the C: Drive in case you lose your files. 26 0 9
+pause
+goto gui
+
+
+
+
 
 
 
@@ -2085,7 +2256,7 @@ rem ShadeBoxAt 21 10 1 11 1
 rem ShadeBoxAt 10 20 12 1 1
 rem rem Last color value is box, first is text, first real value is height,
 rem rem second one is width
-rem MouseCMD 3,3,9,3 3,5,7,5 3,7,6,7 3,9,6,9 1,21,120,30 2,1,5,1 10,10,13,10 10,12,13,12 10,14,13,14 10,16,16,16 1,21,120,30 63,1,66,1 10,18,16,18 get
+rem MouseCMD 3,3,9,3 3,5,7,5 3,7,6,7 3,9,6,9 1,21,120,30 2,1,5,1 10,10,13,10 10,12,13,12 10,14,13,14 10,16,16,16 1,21,120,30 63,1,66,1 10,18,16,18 3,11,8,11 get
 if %result%==1 goto info
 if %result%==2 goto about
 if %result%==3 goto dateus
@@ -2099,6 +2270,7 @@ if %result%==10 goto apprun
 if %result%==11 goto snui
 if %result%==12 goto multifinder
 if %result%==13 goto reinst
+if %result%==14 goto fsysbackup
 if %result%==0 goto CLI
 
 
@@ -2391,6 +2563,8 @@ if %CMD%==COD goto jagcode
 if %CMD%==cod goto jagcode
 if %CMD%==DOS goto revertdos
 if %CMD%==dos goto revertdos
+if %CMD%==BCK goto BACKKUPCMD
+if %CMD%==bck goto BACKKUPCMD
 goto chkhelp
 
 
@@ -2440,6 +2614,8 @@ if %CMD%==COD goto jagcode
 if %CMD%==cod goto jagcode
 if %CMD%==DOS goto revertdos
 if %CMD%==dos goto revertdos
+if %CMD%==BCK goto BACKKUPCMD
+if %CMD%==bck goto BACKKUPCMD
 goto chkhelp
 
 
@@ -2463,7 +2639,84 @@ echo CLS     Clears the Command Terminal menu.
 echo RNS     Reinstalls the Jason Jaguar 2.3 GUI OS and FileSystem.
 echo DOS     Exits out of Jason Jaguar 2.3 GUI OS and FileSystem, and then reverts to the JaguarDOS Boot Version.
 echo COD     Directs the user to the Code Builder, which allows them to write a full Jason Jaguar-compatible program within the terminal.
+echo BCK     Creates a backup of the user's FileSystem on the C: Drive in the event of lost data.
 goto CLIUS
+
+
+
+:BACKKUPCMD
+set /p backwup=@%usar%jaguarcmd} Are you sure you want to create a backup of your FileSystem? Y/N
+
+if %backwup%==Y goto BACKALUP
+if %backwup%==y goto BACKALUP
+if %backwup%==N goto CLIUS
+if %backwup%==n goto CLIUS
+
+
+:BACKALUP
+xcopy C:\JasonJaguarFileSystem C:\JasonJaguarFileSystemBackup /E /H /C /I
+cls
+rem PrintCenter Backing up the Jason Jaguar FileSystem... 21 0 9
+rem CenterSelf
+set FGcol=10
+rem ChangeColor %FGcol% 0
+rem PrintBoxAt 15 51 3 20 2
+rem ChangeColor 0 %FGcol%
+
+rem Wait 50
+REM COPY FILES HERE
+
+rem ShadeBoxAt 16 52 1 2 8
+
+rem Wait 50
+REM COPY MORE FILES HERE
+
+rem ShadeBoxAt 16 54 1 2 8
+
+rem Wait 50
+REM COPY MORE FILES HERE
+
+rem ShadeBoxAt 16 56 1 2 8
+
+rem Wait 50
+REM COPY MORE FILES HERE
+
+rem ShadeBoxAt 16 58 1 2 8
+
+rem Wait 50
+REM COPY MORE FILES HERE
+
+rem ShadeBoxAt 16 60 1 2 8
+
+rem Wait 50
+REM COPY MORE FILES HERE
+
+rem ShadeBoxAt 16 62 1 2 8
+
+rem Wait 50
+REM COPY MORE FILES HERE
+
+rem ShadeBoxAt 16 64 1 2 8
+
+rem Wait 50
+REM COPY MORE FILES HERE
+
+rem ShadeBoxAt 16 66 1 2 8
+
+rem Wait 50
+REM COPY MORE FILES HERE
+
+rem ShadeBoxAt 16 68 1 2 8
+
+rem ClearColor
+rem Locate 30 1
+rem PrintCenter Jason Jaguar FileSystem backed up! 23 0 9
+pause
+rem PrintCenter Your FileSystem is now backed up in the C: Drive in case you lose your files. 26 0 9
+pause
+goto CLIUS
+
+
 
 
 :revertdos
