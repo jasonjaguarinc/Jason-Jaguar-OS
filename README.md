@@ -33,6 +33,7 @@ Introducing Jason Jaguar OS! A little batch shell that directs you to different 
 - A first for Jaguar OS releases, a new menu bar function called the "Special" menu. Only three applications have a special menu so far, which are the Calculator, PathFinder, and Bubble Popper, but they allow easier ways for the user to do special things with their apps. These could include resetting a window that's not working properly or opening the exact drive location you want to find. Browsing with the Special menu makes Jaguar OS a much easier and faster operating shell.
 - A new desktop toy called "Bubble Popper", which lets the user pop "O"s in a small window. I wanted to add something fun to the OS, so I added a small bubbler popper thing to give it more to do.
 - New colors for text! It now looks more stylish and easy on the eyes in many of the menus and dropdowns, including the PathFinder.
+- A DOS-style installer from initial boot, which is able to exited to from the GUI and acts a lot more like the Operating Shell that it actually is.
 - And a few general QOL and stability improvements!
 
 
