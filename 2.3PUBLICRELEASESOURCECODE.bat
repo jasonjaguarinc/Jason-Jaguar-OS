@@ -5173,7 +5173,8 @@ rem Locate 25 1
 rem PrintCenter Welcome to Jason Jaguar 2 . 3 :) Check out the beta features and menus. 13 0 9
 rem ShadeBoxAt 14 27 1 69 1
 rem ShadeBoxAt 13 95 1 1 1
-rem PrintColorAt Jason Jaguar 2.3 GUI Beta Ver. 2 1 88 0 9
+rem PrintColorAt Jason Jaguar 2.3 Public Ver. 1 88 0 9
+rem PrintColorAt .X. 1 117 15 12
 rem PrintColorAt Welcome, %usar%. :) 29 1 0 3
 rem PrintColorAt {@@} 1 2 0 9
 rem rem Last color value is box, first is text, first real value is height,
@@ -5410,7 +5411,8 @@ rem Locate 25 1
 rem PrintCenter Welcome to Jason Jaguar 2 . 3 :) Check out the beta features and menus. 13 0 9
 rem ShadeBoxAt 14 27 1 69 1
 rem ShadeBoxAt 13 95 1 1 1
-rem PrintColorAt Jason Jaguar 2.3 GUI Beta Ver. 2 1 88 0 9
+rem PrintColorAt Jason Jaguar 2.3 Public Ver. 1 88 0 9
+rem PrintColorAt .X. 1 117 15 12
 rem PrintColorAt Welcome, %usar%. :) 29 1 0 3
 rem PrintColorAt {@@} 1 2 0 9
 rem rem Last color value is box, first is text, first real value is height,
