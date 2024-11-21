@@ -34,6 +34,7 @@ Introducing Jason Jaguar OS! A little batch shell that directs you to different 
 - A new desktop toy called "Bubble Popper", which lets the user pop "O"s in a small window. I wanted to add something fun to the OS, so I added a small bubbler popper thing to give it more to do.
 - New colors for text! It now looks more stylish and easy on the eyes in many of the menus and dropdowns, including the PathFinder.
 - A DOS-style installer from initial boot, which is able to exited to from the GUI and acts a lot more like the Operating Shell that it actually is.
+- A FileSystem backup feature, accessible through both the Terminal and the GUI.
 - And a few general QOL and stability improvements!
 
 
