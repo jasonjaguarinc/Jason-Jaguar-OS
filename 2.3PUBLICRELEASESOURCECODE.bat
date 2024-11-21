@@ -1,7 +1,7 @@
 @ECHO OFF
 REM BFCPEOPTIONSTART
 REM Advanced BAT to EXE Converter www.BatToExeConverter.com
-REM BFCPEEXE=C:\Users\Snu 2.1\Downloads\Jason Jaguar 2.x Upgrade Versions\Jason Jaguar Operating System 2.3 MultiFile Operating System.exe
+REM BFCPEEXE=C:\Users\jason\Downloads\Jason Jaguar Operating System 2.3 MultiFile Operating System.exe
 REM BFCPEICON=
 REM BFCPEICONINDEX=1
 REM BFCPEEMBEDDISPLAY=0
@@ -26,6 +26,440 @@ setlocal EnableDelayedExpansion
 
 set taskID=""
 set flagID=""
+
+if exist C:\JasonJaguarFileSystem\MainStorage(A) goto biosboot
+if not exist C:\JasonJaguarFileSystem\MainStorage(A) goto JDOSBOOT
+
+
+:JDOSBOOT
+if exist C:\JaguarSetup\jaguarautorun.txt goto dosboot
+if not exist C:\JaguarSetup\jaguarautorun.txt goto dbootfalse
+
+
+:dbootfalse
+mkdir C:\JaguarSetup
+goto dosboot
+
+
+:dosboot
+cls
+color 0a
+echo.
+echo.
+echo JaguarDOS Boot, Ver. 2.3
+echo (C) Copyright Jason Jaguar Inc, 2024
+echo.
+set /p DOO=C:\
+
+if %DOO%==EXT goto ext1
+if %DOO%==ext goto ext1
+if %DOO%==CLK goto clk1
+if %DOO%==clk goto clk1
+if %DOO%==SZE goto sizel1
+if %DOO%==sze goto sizel1
+if %DOO%==SET goto setul1
+if %DOO%==set goto setul1
+if %DOO%==INS goto instart
+if %DOO%==ins goto instart
+if %DOO%==ERR goto prehelpchk
+if %DOO%==err goto prehelpchk
+if %DOO%==CLS goto cless
+if %DOO%==cls goto cless
+if %DOO%==DEL goto deeleet
+if %DOO%==del goto deeleet
+if %DOO%==help goto prehelp1
+if %DOO%==? goto prehelp1
+if %DOO%==HELP goto prehelp1
+goto prehelpchk
+
+
+
+
+:dosboit
+color 0a
+echo.
+set /p DOO=C:\
+
+if %DOO%==EXT goto ext1
+if %DOO%==ext goto ext1
+if %DOO%==CLK goto clk1
+if %DOO%==clk goto clk1
+if %DOO%==SZE goto sizel1
+if %DOO%==sze goto sizel1
+if %DOO%==SET goto setul1
+if %DOO%==set goto setul1
+if %DOO%==INS goto instart
+if %DOO%==ins goto instart
+if %DOO%==ERR goto prehelpchk
+if %DOO%==err goto prehelpchk
+if %DOO%==CLS goto cless
+if %DOO%==cls goto cless
+if %DOO%==DEL goto deeleet
+if %DOO%==del goto deeleet
+if %DOO%==help goto prehelp1
+if %DOO%==? goto prehelp1
+if %DOO%==HELP goto prehelp1
+goto prehelpchk
+
+
+:prehelp1
+echo EXT     Exits JaguarDOS.
+echo INS     Starts up the installation booting processes for Jason Jaguar 2.3 GUI OS and FileSystem.
+echo CLK     Shows the date and time.
+echo SZE     Declares the size of all directories and files contained on the FileSystem.
+echo SET     Primes and sets the A: and B: drives for installation.
+echo DEL     Deletes the C:\JaguarSetup directory and redirects to first boot.
+echo ERR     Tests the error-throwing system for JaguarDOS.
+echo CLS     Clears the Command Terminal menu.
+goto dosboit
+
+
+
+:deeleet
+rmdir /S /Q  C:\JaguarSetup
+goto JDOSBOOT
+
+
+
+:ext1
+exit
+
+
+
+:clk1
+time /t
+date /t
+goto dosboit
+
+
+
+:prehelpchk
+echo Illegal expression or command. 
+goto dosboit
+
+
+
+:sizel1
+echo Directory of A:\.
+echo.
+echo.
+echo.
+echo.
+echo 0 File(s):          0 Bytes.
+echo 0 Dir(s):           0 Bytes free.
+
+
+echo Directory of B:\.
+echo.
+echo.
+echo.
+echo.
+echo 0 File(s):          0 Bytes.
+echo 0 Dir(s):           0 Bytes free.
+goto dosboit
+
+
+:cless
+cls
+goto dosboit
+
+
+:setul1
+if exist C:\JaguarSetup\jaguarautorun.txt goto setultrue
+if not exist C:\JaguarSetup\jaguarautorun.txt goto setulfalse
+
+
+:setultrue
+echo Setup Booter Drive previously initialized.
+goto dosboit
+
+:setulfalse
+echo Creating Setup Booter Drive...
+echo "}KEYBOARD = TRUE /: MOUSE = TRUE /: BOOTJDOS = TRUE $%/. Argument 37692[KERNEL UNLOCK] a:JJFS b:JJFS 98^97765 P{ }CHRSET LODR: $:>^@%234567890-=qwertyuiop[]\asdfghjkl;'zxcvbnm,./{  }calexe.mtp %HDPS_INIT% %SINGULARITY_CORE_ENGAGE% %QEN_CALIBRATE% %RDF_ACTIVATE%:: set HDPS_INIT=1234567890{  " > C:\JaguarSetup\jaguarautorun.txt
+ping Localhost -n 2 >nul
+cls
+echo Creating Setup Booter Drive..
+ping Localhost -n 2 >nul
+cls
+echo Creating Setup Booter Drive...
+ping Localhost -n 2 >nul
+cls
+echo Setup Booter Drive succesfully created and initialized for boot based on captured system specs.
+goto dosboit 
+
+
+:instart
+if exist C:\JaguarSetup\jaguarautorun.txt goto instarttrue
+if not exist C:\JaguarSetup\jaguarautorun.txt goto instartfalse
+
+
+:instartfalse
+echo Invalid starting conditions: Setup Jaguar Boot drive to start installation.
+goto dosboit
+
+
+:instarttrue
+cls
+echo "}KEYBOARD = TRUE /: MOUSE = TRUE /: BOOTJDOS = TRUE $%/. Argument 37692[KERNEL UNLOCK] a:JJFS b:JJFS 98^97765 P{
+ping Localhost -n 1 >nul
+echo }CHRSET LODR: ^@%234567890-=qwertyuiop[]\asdfghjkl;'zxcvbnm,./{
+echo }CHRSET LODR: ^@%234567890-=qwertyuiop[]\asdfghjkl;'zxcvbnm,./{
+echo }CHRSET LODR: ^@%234567890-=qwertyuiop[]\asdfghjkl;'zxcvbnm,./{
+echo }CHRSET LODR: ^@%234567890-=qwertyuiop[]\asdfghjkl;'zxcvbnm,./{
+echo }CHRSET LODR: ^@%234567890-=qwertyuiop[]\asdfghjkl;'zxcvbnm,./{
+echo }CHRSET LODR: ^@%234567890-=qwertyuiop[]\asdfghjkl;'zxcvbnm,./{
+echo }CHRSET LODR: ^@%234567890-=qwertyuiop[]\asdfghjkl;'zxcvbnm,./{
+echo }CHRSET LODR: ^@%234567890-=qwertyuiop[]\asdfghjkl;'zxcvbnm,./{
+echo }CHRSET LODR: ^@%234567890-=qwertyuiop[]\asdfghjkl;'zxcvbnm,./{
+echo }CHRSET LODR: ^@%234567890-=qwertyuiop[]\asdfghjkl;'zxcvbnm,./{
+echo }CHRSET LODR: ^@%234567890-=qwertyuiop[]\asdfghjkl;'zxcvbnm,./{
+echo }CHRSET LODR: ^@%234567890-=qwertyuiop[]\asdfghjkl;'zxcvbnm,./{
+echo }CHRSET LODR: ^@%234567890-=qwertyuiop[]\asdfghjkl;'zxcvbnm,./{
+echo }CHRSET LODR: ^@%234567890-=qwertyuiop[]\asdfghjkl;'zxcvbnm,./{
+echo }CHRSET LODR: ^@%234567890-=qwertyuiop[]\asdfghjkl;'zxcvbnm,./{
+echo }CHRSET LODR: ^@%234567890-=qwertyuiop[]\asdfghjkl;'zxcvbnm,./{
+echo CHRSET LOD TRUE
+ping Localhost -n 3 >nul
+echo }calexe.mtp %HDPS_INIT% %SINGULARITY_CORE_ENGAGE% %QEN_CALIBRATE% %RDF_ACTIVATE%:: set HDPS_INIT=1234567890{ 
+echo }set HDPS_INIT=1234567890{ 
+echo }set HDPS_INIT=1234567890{ 
+echo }set HDPS_INIT=1234567890{ 
+echo }set HDPS_INIT=1234567890{ 
+echo }set HDPS_INIT=1234567890{ 
+echo }set HDPS_INIT=1234567890{ 
+echo }set HDPS_INIT=1234567890{ 
+echo }set HDPS_INIT=1234567890{ 
+echo }set HDPS_INIT=1234567890{ 
+echo }set HDPS_INIT=1234567890{ 
+echo }set HDPS_INIT=1234567890{ 
+echo }set HDPS_INIT=1234567890{ 
+echo }set HDPS_INIT=1234567890{ 
+echo }set HDPS_INIT=1234567890{ 
+echo }set HDPS_INIT=1234567890{ 
+echo }set HDPS_INIT=1234567890{ 
+echo }set HDPS_INIT=1234567890{ 
+echo }set HDPS_INIT=1234567890{ 
+ping Localhost -n 3 >nul
+pause
+cls
+echo por94wy toirfwgfgp89f3w98r3w893wr89w389w34r98w34r89wr3789wr
+echo nr3wowruw3r8wr30rwo3w9r039rwubrwr   
+echo 9or7grw9g890rhr8903ghr83hr8whr3uirh3
+echo 000101091u314931i392i9238u282782820290290902uh3h78h237832892y37u239823
+echo 39438u4h42h43h432438743jn42h4u847y84784939h3h8732h
+echo 4393u4h893u4893y242h42g478g28282024994373g4yiug4894g8794g82g48g47g44904yh98432
+echo 4h3478284g32784723g432ug4g487tg487g48212001010g478g48g48374g2
+echo 94h3782h948yh230794gh3274g723g32404190947tg48674478
+echo 84h374h8724tg180g4871g4873g814gh8234
+echo 94h32784h382g4832g47ug237i4g37ui2g47y2g847g274g824
+echo 94h37824h892gh472g84yqrety7wr76g73r62q
+echo 493h489h4329yh47392g4y2g62612741278
+echo por94wy toirfwgfgp89f3w98r3w893wr89w389w34r98w34r89wr3789wr
+echo nr3wowruw3r8wr30rwo3w9r039rwubrwr   
+echo 9or7grw9g890rhr8903ghr83hr8whr3uirh3
+echo 000101091u314931i392i9238u282782820290290902uh3h78h237832892y37u239823
+echo 39438u4h42h43h432438743jn42h4u847y84784939h3h8732h
+echo 4393u4h893u4893y242h42g478g28282024994373g4yiug4894g8794g82g48g47g44904yh98432
+echo 4h3478284g32784723g432ug4g487tg487g48212001010g478g48g48374g2
+echo 94h3782h948yh230794gh3274g723g32404190947tg48674478
+echo 84h374h8724tg180g4871g4873g814gh8234
+echo 94h32784h382g4832g47ug237i4g37ui2g47y2g847g274g824
+echo 94h37824h892gh472g84yqrety7wr76g73r62q
+echo 493h489h4329yh47392g4y2g62612741278
+echo por94wy toirfwgfgp89f3w98r3w893wr89w389w34r98w34r89wr3789wr
+echo nr3wowruw3r8wr30rwo3w9r039rwubrwr   
+echo 9or7grw9g890rhr8903ghr83hr8whr3uirh3
+echo 000101091u314931i392i9238u282782820290290902uh3h78h237832892y37u239823
+echo 39438u4h42h43h432438743jn42h4u847y84784939h3h8732h
+echo 4393u4h893u4893y242h42g478g28282024994373g4yiug4894g8794g82g48g47g44904yh98432
+echo 4h3478284g32784723g432ug4g487tg487g48212001010g478g48g48374g2
+echo 94h3782h948yh230794gh3274g723g32404190947tg48674478
+echo 84h374h8724tg180g4871g4873g814gh8234
+echo 94h32784h382g4832g47ug237i4g37ui2g47y2g847g274g824
+echo 94h37824h892gh472g84yqrety7wr76g73r62q
+echo 493h489h4329yh47392g4y2g62612741278
+echo por94wy toirfwgfgp89f3w98r3w893wr89w389w34r98w34r89wr3789wr
+echo nr3wowruw3r8wr30rwo3w9r039rwubrwr   
+echo 9or7grw9g890rhr8903ghr83hr8whr3uirh3
+echo 000101091u314931i392i9238u282782820290290902uh3h78h237832892y37u239823
+echo 39438u4h42h43h432438743jn42h4u847y84784939h3h8732h
+echo 4393u4h893u4893y242h42g478g28282024994373g4yiug4894g8794g82g48g47g44904yh98432
+echo 4h3478284g32784723g432ug4g487tg487g48212001010g478g48g48374g2
+echo 94h3782h948yh230794gh3274g723g32404190947tg48674478
+echo 84h374h8724tg180g4871g4873g814gh8234
+echo 94h32784h382g4832g47ug237i4g37ui2g47y2g847g274g824
+echo 94h37824h892gh472g84yqrety7wr76g73r62q
+echo 493h489h4329yh47392g4y2g62612741278
+echo por94wy toirfwgfgp89f3w98r3w893wr89w389w34r98w34r89wr3789wr
+echo nr3wowruw3r8wr30rwo3w9r039rwubrwr   
+echo 9or7grw9g890rhr8903ghr83hr8whr3uirh3
+echo 000101091u314931i392i9238u282782820290290902uh3h78h237832892y37u239823
+echo 39438u4h42h43h432438743jn42h4u847y84784939h3h8732h
+echo 4393u4h893u4893y242h42g478g28282024994373g4yiug4894g8794g82g48g47g44904yh98432
+echo 4h3478284g32784723g432ug4g487tg487g48212001010g478g48g48374g2
+echo 94h3782h948yh230794gh3274g723g32404190947tg48674478
+echo 84h374h8724tg180g4871g4873g814gh8234
+echo 94h32784h382g4832g47ug237i4g37ui2g47y2g847g274g824
+echo 94h37824h892gh472g84yqrety7wr76g73r62q
+echo 493h489h4329yh47392g4y2g62612741278
+echo por94wy toirfwgfgp89f3w98r3w893wr89w389w34r98w34r89wr3789wr
+echo nr3wowruw3r8wr30rwo3w9r039rwubrwr   
+echo 9or7grw9g890rhr8903ghr83hr8whr3uirh3
+echo 000101091u314931i392i9238u282782820290290902uh3h78h237832892y37u239823
+echo 39438u4h42h43h432438743jn42h4u847y84784939h3h8732h
+echo 4393u4h893u4893y242h42g478g28282024994373g4yiug4894g8794g82g48g47g44904yh98432
+echo 4h3478284g32784723g432ug4g487tg487g48212001010g478g48g48374g2
+echo 94h3782h948yh230794gh3274g723g32404190947tg48674478
+echo 84h374h8724tg180g4871g4873g814gh8234
+echo 94h32784h382g4832g47ug237i4g37ui2g47y2g847g274g824
+echo 94h37824h892gh472g84yqrety7wr76g73r62q
+echo 493h489h4329yh47392g4y2g62612741278
+echo por94wy toirfwgfgp89f3w98r3w893wr89w389w34r98w34r89wr3789wr
+echo nr3wowruw3r8wr30rwo3w9r039rwubrwr   
+echo 9or7grw9g890rhr8903ghr83hr8whr3uirh3
+echo 000101091u314931i392i9238u282782820290290902uh3h78h237832892y37u239823
+echo 39438u4h42h43h432438743jn42h4u847y84784939h3h8732h
+echo 4393u4h893u4893y242h42g478g28282024994373g4yiug4894g8794g82g48g47g44904yh98432
+echo 4h3478284g32784723g432ug4g487tg487g48212001010g478g48g48374g2
+echo 94h3782h948yh230794gh3274g723g32404190947tg48674478
+echo 84h374h8724tg180g4871g4873g814gh8234
+echo 94h32784h382g4832g47ug237i4g37ui2g47y2g847g274g824
+echo 94h37824h892gh472g84yqrety7wr76g73r62q
+echo 493h489h4329yh47392g4y2g62612741278
+echo por94wy toirfwgfgp89f3w98r3w893wr89w389w34r98w34r89wr3789wr
+echo nr3wowruw3r8wr30rwo3w9r039rwubrwr   
+echo 9or7grw9g890rhr8903ghr83hr8whr3uirh3
+echo 000101091u314931i392i9238u282782820290290902uh3h78h237832892y37u239823
+echo 39438u4h42h43h432438743jn42h4u847y84784939h3h8732h
+echo 4393u4h893u4893y242h42g478g28282024994373g4yiug4894g8794g82g48g47g44904yh98432
+echo 4h3478284g32784723g432ug4g487tg487g48212001010g478g48g48374g2
+echo 94h3782h948yh230794gh3274g723g32404190947tg48674478
+echo 84h374h8724tg180g4871g4873g814gh8234
+echo 94h32784h382g4832g47ug237i4g37ui2g47y2g847g274g824
+echo 94h37824h892gh472g84yqrety7wr76g73r62q
+echo 493h489h4329yh47392g4y2g62612741278
+ping Localhost -n 2 >nul
+echo 1010001011111011011010101101000011100101010110
+echo 101011111011101010101
+echo 101011010111001011001010100111
+echo 0101101111101110011001011011101001110001001110100111001101
+echo 1110010011001100111111101111111001011100110011001101111111011011100
+echo 1100111111011111110010111001100110011011111110110111001100111111011111110
+echo 0101110011001100110111111101101110011001111
+echo 11011111110010111001100110011011111110
+echo 11011100110011111101111111001011100110011001101111111011011100110011111101111111001011
+echo 1001100110011011111110110111001100111111011111
+echo 110010111001100110011011111110110111001100111111011111
+echo 110010111001100110011011111110110111001100111111
+echo 011111110010111001100110011011111110110111001100111111
+echo 011111110010111001100110011011111110110111001100111
+echo 1110111111100101110011001100110111111101101110011001
+echo 1111101111111001011100110011001101111111011011100110
+echo 01111110111111100101110011001100110111111101101110011
+echo 0011111101111111001011100110011001
+echo 1011111110110111001100111111011
+echo 1111100101110011001100110111111101101110011001111110111111100101110
+echo 01100110011011111110110111001100111111011111110010111001100110011011
+echo 1111101101110011001111110111111100101110011001100110111111101101
+ping Localhost -n 3 >nul
+echo Jason Jaguar OS 2.3 Kernel loaded and booted. Setup will now restart into JJFileSystem 1.6 BIOS.
+pause
+goto biosboot
+
+
+
+
+:JBOOTDOSAFTER
+cls
+color 0a
+echo.
+echo.
+echo JaguarDOS Boot, Ver. 2.3
+echo (C) Copyright Jason Jaguar Inc, 2024
+echo.
+set /p DOO=C:\
+
+if %DOO%==EXT goto ext2
+if %DOO%==ext goto ext2
+if %DOO%==CLK goto clk2
+if %DOO%==clk goto clk2
+if %DOO%==INS goto jstart
+if %DOO%==ins goto jstart
+if %DOO%==ERR goto peehelpchk
+if %DOO%==err goto peehelpchk
+if %DOO%==CLS goto clessw
+if %DOO%==cls goto clessw
+if %DOO%==help goto prehelp2
+if %DOO%==? goto prehelp2
+if %DOO%==HELP goto prehelp2
+goto peehelpchk
+
+
+
+
+:dosbout
+color 0a
+echo.
+set /p DOO=C:\
+
+if %DOO%==EXT goto ext2
+if %DOO%==ext goto ext2
+if %DOO%==CLK goto clk2
+if %DOO%==clk goto clk2
+if %DOO%==INS goto jstart
+if %DOO%==ins goto jstart
+if %DOO%==ERR goto peehelpchk
+if %DOO%==err goto peehelpchk
+if %DOO%==CLS goto clessw
+if %DOO%==cls goto clessw
+if %DOO%==help goto prehelp2
+if %DOO%==? goto prehelp2
+if %DOO%==HELP goto prehelp2
+goto peehelpchk
+
+
+:prehelp2
+echo EXT     Exits JaguarDOS and uninitializes any Operating System or Shell.
+echo INS     Boots into an installed copy of Jason Jaguar 2.3 GUI OS.
+echo CLK     Shows the date and time.
+echo ERR     Tests the error-throwing system for JaguarDOS.
+echo CLS     Clears the Command Terminal menu.
+goto dosbout
+
+
+
+
+:ext2
+exit
+
+
+
+:clk2
+time /t
+date /t
+goto dosbout
+
+
+
+:peehelpchk
+echo Illegal expression or command. 
+goto dosbout
+
+
+
+:clessw
+cls
+goto dosbout
+
+
+
+:jstart
+cls
+ping Localhost -n 2 >nul
+goto biosboot
+
+
+
 
 :biosboot
 color 08
@@ -675,6 +1109,7 @@ rem PrintCenter Welcome to Jason Jaguar 2 . 3 :) Check out the beta features and
 rem ShadeBoxAt 14 27 1 69 1
 rem ShadeBoxAt 13 95 1 1 1
 rem PrintColorAt Jason Jaguar 2.3 Public Ver. 1 88 0 9
+rem PrintColorAt .X. 1 117 15 12
 rem PrintColorAt Welcome, %usar%. :) 29 1 0 3
 rem PrintColorAt {@@} 1 2 0 9
 rem rem Last color value is box, first is text, first real value is height,
@@ -686,7 +1121,7 @@ rem PrintColorAt Folder System 1 26 0 9
 rem PrintColorAt Reload Desktop 1 41 0 9
 rem PrintColorAt %hour%:%minute% %ampm%, %mydate% 29 100 0 3
 rem PrintColorAt File 1 63 15 1
-rem MouseCMD 2,1,5,1 8,1,15,1 18,1,23,1 26,1,38,1 41,1,54,1 63,1,66,1 get
+rem MouseCMD 2,1,5,1 8,1,15,1 18,1,23,1 26,1,38,1 41,1,54,1 63,1,66,1 117,1,119,1 get
 
 if %result%==1 goto test
 if %result%==2 goto bubbles
@@ -694,7 +1129,112 @@ if %result%==3 goto lega
 if %result%==4 goto FileSystem
 if %result%==5 goto test3
 if %result%==6 goto multifinder
+if %result%==7 goto ENDJAGGUI
 if %result%==0 goto CLI
+
+
+
+
+:ENDJAGGUI
+set taskID=JEnd
+set flagID=ENDJAGGUI
+rem ShadeBoxAt 2 63 1 11 1
+rem ShadeBoxAt 3 63 6 12 2
+rem ShadeBoxAt 5 25 1 10 2
+rem ShadeBoxAt 2 2 24 74 2
+rem PrintCenter Welcome to Jason Jaguar 2 . 3 :) Check out the beta features and menus. 13 0 9
+rem ShadeBoxAt 6 17 10 40 4
+rem ShadeBoxAt 12 20 1 2 4
+rem PrintColorAt *X* 6 17 15 12
+rem PrintColorAt Jason Jaguar - 2.3 GUI Environment{/} 6 20 0 9
+rem PrintColorAt { 7 17 0 8
+rem PrintColorAt { 8 17 0 8
+rem PrintColorAt { 9 17 0 8
+rem PrintColorAt { 10 17 0 8
+rem PrintColorAt { 11 17 0 8
+rem PrintColorAt { 12 17 0 8
+rem PrintColorAt { 13 17 0 8
+rem PrintColorAt { 14 17 0 8
+rem PrintColorAt { 15 17 0 8
+rem PrintColorAt - 15 18 0 8
+rem PrintColorAt - 15 19 0 8
+rem PrintColorAt - 15 20 0 8
+rem PrintColorAt - 15 21 0 8
+rem PrintColorAt - 15 22 0 8
+rem PrintColorAt - 15 23 0 8
+rem PrintColorAt - 15 24 0 8
+rem PrintColorAt - 15 25 0 8
+rem PrintColorAt - 15 26 0 8
+rem PrintColorAt - 15 27 0 8
+rem PrintColorAt - 15 28 0 8
+rem PrintColorAt - 15 29 0 8
+rem PrintColorAt - 15 30 0 8
+rem PrintColorAt - 15 31 0 8
+rem PrintColorAt - 15 32 0 8
+rem PrintColorAt - 15 33 0 8
+rem PrintColorAt - 15 34 0 8
+rem PrintColorAt - 15 35 0 8
+rem PrintColorAt - 15 36 0 8
+rem PrintColorAt - 15 37 0 8
+rem PrintColorAt - 15 38 0 8
+rem PrintColorAt - 15 39 0 8
+rem PrintColorAt - 15 40 0 8
+rem PrintColorAt - 15 41 0 8
+rem PrintColorAt - 15 42 0 8
+rem PrintColorAt - 15 43 0 8
+rem PrintColorAt - 15 44 0 8
+rem PrintColorAt - 15 45 0 8
+rem PrintColorAt - 15 46 0 8
+rem PrintColorAt - 15 47 0 8
+rem PrintColorAt - 15 48 0 8
+rem PrintColorAt - 15 49 0 8
+rem PrintColorAt - 15 50 0 8
+rem PrintColorAt - 15 51 0 8
+rem PrintColorAt - 15 52 0 8
+rem PrintColorAt - 15 53 0 8
+rem PrintColorAt - 15 54 0 8
+rem PrintColorAt - 15 55 0 8
+rem PrintColorAt - 15 56 0 8
+rem PrintColorAt } 7 56 0 8
+rem PrintColorAt } 8 56 0 8
+rem PrintColorAt } 9 56 0 8
+rem PrintColorAt } 10 56 0 8
+rem PrintColorAt } 11 56 0 8
+rem PrintColorAt } 12 56 0 8
+rem PrintColorAt } 13 56 0 8
+rem PrintColorAt } 14 56 0 8
+rem PrintColorAt } 15 56 0 8
+rem PrintColorAt This will end your OS 2.3 GUI session. 10 18 0 3
+rem PrintColorAt *Yes* 13 24 0 9
+rem PrintColorAt *No* 13 40 15 12
+rem ShadeBoxAt 7 57 10 1 1
+rem ShadeBoxAt 16 18 1 40 1
+rem PrintColorAt %taskID% 1 63 15 1
+rem rem Last color value is box, first is text, first real value is height,
+rem rem second one is width
+rem MouseCMD 2,1,5,1 1,17,120,30 17,6,19,6 63,1,66,1 24,13,28,13 40,13,43,13 get
+if %result%==1 goto snui
+if %result%==2 goto snui
+if %result%==3 goto snui
+if %result%==4 goto multifinder
+if %result%==5 goto snurenderer
+if %result%==6 goto snui
+if %result%==0 goto CLI
+
+
+:snurenderer
+rem PaintScreen 15
+rem ShadeBoxAt 3 1 27 120 2
+rem ShadeBoxAt 1 33 2 87 1
+wait 2500
+rem PaintScreen 15
+goto bigwaiter
+
+:bigwaiter
+cls
+ping Localhost -n 2 >nul
+goto JBOOTDOSAFTER
+
 
 
 
@@ -713,10 +1253,11 @@ rem PrintColorAt Legacy 1 18 0 9
 rem PrintColorAt Folder System 1 26 0 9
 rem PrintColorAt Reload Desktop 1 41 0 9
 rem PrintColorAt Jason Jaguar 2.3 Public Ver. 1 88 0 9
+rem PrintColorAt .X. 1 117 15 12
 rem PrintColorAt Welcome, %usar%. :) 29 1 0 3
 rem PrintColorAt %hour%:%minute% %ampm%, %mydate% 29 100 0 3
 rem PrintColorAt File 1 63 15 1
-rem MouseCMD 2,1,5,1 8,1,15,1 18,1,23,1 26,1,38,1 41,1,54,1 63,1,66,1 get
+rem MouseCMD 2,1,5,1 8,1,15,1 18,1,23,1 26,1,38,1 41,1,54,1 63,1,66,1 117,1,119,1 get
 
 if %result%==1 goto test
 if %result%==2 goto bubbles
@@ -724,6 +1265,7 @@ if %result%==3 goto lega
 if %result%==4 goto FileSystem
 if %result%==5 goto test3
 if %result%==6 goto multifinder
+if %result%==7 goto ENDJAGGUI
 if %result%==0 goto CLI
 
 
@@ -759,12 +1301,13 @@ rem ShadeBoxAt 8 64 1 11 1
 rem ShadeBoxAt 3 74 6 1 1
 rem PrintColorAt File 3 65 0 9
 rem PrintColorAt %taskID% 5 65 0 3
-rem MouseCMD 65,3,68,3 65,5,68,5 1,14,120,30 2,1,5,1 get
+rem MouseCMD 65,3,68,3 65,5,68,5 1,14,120,30 2,1,5,1 117,1,119,1 get
 
 if %result%==1 goto jagblock
 if %result%==2 goto %flagID%
 if %result%==3 goto snui
 if %result%==4 goto snui
+if %result%==5 goto ENDJAGGUI
 if %result%==0 goto CLI
 
 
@@ -773,7 +1316,7 @@ rem ShadeBoxAt 2 63 1 11 1
 rem ShadeBoxAt 3 63 6 12 2
 rem PrintColorAt Reload Desktop 1 41 0 9
 rem PrintColorAt File 1 63 15 1
-rem MouseCMD 2,1,5,1 8,1,15,1 18,1,23,1 26,1,38,1 41,1,54,1 63,1,66,1 get
+rem MouseCMD 2,1,5,1 8,1,15,1 18,1,23,1 26,1,38,1 41,1,54,1 63,1,66,1 117,1,119,1 get
 
 if %result%==1 goto test
 if %result%==2 goto bubbles
@@ -781,6 +1324,7 @@ if %result%==3 goto lega
 if %result%==4 goto FileSystem
 if %result%==5 goto test3
 if %result%==6 goto multifinder
+if %result%==7 goto ENDJAGGUI
 if %result%==0 goto CLI
 
 
@@ -1845,6 +2389,8 @@ if %CMD%==RNS goto rinset
 if %CMD%==rns goto rinset
 if %CMD%==COD goto jagcode
 if %CMD%==cod goto jagcode
+if %CMD%==DOS goto revertdos
+if %CMD%==dos goto revertdos
 goto chkhelp
 
 
@@ -1892,6 +2438,8 @@ if %CMD%==RNS goto rinset
 if %CMD%==rns goto rinset
 if %CMD%==COD goto jagcode
 if %CMD%==cod goto jagcode
+if %CMD%==DOS goto revertdos
+if %CMD%==dos goto revertdos
 goto chkhelp
 
 
@@ -1913,7 +2461,24 @@ echo CLC     Directs the user to the calculator.
 echo ERR     Tests the error-throwing system for the CLI.
 echo CLS     Clears the Command Terminal menu.
 echo RNS     Reinstalls the Jason Jaguar 2.3 GUI OS and FileSystem.
+echo DOS     Exits out of Jason Jaguar 2.3 GUI OS and FileSystem, and then reverts to the JaguarDOS Boot Version.
 echo COD     Directs the user to the Code Builder, which allows them to write a full Jason Jaguar-compatible program within the terminal.
+goto CLIUS
+
+
+:revertdos
+set /p REVVERT=@%usar%jaguarcmd} This will end your OS 2.3 session. Y/N?
+
+if %REVVERT%==Y goto WORSEYDOS
+if %REVVERT%==y goto WORSEYDOS
+if %REVVERT%==N goto CLIUS
+if %REVVERT%==n goto CLIUS
+
+
+:WORSEYDOS
+cls
+ping Localhost -n 2 >nul
+goto JBOOTDOSAFTER
 
 
 
