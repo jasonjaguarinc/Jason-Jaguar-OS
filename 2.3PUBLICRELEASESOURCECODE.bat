@@ -1912,9 +1912,9 @@ rem PrintColorAt } 12 56 0 8
 rem PrintColorAt } 13 56 0 8
 rem PrintColorAt } 14 56 0 8
 rem PrintColorAt } 15 56 0 8
-rem PrintColorAt Are you sure you want to backup 8 19 15 1
-rem PrintColorAt Your Jason Jaguar FileSystem? 10 19 15 1
-rem PrintColorAt *Yes* 13 24 15 12
+rem PrintColorAt Are you sure you want to backup 8 19 0 3
+rem PrintColorAt Your Jason Jaguar FileSystem? 10 19 0 11
+rem PrintColorAt *Yes* 13 24 0 3
 rem PrintColorAt *No* 13 40 15 12
 rem ShadeBoxAt 7 57 10 1 1
 rem ShadeBoxAt 16 18 1 40 1
@@ -2345,9 +2345,9 @@ rem PrintColorAt } 12 56 0 8
 rem PrintColorAt } 13 56 0 8
 rem PrintColorAt } 14 56 0 8
 rem PrintColorAt } 15 56 0 8
-rem PrintColorAt Are you sure you want to reinstall 8 19 15 1
-rem PrintColorAt Jason Jaguar 2.3 Public Release? 10 19 15 1
-rem PrintColorAt *Yes* 13 24 15 12
+rem PrintColorAt Are you sure you want to reinstall 8 19 0 3
+rem PrintColorAt Jason Jaguar 2.3 Public Release? 10 19 0 11
+rem PrintColorAt *Yes* 13 24 0 3
 rem PrintColorAt *No* 13 40 15 12
 rem ShadeBoxAt 7 57 10 1 1
 rem ShadeBoxAt 16 18 1 40 1
@@ -2529,8 +2529,8 @@ if %CMD%==RET goto biosboot
 if %CMD%==ret goto biosboot
 if %CMD%==GUI goto gui
 if %CMD%==gui goto gui
-if %CMD%==JAG goto lega
-if %CMD%==jag goto lega
+if %CMD%==JAG goto legacmd
+if %CMD%==jag goto legacmd
 if %CMD%==ABT goto abt
 if %CMD%==abt goto abt
 if %CMD%==SYS goto infotus
@@ -2568,6 +2568,7 @@ if %CMD%==bck goto BACKKUPCMD
 goto chkhelp
 
 
+
 :CLIUS
 color 0a
 echo.
@@ -2580,8 +2581,8 @@ if %CMD%==RET goto biosboot
 if %CMD%==ret goto biosboot
 if %CMD%==GUI goto gui
 if %CMD%==gui goto gui
-if %CMD%==JAG goto lega
-if %CMD%==jag goto lega
+if %CMD%==JAG goto legacmd
+if %CMD%==jag goto legacmd
 if %CMD%==ABT goto abt
 if %CMD%==abt goto abt
 if %CMD%==SYS goto infotus
@@ -5183,7 +5184,7 @@ rem rem WIDTH THEN HEIGHT FOR COORDINATES THOUGH
 rem PrintColorAt *Bubbles 1 8 0 9
 rem PrintColorAt Legacy 1 18 0 9
 rem PrintColorAt Folder System 1 26 0 9
-rem PrintColorAt Reload Desktop 1 41 0 9
+rem PrintColorAt PathFinderSpec 1 41 0 9
 rem PrintColorAt %hour%:%minute% %ampm%, %mydate% 29 100 0 3
 rem PrintColorAt File 1 63 15 1
 
@@ -5318,7 +5319,7 @@ rem PrintColorAt - 14 30 0 9
 rem PrintColorAt - 14 31 0 9
 rem PrintColorAt / 14 32 0 9
 rem PrintColorAt Sorry, couldn't find or load specified file :( 11 20 0 3
-rem PrintColorAt Press the back button to redirect to the A: Drive. 13 21 0 3
+rem PrintColorAt Press the back button to redirect to the A: Drive. 13 21 0 11
 rem ShadeBoxAt 7 75 18 1 1
 rem ShadeBoxAt 25 18 1 58 1
 rem PrintColorAt %taskID% 1 63 15 1
@@ -5421,7 +5422,7 @@ rem rem WIDTH THEN HEIGHT FOR COORDINATES THOUGH
 rem PrintColorAt *Bubbles 1 8 0 9
 rem PrintColorAt Legacy 1 18 0 9
 rem PrintColorAt Folder System 1 26 0 9
-rem PrintColorAt Reload Desktop 1 41 0 9
+rem PrintColorAt PathFinderSpec 1 41 0 9
 rem PrintColorAt %hour%:%minute% %ampm%, %mydate% 29 100 0 3
 rem PrintColorAt File 1 63 15 1
 
@@ -5788,9 +5789,9 @@ rem PrintColorAt } 12 56 0 8
 rem PrintColorAt } 13 56 0 8
 rem PrintColorAt } 14 56 0 8
 rem PrintColorAt } 15 56 0 8
-rem PrintColorAt Would you like to run software 9 18 15 1
-rem PrintColorAt from an external drive? 11 20 15 1
-rem PrintColorAt *Yes* 13 24 15 12
+rem PrintColorAt Would you like to run software 9 18 0 3
+rem PrintColorAt from an external drive? 11 20 0 11
+rem PrintColorAt *Yes* 13 24 0 3
 rem PrintColorAt *No* 13 40 15 12
 rem ShadeBoxAt 7 57 10 1 1
 rem ShadeBoxAt 16 18 1 40 1
@@ -5907,12 +5908,104 @@ goto yestal
 
 
 :lega
-cls
-color 0c
+set taskID=Lega
+set flagID=lega
+rem ShadeBoxAt 2 63 1 11 1
+rem ShadeBoxAt 3 63 6 12 2
+rem ShadeBoxAt 5 25 1 10 2
+rem ShadeBoxAt 2 2 24 74 2
+rem PrintCenter Welcome to Jason Jaguar 2 . 3 :) Check out the beta features and menus. 13 0 9
+rem ShadeBoxAt 6 17 10 40 4
+rem ShadeBoxAt 12 20 1 2 4
+rem PrintColorAt *X* 6 17 15 12
+rem PrintColorAt Jason Jaguar - 2.3 GUI Environment{/} 6 20 0 9
+rem PrintColorAt { 7 17 0 8
+rem PrintColorAt { 8 17 0 8
+rem PrintColorAt { 9 17 0 8
+rem PrintColorAt { 10 17 0 8
+rem PrintColorAt { 11 17 0 8
+rem PrintColorAt { 12 17 0 8
+rem PrintColorAt { 13 17 0 8
+rem PrintColorAt { 14 17 0 8
+rem PrintColorAt { 15 17 0 8
+rem PrintColorAt - 15 18 0 8
+rem PrintColorAt - 15 19 0 8
+rem PrintColorAt - 15 20 0 8
+rem PrintColorAt - 15 21 0 8
+rem PrintColorAt - 15 22 0 8
+rem PrintColorAt - 15 23 0 8
+rem PrintColorAt - 15 24 0 8
+rem PrintColorAt - 15 25 0 8
+rem PrintColorAt - 15 26 0 8
+rem PrintColorAt - 15 27 0 8
+rem PrintColorAt - 15 28 0 8
+rem PrintColorAt - 15 29 0 8
+rem PrintColorAt - 15 30 0 8
+rem PrintColorAt - 15 31 0 8
+rem PrintColorAt - 15 32 0 8
+rem PrintColorAt - 15 33 0 8
+rem PrintColorAt - 15 34 0 8
+rem PrintColorAt - 15 35 0 8
+rem PrintColorAt - 15 36 0 8
+rem PrintColorAt - 15 37 0 8
+rem PrintColorAt - 15 38 0 8
+rem PrintColorAt - 15 39 0 8
+rem PrintColorAt - 15 40 0 8
+rem PrintColorAt - 15 41 0 8
+rem PrintColorAt - 15 42 0 8
+rem PrintColorAt - 15 43 0 8
+rem PrintColorAt - 15 44 0 8
+rem PrintColorAt - 15 45 0 8
+rem PrintColorAt - 15 46 0 8
+rem PrintColorAt - 15 47 0 8
+rem PrintColorAt - 15 48 0 8
+rem PrintColorAt - 15 49 0 8
+rem PrintColorAt - 15 50 0 8
+rem PrintColorAt - 15 51 0 8
+rem PrintColorAt - 15 52 0 8
+rem PrintColorAt - 15 53 0 8
+rem PrintColorAt - 15 54 0 8
+rem PrintColorAt - 15 55 0 8
+rem PrintColorAt - 15 56 0 8
+rem PrintColorAt } 7 56 0 8
+rem PrintColorAt } 8 56 0 8
+rem PrintColorAt } 9 56 0 8
+rem PrintColorAt } 10 56 0 8
+rem PrintColorAt } 11 56 0 8
+rem PrintColorAt } 12 56 0 8
+rem PrintColorAt } 13 56 0 8
+rem PrintColorAt } 14 56 0 8
+rem PrintColorAt } 15 56 0 8
+rem PrintColorAt Would you like to boot into 9 18 0 3
+rem PrintColorAt Jaguar OS Legacy Version? 11 20 0 11
+rem PrintColorAt *Yes* 13 24 0 3
+rem PrintColorAt *No* 13 40 15 12
+rem ShadeBoxAt 7 57 10 1 1
+rem ShadeBoxAt 16 18 1 40 1
+rem PrintColorAt %taskID% 1 63 15 1
+rem rem Last color value is box, first is text, first real value is height,
+rem rem second one is width
+rem MouseCMD 2,1,5,1 1,17,120,30 17,6,19,6 63,1,66,1 24,13,28,13 40,13,43,13 get
+if %result%==1 goto snui
+if %result%==2 goto snui
+if %result%==3 goto snui
+if %result%==4 goto multifinder
+if %result%==5 goto jaguar1
+if %result%==6 goto snui
+if %result%==0 goto CLI
+
+
+
+
+
+:legacmd
+color 0a
 set /p menu=Would you like to boot into Jason Jaguar Legacy DOS? Y/N
 
 if %menu%==Y goto jaguar1
-if %menu%==N goto gui
+if %menu%==N goto CLIUS
+if %menu%==y goto jaguar1
+if %menu%==n goto CLIUS
 
 
 :test2
