@@ -5180,7 +5180,7 @@ rem PrintColorAt {@@} 1 2 0 9
 rem rem Last color value is box, first is text, first real value is height,
 rem rem second one is width
 rem rem WIDTH THEN HEIGHT FOR COORDINATES THOUGH
-rem PrintColorAt MenuTest 1 8 0 9
+rem PrintColorAt *Bubbles 1 8 0 9
 rem PrintColorAt Legacy 1 18 0 9
 rem PrintColorAt Folder System 1 26 0 9
 rem PrintColorAt Reload Desktop 1 41 0 9
@@ -5418,7 +5418,7 @@ rem PrintColorAt {@@} 1 2 0 9
 rem rem Last color value is box, first is text, first real value is height,
 rem rem second one is width
 rem rem WIDTH THEN HEIGHT FOR COORDINATES THOUGH
-rem PrintColorAt MenuTest 1 8 0 9
+rem PrintColorAt *Bubbles 1 8 0 9
 rem PrintColorAt Legacy 1 18 0 9
 rem PrintColorAt Folder System 1 26 0 9
 rem PrintColorAt Reload Desktop 1 41 0 9
