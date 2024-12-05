@@ -36,6 +36,8 @@ Introducing Jason Jaguar OS! A little batch shell that directs you to different 
 - A DOS-style installer from initial boot, which is able to exited to from the GUI and acts a lot more like the Operating Shell that it actually is.
 - A FileSystem backup feature, accessible through both the Terminal and the GUI.
 - A graphical menu before redirecting to Jason Jaguar Legacy Version.
+- The ability to boot from a previous FileSystem Backup in both the GUI and the Terminal.
+- The ability to nuke your entire install of JaguarOS and the FileSystem from the Terminal.
 - And a few general QOL and stability improvements!
 
 
