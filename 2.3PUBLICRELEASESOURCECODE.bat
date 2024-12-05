@@ -2869,7 +2869,7 @@ echo RNS     Reinstalls the Jason Jaguar 2.3 GUI OS and FileSystem.
 echo DOS     Exits out of Jason Jaguar 2.3 GUI OS and FileSystem, and then reverts to the JaguarDOS Boot Version.
 echo COD     Directs the user to the Code Builder, which allows them to write a full Jason Jaguar-compatible program within the terminal.
 echo BCK     Creates a backup of the user's FileSystem on the C: Drive in the event of lost data.
-echo NUK     Permanently nukes your current FileSystem install, directing the user to a pre-install version of JaguarDOS Boot 2.3.
+echo NUK     Nukes your current FileSystem install, directing the user to a pre-install version of JaguarDOS Boot 2.3.
 echo BOT     Boots from a FileSystem Backup currently on the C: Drive.
 goto CLIUS
 
@@ -3142,26 +3142,26 @@ goto CLIUS
 
 :clialc
 cls
+color 0a
 echo.
 echo.
 echo.
-echo ________Calculator________
+echo ________Jason Jaguar Terminal Calculator________
+echo.
+echo Press @ to return to the Terminal.
 echo.
 set /p expression= Enter expression to calculate:
+if %expression%==@ goto CL
+
+goto reicalc
+
+:reicalc
 set /a ans=%expression%
 echo.
 echo = %ans%
 echo.
 pause
-cls
-
-set /p option=Do you want to go back to the Jaguar DOS Command Terminal, Y/N?
-if %option% == Y goto guiback
-if %option% == N goto clialc
-
-:guiback
-cls
-goto CLIUS
+goto clialc
 
 
 :infotus
@@ -3293,69 +3293,53 @@ goto CLIUS
 
 
 :directory
-cls
-set /p fyle=@%usar%jaguarcmd}What would you like to name the directory folder?:
-
+set /p "fyle=What would you like to name the directory folder? "
 if "%fyle%"=="" (
-  echo @%usar%jaguarcmd}Please enter a name and try again.
-  pause
-  goto directory
+    echo Please enter a name and try again ...
+    goto directory
 )
 
-:create_folder
-
-mkdir "C:\JasonJaguarFileSystem\MainStorage(A)\"%fyle%"
-ping Localhost -n 2 >nul
-echo Creating folder...
-ping Localhost -n 2 >nul
-echo Creating folder..
-ping Localhost -n 2 >nul
-cls
-goto chalm
-
-:chalm
-if exist "C:\JasonJaguarFileSystem\MainStorage(A)\"%fyle%"" echo @%usar%jaguarcmd}Directory created successfully.
+echo Creating folder ...
+mkdir "%SYSTEMDRIVE%\JasonJaguarFileSystem\MainStorage(A)\%fyle%" || (
+    echo Directory not found ...
+    goto CLIUS
+)
+echo Directory created successfuly! 
 goto CLIUS
-if not exist "C:\JasonJaguarFileSystem\MainStorage(A)\"%fyle%"" goto sadface
-
-:sadface
-cls
-echo @%usar%jaguarcmd}Directory not found.
-pause
-goto directory
 
 
 :remlove
-cls
-set /p fyler=What's the name of the folder you want to delete?:
+set /p bhas=@%usar%jaguarcmd}What's the name of the folder you want to delete?:
+if not exist C:\JasonJaguarFileSystem\MainStorage(A)\%bhas% goto presiadface
+if exist C:\JasonJaguarFileSystem\MainStorage(A)\%bhas% goto delete_folder
 
-if "%fyler%"=="" (
-  echo Please enter a name and try again.
-  pause
-  goto remlove
-)
+
+:presiadface
+if not defined %bhas% goto fullhyuks
+if not exist C:\JasonJaguarFileSystem\MainStorage(A)\%bhas% goto siadface
+
 
 :delete_folder
-
-rmdir "C:\JasonJaguarFileSystem\MainStorage(A)\"%fyler%"
-ping Localhost -n 2 >nul
-echo Deleting folder...
-ping Localhost -n 2 >nul
-echo Deleting folder..
-ping Localhost -n 2 >nul
-cls
+rmdir C:\JasonJaguarFileSystem\MainStorage(A)\%bhas%
 goto cyhalm
 
 :cyhalm
-if not exist "C:\JasonJaguarFileSystem\MainStorage(A)\"%fyler%"" echo Folder "%fyler%" deleted successfully!
+if not exist C:\JasonJaguarFileSystem\MainStorage(A)\%bhas% goto barffarb
+if exist C:\JasonJaguarFileSystem\MainStorage(A)\%bhas% goto siadface
+
+:barffarb
+echo Folder %bhas% deleted successfully.
 goto CLIUS
-if exist "C:\JasonJaguarFileSystem\MainStorage(A)\"%fyler%"" goto siadface
 
 :siadface
-cls
-echo :( it didn't work
-pause
-goto remlove
+echo Directory unable to remove.
+goto CLIUS
+
+
+:fullhyuks
+echo Please enter a real name and try again.
+goto CLIUS
+
 
 
 
