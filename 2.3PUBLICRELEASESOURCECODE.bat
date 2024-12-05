@@ -24,6 +24,7 @@ REM BFCPEOPTIONEND
 
 setlocal EnableDelayedExpansion
 
+:prebiosstart
 set taskID=""
 set flagID=""
 
@@ -1844,6 +1845,7 @@ if %result%==0 goto CLI
 :fsysbackup
 set taskID=Bkup
 set flagID=fsysbackup
+set specID=BackupLoadSpec
 rem ShadeBoxAt 2 63 1 11 1
 rem ShadeBoxAt 3 63 6 12 2
 rem ShadeBoxAt 5 25 1 10 2
@@ -1918,19 +1920,237 @@ rem PrintColorAt *Yes* 13 24 0 3
 rem PrintColorAt *No* 13 40 15 12
 rem ShadeBoxAt 7 57 10 1 1
 rem ShadeBoxAt 16 18 1 40 1
+rem PrintColorAt %specID% 1 41 0 9
 rem PrintColorAt %taskID% 1 63 15 1
 rem rem Last color value is box, first is text, first real value is height,
 rem rem second one is width
-rem MouseCMD 2,1,5,1 1,17,120,30 17,6,19,6 63,1,66,1 24,13,28,13 40,13,43,13 get
+rem MouseCMD 2,1,5,1 1,17,120,30 17,6,19,6 63,1,66,1 24,13,28,13 40,13,43,13 41,1,54,1 get
 if %result%==1 goto snui
 if %result%==2 goto snui
 if %result%==3 goto snui
 if %result%==4 goto multifinder
 if %result%==5 goto jaguarbacklup
 if %result%==6 goto snui
+if %result%==7 goto backupspec
 if %result%==0 goto CLI
 
 
+
+:backupspec
+rem Locate 25 1
+rem ShadeBoxAt 2 42 4 16 4
+rem PrintColorAt { 2 41 15 1
+rem PrintColorAt { 3 41 15 1
+rem PrintColorAt { 4 41 15 1
+rem PrintColorAt { 5 41 15 1
+rem PrintColorAt - 6 41 15 1
+rem PrintColorAt - 6 42 15 1
+rem PrintColorAt - 6 43 15 1
+rem PrintColorAt - 6 44 15 1
+rem PrintColorAt - 6 45 15 1
+rem PrintColorAt - 6 46 15 1
+rem PrintColorAt - 6 47 15 1
+rem PrintColorAt - 6 48 15 1
+rem PrintColorAt - 6 49 15 1
+rem PrintColorAt - 6 50 15 1
+rem PrintColorAt - 6 51 15 1
+rem PrintColorAt - 6 52 15 1
+rem PrintColorAt - 6 53 15 1
+rem PrintColorAt - 6 54 15 1
+rem PrintColorAt - 6 55 15 1
+rem PrintColorAt - 6 56 15 1
+rem PrintColorAt - 6 57 15 1
+rem PrintColorAt - 6 58 15 1
+rem PrintColorAt } 2 58 15 1
+rem PrintColorAt } 3 58 15 1
+rem PrintColorAt } 4 58 15 1
+rem PrintColorAt } 5 58 15 1
+rem PrintColorAt } 6 58 15 1
+rem PrintColorAt - 6 58 15 1
+rem ShadeBoxAt 7 42 1 17 1
+rem ShadeBoxAt 3 59 5 1 1
+rem PrintColorAt Boot Backup 3 43 0 3
+rem MouseCMD 2,1,5,1 41,1,54,1 43,3,53,3 63,1,66,1 1,14,120,30 2,1,5,1 17,6,19,6 get
+
+if %result%==1 goto snui
+if %result%==2 goto fsysbackup
+if %result%==3 goto drivebooterex
+if %result%==4 goto multifinder
+if %result%==5 goto snui
+if %result%==6 goto snui
+if %result%==7 goto snui
+if %result%==0 goto CLI
+
+
+
+:drivebooterex
+set taskID=Boot
+set flagID=drivebooterex
+set specID=ReturnToBackup
+rem ShadeBoxAt 2 63 1 11 1
+rem ShadeBoxAt 3 63 6 12 2
+rem ShadeBoxAt 5 25 1 10 2
+rem Locate 25 1
+rem ShadeBoxAt 2 2 23 23 2
+rem ShadeBoxAt 2 2 24 74 2
+rem PrintCenter Welcome to Jason Jaguar 2 . 3 :) Check out the beta features and menus. 13 0 9
+rem ShadeBoxAt 6 17 10 40 4
+rem ShadeBoxAt 12 20 1 2 4
+rem PrintColorAt *X* 6 17 15 12
+rem PrintColorAt Jason Jaguar - 2.3 GUI Environment{/} 6 20 0 9
+rem PrintColorAt { 7 17 0 8
+rem PrintColorAt { 8 17 0 8
+rem PrintColorAt { 9 17 0 8
+rem PrintColorAt { 10 17 0 8
+rem PrintColorAt { 11 17 0 8
+rem PrintColorAt { 12 17 0 8
+rem PrintColorAt { 13 17 0 8
+rem PrintColorAt { 14 17 0 8
+rem PrintColorAt { 15 17 0 8
+rem PrintColorAt - 15 18 0 8
+rem PrintColorAt - 15 19 0 8
+rem PrintColorAt - 15 20 0 8
+rem PrintColorAt - 15 21 0 8
+rem PrintColorAt - 15 22 0 8
+rem PrintColorAt - 15 23 0 8
+rem PrintColorAt - 15 24 0 8
+rem PrintColorAt - 15 25 0 8
+rem PrintColorAt - 15 26 0 8
+rem PrintColorAt - 15 27 0 8
+rem PrintColorAt - 15 28 0 8
+rem PrintColorAt - 15 29 0 8
+rem PrintColorAt - 15 30 0 8
+rem PrintColorAt - 15 31 0 8
+rem PrintColorAt - 15 32 0 8
+rem PrintColorAt - 15 33 0 8
+rem PrintColorAt - 15 34 0 8
+rem PrintColorAt - 15 35 0 8
+rem PrintColorAt - 15 36 0 8
+rem PrintColorAt - 15 37 0 8
+rem PrintColorAt - 15 38 0 8
+rem PrintColorAt - 15 39 0 8
+rem PrintColorAt - 15 40 0 8
+rem PrintColorAt - 15 41 0 8
+rem PrintColorAt - 15 42 0 8
+rem PrintColorAt - 15 43 0 8
+rem PrintColorAt - 15 44 0 8
+rem PrintColorAt - 15 45 0 8
+rem PrintColorAt - 15 46 0 8
+rem PrintColorAt - 15 47 0 8
+rem PrintColorAt - 15 48 0 8
+rem PrintColorAt - 15 49 0 8
+rem PrintColorAt - 15 50 0 8
+rem PrintColorAt - 15 51 0 8
+rem PrintColorAt - 15 52 0 8
+rem PrintColorAt - 15 53 0 8
+rem PrintColorAt - 15 54 0 8
+rem PrintColorAt - 15 55 0 8
+rem PrintColorAt - 15 56 0 8
+rem PrintColorAt } 7 56 0 8
+rem PrintColorAt } 8 56 0 8
+rem PrintColorAt } 9 56 0 8
+rem PrintColorAt } 10 56 0 8
+rem PrintColorAt } 11 56 0 8
+rem PrintColorAt } 12 56 0 8
+rem PrintColorAt } 13 56 0 8
+rem PrintColorAt } 14 56 0 8
+rem PrintColorAt } 15 56 0 8
+rem PrintColorAt Would you like to boot off 8 19 0 3
+rem PrintColorAt A previous FileSystem Backup? 10 19 0 11
+rem PrintColorAt *Yes* 13 24 0 3
+rem PrintColorAt *No* 13 40 15 12
+rem ShadeBoxAt 7 57 10 1 1
+rem ShadeBoxAt 16 18 1 40 1
+rem PrintColorAt %specID% 1 41 0 9
+rem PrintColorAt %taskID% 1 63 15 1
+rem rem Last color value is box, first is text, first real value is height,
+rem rem second one is width
+rem MouseCMD 2,1,5,1 1,17,120,30 17,6,19,6 63,1,66,1 24,13,28,13 40,13,43,13 41,1,54,1 get
+if %result%==1 goto snui
+if %result%==2 goto snui
+if %result%==3 goto snui
+if %result%==4 goto multifinder
+if %result%==5 goto reejaguarbacklup
+if %result%==6 goto snui
+if %result%==7 goto fsysbackup
+if %result%==0 goto CLI
+
+
+
+:reejaguarbacklup
+if exist C:\JasonJaguarFileSystemBackup goto reejaguarbackluptrue
+if not exist C:\JaguarSetup\jaguarautorun.txt goto reejaguarbacklupfalse
+
+
+:reejaguarbacklupfalse
+cls
+rem PrintCenter Sorry, no FileSystem Backup detected. :( You will now return to the GUI. 15 0 9
+pause
+goto GUI
+
+
+:reejaguarbackluptrue
+xcopy C:\JasonJaguarFileSystemBackup C:\JasonJaguarFileSystem /E /H /C /I
+cls
+rem PrintCenter Re-integrating into previous FileSystem Backup... 21 0 9
+rem CenterSelf
+set FGcol=10
+rem ChangeColor %FGcol% 0
+rem PrintBoxAt 15 51 3 20 2
+rem ChangeColor 0 %FGcol%
+
+rem Wait 50
+REM COPY FILES HERE
+
+rem ShadeBoxAt 16 52 1 2 8
+
+rem Wait 50
+REM COPY MORE FILES HERE
+
+rem ShadeBoxAt 16 54 1 2 8
+
+rem Wait 50
+REM COPY MORE FILES HERE
+
+rem ShadeBoxAt 16 56 1 2 8
+
+rem Wait 50
+REM COPY MORE FILES HERE
+
+rem ShadeBoxAt 16 58 1 2 8
+
+rem Wait 50
+REM COPY MORE FILES HERE
+
+rem ShadeBoxAt 16 60 1 2 8
+
+rem Wait 50
+REM COPY MORE FILES HERE
+
+rem ShadeBoxAt 16 62 1 2 8
+
+rem Wait 50
+REM COPY MORE FILES HERE
+
+rem ShadeBoxAt 16 64 1 2 8
+
+rem Wait 50
+REM COPY MORE FILES HERE
+
+rem ShadeBoxAt 16 66 1 2 8
+
+rem Wait 50
+REM COPY MORE FILES HERE
+
+rem ShadeBoxAt 16 68 1 2 8
+
+rem ClearColor
+rem Locate 30 1
+rem PrintCenter Jason Jaguar FileSystem re-integration complete! 23 0 9
+pause
+rem PrintCenter Your previous FileSystem backup is now bootable. 26 0 9
+pause
+goto gui
 
 
 
@@ -2521,7 +2741,7 @@ echo JaguarDOS, Ver. 2.3 Command Line Interface
 echo (C) Copyright Jason Jaguar Inc, 2024
 echo.
 set /p CMD=@%usar%jaguarcmd}
-  
+
 if %CMD%==help goto helpcmd
 if %CMD%==? goto helpcmd
 if %CMD%==HELP goto helpcmd
@@ -2565,6 +2785,10 @@ if %CMD%==DOS goto revertdos
 if %CMD%==dos goto revertdos
 if %CMD%==BCK goto BACKKUPCMD
 if %CMD%==bck goto BACKKUPCMD
+if %CMD%==NUK goto nukefyle
+if %CMD%==nuk goto nukefyle
+if %CMD%==BOT goto BOOTBACKKUPCMD
+if %CMD%==bot goto BOOTBACKKUPCMD
 goto chkhelp
 
 
@@ -2617,6 +2841,10 @@ if %CMD%==DOS goto revertdos
 if %CMD%==dos goto revertdos
 if %CMD%==BCK goto BACKKUPCMD
 if %CMD%==bck goto BACKKUPCMD
+if %CMD%==NUK goto nukefyle
+if %CMD%==nuk goto nukefyle
+if %CMD%==BOT goto BOOTBACKKUPCMD
+if %CMD%==bot goto BOOTBACKKUPCMD
 goto chkhelp
 
 
@@ -2641,7 +2869,178 @@ echo RNS     Reinstalls the Jason Jaguar 2.3 GUI OS and FileSystem.
 echo DOS     Exits out of Jason Jaguar 2.3 GUI OS and FileSystem, and then reverts to the JaguarDOS Boot Version.
 echo COD     Directs the user to the Code Builder, which allows them to write a full Jason Jaguar-compatible program within the terminal.
 echo BCK     Creates a backup of the user's FileSystem on the C: Drive in the event of lost data.
+echo NUK     Permanently nukes your current FileSystem install, directing the user to a pre-install version of JaguarDOS Boot 2.3.
+echo BOT     Boots from a FileSystem Backup currently on the C: Drive.
 goto CLIUS
+
+
+
+
+:nukefyle
+set /p backwup=@%usar%jaguarcmd} Are you sure you want to nuke your entire FileSystem and revert to the initial install? Y/N
+
+if %backwup%==Y goto BIGSNUGGIE
+if %backwup%==y goto BIGSNUGGIE
+if %backwup%==N goto CLIUS
+if %backwup%==n goto CLIUS
+
+
+
+:BIGSNUGGIE
+RMDIR C:\JasonJaguarFileSystem /s /q
+RMDIR C:\JaguarSetup /s /q
+cls
+rem PrintCenter Destroying your install of the Jason Jaguar FileSystem... 21 0 9
+rem CenterSelf
+set FGcol=10
+rem ChangeColor %FGcol% 0
+rem PrintBoxAt 15 51 3 20 2
+rem ChangeColor 0 %FGcol%
+
+rem Wait 50
+REM COPY FILES HERE
+
+rem ShadeBoxAt 16 52 1 2 8
+
+rem Wait 50
+REM COPY MORE FILES HERE
+
+rem ShadeBoxAt 16 54 1 2 8
+
+rem Wait 50
+REM COPY MORE FILES HERE
+
+rem ShadeBoxAt 16 56 1 2 8
+
+rem Wait 50
+REM COPY MORE FILES HERE
+
+rem ShadeBoxAt 16 58 1 2 8
+
+rem Wait 50
+REM COPY MORE FILES HERE
+
+rem ShadeBoxAt 16 60 1 2 8
+
+rem Wait 50
+REM COPY MORE FILES HERE
+
+rem ShadeBoxAt 16 62 1 2 8
+
+rem Wait 50
+REM COPY MORE FILES HERE
+
+rem ShadeBoxAt 16 64 1 2 8
+
+rem Wait 50
+REM COPY MORE FILES HERE
+
+rem ShadeBoxAt 16 66 1 2 8
+
+rem Wait 50
+REM COPY MORE FILES HERE
+
+rem ShadeBoxAt 16 68 1 2 8
+
+rem ClearColor
+rem Locate 30 1
+rem PrintCenter Jason Jaguar FileSystem destroyed! 23 0 9
+pause
+rem PrintCenter You will now revert to a pre-install state and your files are now gone. 26 0 9
+pause
+goto undersnowren
+
+:undersnowren
+rem PaintScreen 15
+rem ShadeBoxAt 3 1 27 120 2
+rem ShadeBoxAt 1 33 2 87 1
+wait 2500
+rem PaintScreen 15
+goto bigwaiter7
+
+:bigwaiter7
+cls
+ping Localhost -n 2 >nul
+goto prebiosstart
+
+
+
+
+
+:BOOTBACKKUPCMD
+set /p backwup=@%usar%jaguarcmd} Are you sure you want to boot from a FileSystem Backup? Y/N
+
+if %backwup%==Y goto BOOTBACKALUP
+if %backwup%==y goto BOOTBACKALUP
+if %backwup%==N goto CLIUS
+if %backwup%==n goto CLIUS
+
+
+:BOOTBACKALUP
+xcopy C:\JasonJaguarFileSystemBackup C:\JasonJaguarFileSystem /E /H /C /I /Q
+cls
+rem PrintCenter Re-integrating FileSystem and Backup... 21 0 9
+rem CenterSelf
+set FGcol=10
+rem ChangeColor %FGcol% 0
+rem PrintBoxAt 15 51 3 20 2
+rem ChangeColor 0 %FGcol%
+
+rem Wait 50
+REM COPY FILES HERE
+
+rem ShadeBoxAt 16 52 1 2 8
+
+rem Wait 50
+REM COPY MORE FILES HERE
+
+rem ShadeBoxAt 16 54 1 2 8
+
+rem Wait 50
+REM COPY MORE FILES HERE
+
+rem ShadeBoxAt 16 56 1 2 8
+
+rem Wait 50
+REM COPY MORE FILES HERE
+
+rem ShadeBoxAt 16 58 1 2 8
+
+rem Wait 50
+REM COPY MORE FILES HERE
+
+rem ShadeBoxAt 16 60 1 2 8
+
+rem Wait 50
+REM COPY MORE FILES HERE
+
+rem ShadeBoxAt 16 62 1 2 8
+
+rem Wait 50
+REM COPY MORE FILES HERE
+
+rem ShadeBoxAt 16 64 1 2 8
+
+rem Wait 50
+REM COPY MORE FILES HERE
+
+rem ShadeBoxAt 16 66 1 2 8
+
+rem Wait 50
+REM COPY MORE FILES HERE
+
+rem ShadeBoxAt 16 68 1 2 8
+
+rem ClearColor
+rem Locate 30 1
+rem PrintCenter Jason Jaguar FileSystem Backup is now bootable! 23 0 9
+pause
+rem PrintCenter You will boot into the Backup that exists on your C: Drive. 26 0 9
+pause
+goto CLIUS
+
+
+
 
 
 
@@ -2655,7 +3054,7 @@ if %backwup%==n goto CLIUS
 
 
 :BACKALUP
-xcopy C:\JasonJaguarFileSystem C:\JasonJaguarFileSystemBackup /E /H /C /I
+xcopy C:\JasonJaguarFileSystem C:\JasonJaguarFileSystemBackup /E /H /C /I 
 cls
 rem PrintCenter Backing up the Jason Jaguar FileSystem... 21 0 9
 rem CenterSelf
