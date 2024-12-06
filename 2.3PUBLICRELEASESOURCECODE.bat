@@ -1,25 +1,3 @@
-@ECHO OFF
-REM BFCPEOPTIONSTART
-REM Advanced BAT to EXE Converter www.BatToExeConverter.com
-REM BFCPEEXE=C:\Users\Snu 2.1\Downloads\Jason Jaguar 2.x Upgrade Versions\Jason Jaguar Operating System 2.3 ZDOS BACKUP MultiFile Operating System.exe
-REM BFCPEICON=
-REM BFCPEICONINDEX=1
-REM BFCPEEMBEDDISPLAY=0
-REM BFCPEEMBEDDELETE=1
-REM BFCPEADMINEXE=0
-REM BFCPEINVISEXE=0
-REM BFCPEVERINCLUDE=1
-REM BFCPEVERVERSION=2.3.0.0
-REM BFCPEVERPRODUCT=Jason Jaguar OS 2.3 MultiFile OS
-REM BFCPEVERDESC=The world's most advanced batch OS!
-REM BFCPEVERCOMPANY=Jason Jaguar Inc. 
-REM BFCPEVERCOPYRIGHT=Jason Jaguar Inc. Labs 1983 (C)
-REM BFCPEWINDOWCENTER=1
-REM BFCPEDISABLEQE=0
-REM BFCPEWINDOWHEIGHT=30
-REM BFCPEWINDOWWIDTH=120
-REM BFCPEWTITLE=Jason Jaguar 2.3 GUI MultiFile System
-REM BFCPEOPTIONEND
 @echo off
 
 setlocal EnableDelayedExpansion
@@ -28,17 +6,17 @@ setlocal EnableDelayedExpansion
 set taskID=""
 set flagID=""
 
-if exist C:\JasonJaguarFileSystem\MainStorage(A) goto biosboot
-if not exist C:\JasonJaguarFileSystem\MainStorage(A) goto JDOSBOOT
+if exist %SYSTEMDRIVE%\JasonJaguarFileSystem\MainStorage(A) goto biosboot
+if not exist %SYSTEMDRIVE%\JasonJaguarFileSystem\MainStorage(A) goto JDOSBOOT
 
 
 :JDOSBOOT
-if exist C:\JaguarSetup\jaguarautorun.txt goto dosboot
-if not exist C:\JaguarSetup\jaguarautorun.txt goto dbootfalse
+if exist %SYSTEMDRIVE%\JaguarSetup\jaguarautorun.txt goto dosboot
+if not exist %SYSTEMDRIVE%\JaguarSetup\jaguarautorun.txt goto dbootfalse
 
 
 :dbootfalse
-mkdir C:\JaguarSetup
+mkdir %SYSTEMDRIVE%\JaguarSetup
 goto dosboot
 
 
@@ -50,7 +28,7 @@ echo.
 echo JaguarDOS Boot, Ver. 2.3
 echo (C) Copyright Jason Jaguar Inc, 2024
 echo.
-set /p DOO=C:\
+set /p DOO=%SYSTEMDRIVE%\
 
 if %DOO%==EXT goto ext1
 if %DOO%==ext goto ext1
@@ -79,7 +57,7 @@ goto prehelpchk
 :dosboit
 color 0a
 echo.
-set /p DOO=C:\
+set /p DOO=%SYSTEMDRIVE%\
 
 if %DOO%==EXT goto ext1
 if %DOO%==ext goto ext1
@@ -109,7 +87,7 @@ echo INS     Starts up the installation booting processes for Jason Jaguar 2.3 G
 echo CLK     Shows the date and time.
 echo SZE     Declares the size of all directories and files contained on the FileSystem.
 echo SET     Primes and sets the A: and B: drives for installation.
-echo DEL     Deletes the C:\JaguarSetup directory and redirects to first boot.
+echo DEL     Deletes the %SYSTEMDRIVE%\JaguarSetup directory and redirects to first boot.
 echo ERR     Tests the error-throwing system for JaguarDOS.
 echo CLS     Clears the Command Terminal menu.
 goto dosboit
@@ -117,7 +95,7 @@ goto dosboit
 
 
 :deeleet
-rmdir /S /Q  C:\JaguarSetup
+rmdir /S /Q  %SYSTEMDRIVE%\JaguarSetup
 goto JDOSBOOT
 
 
@@ -166,8 +144,8 @@ goto dosboit
 
 
 :setul1
-if exist C:\JaguarSetup\jaguarautorun.txt goto setultrue
-if not exist C:\JaguarSetup\jaguarautorun.txt goto setulfalse
+if exist %SYSTEMDRIVE%\JaguarSetup\jaguarautorun.txt goto setultrue
+if not exist %SYSTEMDRIVE%\JaguarSetup\jaguarautorun.txt goto setulfalse
 
 
 :setultrue
@@ -176,7 +154,7 @@ goto dosboit
 
 :setulfalse
 echo Creating Setup Booter Drive...
-echo "}KEYBOARD = TRUE /: MOUSE = TRUE /: BOOTJDOS = TRUE $%/. Argument 37692[KERNEL UNLOCK] a:JJFS b:JJFS 98^97765 P{ }CHRSET LODR: $:>^@%234567890-=qwertyuiop[]\asdfghjkl;'zxcvbnm,./{  }calexe.mtp %HDPS_INIT% %SINGULARITY_CORE_ENGAGE% %QEN_CALIBRATE% %RDF_ACTIVATE%:: set HDPS_INIT=1234567890{  " > C:\JaguarSetup\jaguarautorun.txt
+echo "}KEYBOARD = TRUE /: MOUSE = TRUE /: BOOTJDOS = TRUE $%/. Argument 37692[KERNEL UNLOCK] a:JJFS b:JJFS 98^97765 P{ }CHRSET LODR: $:>^@%234567890-=qwertyuiop[]\asdfghjkl;'zxcvbnm,./{  }calexe.mtp %HDPS_INIT% %SINGULARITY_CORE_ENGAGE% %QEN_CALIBRATE% %RDF_ACTIVATE%:: set HDPS_INIT=1234567890{  " > %SYSTEMDRIVE%\JaguarSetup\jaguarautorun.txt
 ping Localhost -n 2 >nul
 cls
 echo Creating Setup Booter Drive..
@@ -190,8 +168,8 @@ goto dosboit
 
 
 :instart
-if exist C:\JaguarSetup\jaguarautorun.txt goto instarttrue
-if not exist C:\JaguarSetup\jaguarautorun.txt goto instartfalse
+if exist %SYSTEMDRIVE%\JaguarSetup\jaguarautorun.txt goto instarttrue
+if not exist %SYSTEMDRIVE%\JaguarSetup\jaguarautorun.txt goto instartfalse
 
 
 :instartfalse
@@ -378,7 +356,7 @@ echo.
 echo JaguarDOS Boot, Ver. 2.3
 echo (C) Copyright Jason Jaguar Inc, 2024
 echo.
-set /p DOO=C:\
+set /p DOO=%SYSTEMDRIVE%\
 
 if %DOO%==EXT goto ext2
 if %DOO%==ext goto ext2
@@ -403,7 +381,7 @@ goto peehelpchk
 :dosbout
 color 0a
 echo.
-set /p DOO=C:\
+set /p DOO=%SYSTEMDRIVE%\
 
 if %DOO%==EXT goto ext2
 if %DOO%==ext goto ext2
@@ -469,11 +447,11 @@ goto biosboot
 
 :biosboot
 color 08
-if exist C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\UserPass goto cheloice
-if not exist C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\UserPass goto create1
+if exist %SYSTEMDRIVE%\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\UserPass goto cheloice
+if not exist %SYSTEMDRIVE%\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\UserPass goto create1
 
 :create1
-mkdir C:\JasonJaguarFileSystem
+mkdir %SYSTEMDRIVE%\JasonJaguarFileSystem
 cls
 rem PrintCenter Creating Jason Jaguar FileSystem... 21 0 9
 rem CenterSelf
@@ -535,14 +513,14 @@ goto mainstoragecheck1
 
 :mainstoragecheck1
 cls
-if exist C:\JasonJaguarFileSystem\MainStorage(A) goto mainstoragecheck2
-if not exist C:\JasonJaguarFileSystem\MainStorage(A) goto create2
+if exist %SYSTEMDRIVE%\JasonJaguarFileSystem\MainStorage(A) goto mainstoragecheck2
+if not exist %SYSTEMDRIVE%\JasonJaguarFileSystem\MainStorage(A) goto create2
 
 
 
 :create2
-mkdir C:\JasonJaguarFileSystem\App(B)
-mkdir C:\JasonJaguarFileSystem\MainStorage(A)
+mkdir %SYSTEMDRIVE%\JasonJaguarFileSystem\App(B)
+mkdir %SYSTEMDRIVE%\JasonJaguarFileSystem\MainStorage(A)
 cls
 rem PrintCenter Creating Jason Jaguar FileSystem... 21 0 9
 rem CenterSelf
@@ -603,14 +581,14 @@ goto mainstoragecheck2
 
 :mainstoragecheck2
 cls
-if exist C:\JasonJaguarFileSystem\MainStorage(A)\Documents goto mainstoragecheck3
-if not exist C:\JasonJaguarFileSystem\MainStorage(A)\Documents goto create3
+if exist %SYSTEMDRIVE%\JasonJaguarFileSystem\MainStorage(A)\Documents goto mainstoragecheck3
+if not exist %SYSTEMDRIVE%\JasonJaguarFileSystem\MainStorage(A)\Documents goto create3
 
 
 
 
 :create3
-mkdir C:\JasonJaguarFileSystem\MainStorage(A)\Documents
+mkdir %SYSTEMDRIVE%\JasonJaguarFileSystem\MainStorage(A)\Documents
 cls
 rem PrintCenter Creating Jason Jaguar FileSystem... 21 0 9
 rem CenterSelf
@@ -671,15 +649,15 @@ goto mainstoragecheck3
 
 :mainstoragecheck3
 cls
-if exist C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData goto mainstoragecheck4
-if not exist C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData goto create4
+if exist %SYSTEMDRIVE%\JasonJaguarFileSystem\MainStorage(A)\OtherUserData goto mainstoragecheck4
+if not exist %SYSTEMDRIVE%\JasonJaguarFileSystem\MainStorage(A)\OtherUserData goto create4
 
 
 
 
 :create4
-mkdir C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData
-mkdir C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\UserPass
+mkdir %SYSTEMDRIVE%\JasonJaguarFileSystem\MainStorage(A)\OtherUserData
+mkdir %SYSTEMDRIVE%\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\UserPass
 cls
 rem PrintCenter Creating Jason Jaguar FileSystem... 21 0 9
 rem CenterSelf
@@ -865,8 +843,8 @@ goto madepass
 
 :madepass
 cls
-if exist C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\UserPass\username.txt goto loadingsys
-if not exist C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\UserPass\username.txt goto firsttime
+if exist %SYSTEMDRIVE%\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\UserPass\username.txt goto loadingsys
+if not exist %SYSTEMDRIVE%\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\UserPass\username.txt goto firsttime
 
 
 :firsttime
@@ -939,7 +917,7 @@ rem PrintColorAt Welcome to Jason Jaguar 2.3 :) 9 19 15 1
 rem PrintColorAt Input your username: 12 19 15 1
 rem PrintColorAt { 13 19 0 9
 rem GetInput
-echo %result%>C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\UserPass\username.txt
+echo %result%>%SYSTEMDRIVE%\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\UserPass\username.txt
 cls
 rem PaintScreen 1
 rem PrintCenter Inputting username... 21 15 0
@@ -1000,7 +978,7 @@ echo.
 pause
 cls
 rem PaintScreen 1
-set /p usar=<C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\UserPass\username.txt
+set /p usar=<%SYSTEMDRIVE%\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\UserPass\username.txt
 rem PrintCenter Great, welcome %usar%. Enjoy Jason Jaguar 2.3 :) 15 15 0
 echo.
 pause
@@ -1015,7 +993,7 @@ goto loadingsys
 rem WHEN MAKING VARIABLES, NO UPPERCASE, WHEN MAKING EQUALS FOR OPTION, NO SPACES
 :loadingsys
 cls
-set /p usar=<C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\UserPass\username.txt
+set /p usar=<%SYSTEMDRIVE%\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\UserPass\username.txt
 rem PrintCenter Loading Jason Jaguar 2.3 GUI Environment... 21 0 9
 rem CenterSelf
 set FGcol=10
@@ -1074,7 +1052,7 @@ goto gui
 
 
 :gui
-set /p usar=<C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\UserPass\username.txt
+set /p usar=<%SYSTEMDRIVE%\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\UserPass\username.txt
 rem Function to update date and time variables
 rem Get the current date
 for /F "tokens=2" %%i in ('date /t') do set mydate=%%i
@@ -2078,8 +2056,8 @@ if %result%==0 goto CLI
 
 
 :reejaguarbacklup
-if exist C:\JasonJaguarFileSystemBackup goto reejaguarbackluptrue
-if not exist C:\JaguarSetup\jaguarautorun.txt goto reejaguarbacklupfalse
+if exist %SYSTEMDRIVE%\JasonJaguarFileSystemBackup goto reejaguarbackluptrue
+if not exist %SYSTEMDRIVE%\JaguarSetup\jaguarautorun.txt goto reejaguarbacklupfalse
 
 
 :reejaguarbacklupfalse
@@ -2090,7 +2068,7 @@ goto GUI
 
 
 :reejaguarbackluptrue
-xcopy C:\JasonJaguarFileSystemBackup C:\JasonJaguarFileSystem /E /H /C /I
+xcopy %SYSTEMDRIVE%\JasonJaguarFileSystemBackup %SYSTEMDRIVE%\JasonJaguarFileSystem /E /H /C /I
 cls
 rem PrintCenter Re-integrating into previous FileSystem Backup... 21 0 9
 rem CenterSelf
@@ -2156,7 +2134,7 @@ goto gui
 
 
 :jaguarbacklup
-xcopy C:\JasonJaguarFileSystem C:\JasonJaguarFileSystemBackup /E /H /C /I
+xcopy %SYSTEMDRIVE%\JasonJaguarFileSystem %SYSTEMDRIVE%\JasonJaguarFileSystemBackup /E /H /C /I
 cls
 rem PrintCenter Backing up the Jason Jaguar FileSystem... 21 0 9
 rem CenterSelf
@@ -2214,7 +2192,7 @@ rem ClearColor
 rem Locate 30 1
 rem PrintCenter Jason Jaguar FileSystem backed up! 23 0 9
 pause
-rem PrintCenter Your FileSystem is now backed up in the C: Drive in case you lose your files. 26 0 9
+rem PrintCenter Your FileSystem is now backed up in the %SYSTEMDRIVE% Drive in case you lose your files. 26 0 9
 pause
 goto gui
 
@@ -2229,15 +2207,15 @@ cls
 echo.================================
 echo     Jason Jaguar__OS_2.3__GUI
 echo.================================
-wmic computersystem get manufacturer,model,name >C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\sysinfo.txt
-wmic cpu get name,numberofcores >>C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\sysinfo.txt
-wmic bios get manufacturer,serialnumber,smbiosbiosversion >>C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\sysinfo.txt
-wmic memorychip where "devicelocator != 'SYSTEM ROM'" get capacity,devicelocator,manufacturer,partnumber >>C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\sysinfo.txt
-ECHO OS: Jason Jaguar 2.3 Graphical User Shell >>C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\sysinfo.txt
-wmic diskdrive get index,firmwarerevision,model,size >>C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\sysinfo.txt
-wmic logicaldisk get description,deviceid,freespace,size,volumename >>C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\sysinfo.txt
-wmic NIC where "physicaladapter=TRUE" get MACAddress,ProductName | findstr /v /C:"Virtual" >>C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\sysinfo.txt
-wmic nicconfig where ipenabled="TRUE" get description,macaddress,ipaddress,dhcpleaseobtained >>C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\sysinfo.txt
+wmic computersystem get manufacturer,model,name >%SYSTEMDRIVE%\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\sysinfo.txt
+wmic cpu get name,numberofcores >>%SYSTEMDRIVE%\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\sysinfo.txt
+wmic bios get manufacturer,serialnumber,smbiosbiosversion >>%SYSTEMDRIVE%\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\sysinfo.txt
+wmic memorychip where "devicelocator != 'SYSTEM ROM'" get capacity,devicelocator,manufacturer,partnumber >>%SYSTEMDRIVE%\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\sysinfo.txt
+ECHO OS: Jason Jaguar 2.3 Graphical User Shell >>%SYSTEMDRIVE%\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\sysinfo.txt
+wmic diskdrive get index,firmwarerevision,model,size >>%SYSTEMDRIVE%\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\sysinfo.txt
+wmic logicaldisk get description,deviceid,freespace,size,volumename >>%SYSTEMDRIVE%\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\sysinfo.txt
+wmic NIC where "physicaladapter=TRUE" get MACAddress,ProductName | findstr /v /%SYSTEMDRIVE%"Virtual" >>%SYSTEMDRIVE%\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\sysinfo.txt
+wmic nicconfig where ipenabled="TRUE" get description,macaddress,ipaddress,dhcpleaseobtained >>%SYSTEMDRIVE%\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\sysinfo.txt
 echo.=====================================
 echo     @Copyright Jason Jaguar.inc, 2024
 echo.=====================================
@@ -2586,7 +2564,7 @@ if %result%==0 goto CLI
 
 
 :yestal
-rd /s /q C:\JasonJaguarFileSystem
+rd /s /q %SYSTEMDRIVE%\JasonJaguarFileSystem
 cls
 rem PrintCenter Removing Jason Jaguar FileSystem... 21 0 9
 rem CenterSelf
@@ -2660,7 +2638,7 @@ cls
 color 0a
 set "color=%_color_choice%"
 set "_file=0"
-set "output_file=C:\JasonJaguarFileSystem\MainStorage(A)\Documents\JAGUARWORD.txt"
+set "output_file=%SYSTEMDRIVE%\JasonJaguarFileSystem\MainStorage(A)\Documents\JAGUARWORD.txt"
 goto go_back7
 :go_back7
 if not exist "%output_file%" (
@@ -2669,7 +2647,7 @@ if not exist "%output_file%" (
 
 cls
 echo Welcome to the Jason Jaguar (tm) Inc. Office Word Processor :)
-echo Type all your text here, and it will be saved in the Jaguar DFS (Disk File System)
+echo Type all your text here, and it will be saved in the Jaguar FileSystem's A: Drive in Documents.
 echo.
 echo @. Save and exit the JAGUAR WORD document editor
 echo *. Change text color
@@ -2868,9 +2846,9 @@ echo CLS     Clears the Command Terminal menu.
 echo RNS     Reinstalls the Jason Jaguar 2.3 GUI OS and FileSystem.
 echo DOS     Exits out of Jason Jaguar 2.3 GUI OS and FileSystem, and then reverts to the JaguarDOS Boot Version.
 echo COD     Directs the user to the Code Builder, which allows them to write a full Jason Jaguar-compatible program within the terminal.
-echo BCK     Creates a backup of the user's FileSystem on the C: Drive in the event of lost data.
+echo BCK     Creates a backup of the user's FileSystem on the %SYSTEMDRIVE% Drive in the event of lost data.
 echo NUK     Nukes your current FileSystem install, directing the user to a pre-install version of JaguarDOS Boot 2.3.
-echo BOT     Boots from a FileSystem Backup currently on the C: Drive.
+echo BOT     Boots from a FileSystem Backup currently on the %SYSTEMDRIVE% Drive.
 goto CLIUS
 
 
@@ -2887,8 +2865,8 @@ if %backwup%==n goto CLIUS
 
 
 :BIGSNUGGIE
-RMDIR C:\JasonJaguarFileSystem /s /q
-RMDIR C:\JaguarSetup /s /q
+RMDIR %SYSTEMDRIVE%\JasonJaguarFileSystem /s /q
+RMDIR %SYSTEMDRIVE%\JaguarSetup /s /q
 cls
 rem PrintCenter Destroying your install of the Jason Jaguar FileSystem... 21 0 9
 rem CenterSelf
@@ -2977,7 +2955,7 @@ if %backwup%==n goto CLIUS
 
 
 :BOOTBACKALUP
-xcopy C:\JasonJaguarFileSystemBackup C:\JasonJaguarFileSystem /E /H /C /I /Q
+xcopy %SYSTEMDRIVE%\JasonJaguarFileSystemBackup %SYSTEMDRIVE%\JasonJaguarFileSystem /E /H /C /I /Q
 cls
 rem PrintCenter Re-integrating FileSystem and Backup... 21 0 9
 rem CenterSelf
@@ -3035,7 +3013,7 @@ rem ClearColor
 rem Locate 30 1
 rem PrintCenter Jason Jaguar FileSystem Backup is now bootable! 23 0 9
 pause
-rem PrintCenter You will boot into the Backup that exists on your C: Drive. 26 0 9
+rem PrintCenter You will boot into the Backup that exists on your %SYSTEMDRIVE% Drive. 26 0 9
 pause
 goto CLIUS
 
@@ -3054,7 +3032,7 @@ if %backwup%==n goto CLIUS
 
 
 :BACKALUP
-xcopy C:\JasonJaguarFileSystem C:\JasonJaguarFileSystemBackup /E /H /C /I 
+xcopy %SYSTEMDRIVE%\JasonJaguarFileSystem %SYSTEMDRIVE%\JasonJaguarFileSystemBackup /E /H /C /I 
 cls
 rem PrintCenter Backing up the Jason Jaguar FileSystem... 21 0 9
 rem CenterSelf
@@ -3112,7 +3090,7 @@ rem ClearColor
 rem Locate 30 1
 rem PrintCenter Jason Jaguar FileSystem backed up! 23 0 9
 pause
-rem PrintCenter Your FileSystem is now backed up in the C: Drive in case you lose your files. 26 0 9
+rem PrintCenter Your FileSystem is now backed up in the %SYSTEMDRIVE% Drive in case you lose your files. 26 0 9
 pause
 goto CLIUS
 
@@ -3183,7 +3161,7 @@ wmic diskdrive get index,firmwarerevision,model,size
 ECHO Logical drives:
 wmic logicaldisk get description,deviceid,freespace,size,volumename
 ECHO Physical network interface(s):
-wmic NIC where "physicaladapter=TRUE" get MACAddress,ProductName | findstr /v /C:"Virtual"
+wmic NIC where "physicaladapter=TRUE" get MACAddress,ProductName | findstr /v /%SYSTEMDRIVE%"Virtual"
 ECHO Currently active network interfaces:
 wmic nicconfig where ipenabled="TRUE" get description,macaddress,ipaddress,dhcpleaseobtained
 echo.=======================================
@@ -3211,7 +3189,7 @@ cls
 color 0a
 set "color=%_color_choice%"
 set "_file=0"
-set "output_file=C:\JasonJaguarFileSystem\App(B)\app.bat"
+set "output_file=%SYSTEMDRIVE%\JasonJaguarFileSystem\App(B)\app.bat"
 goto go_back1
 :go_back1
 if not exist "%output_file%" (
@@ -3220,7 +3198,7 @@ if not exist "%output_file%" (
 
 cls
 echo Welcome to the Jason Jaguar (tm) Inc. Code Builder :)
-echo Write your Jason Jaguar-compatible code here, and it will be saved in the Jaguar DFS (Disk File System)'s App(B) drive to be later installed and run.
+echo Write your Jason Jaguar-compatible code here, and it will be saved in the Jaguar FileSystem's App(B:) Drive to be later installed and run.
 echo (Make sure not to make any typos, there is no delete function implemented which is very annoying)
 echo.
 echo @. Save and exit the Jason Jaguar CODE BUILDER
@@ -3296,7 +3274,7 @@ goto CLIUS
 set /p "fyle=What would you like to name the directory folder? "
 if "%fyle%"=="" (
     echo Please enter a name and try again ...
-    goto directory
+    goto CLIUS
 )
 
 echo Creating folder ...
@@ -3310,22 +3288,22 @@ goto CLIUS
 
 :remlove
 set /p bhas=@%usar%jaguarcmd}What's the name of the folder you want to delete?:
-if not exist C:\JasonJaguarFileSystem\MainStorage(A)\%bhas% goto presiadface
-if exist C:\JasonJaguarFileSystem\MainStorage(A)\%bhas% goto delete_folder
+if not exist %SYSTEMDRIVE%\JasonJaguarFileSystem\MainStorage(A)\%bhas% goto presiadface
+if exist %SYSTEMDRIVE%\JasonJaguarFileSystem\MainStorage(A)\%bhas% goto delete_folder
 
 
 :presiadface
 if not defined %bhas% goto fullhyuks
-if not exist C:\JasonJaguarFileSystem\MainStorage(A)\%bhas% goto siadface
+if not exist %SYSTEMDRIVE%\JasonJaguarFileSystem\MainStorage(A)\%bhas% goto siadface
 
 
 :delete_folder
-rmdir C:\JasonJaguarFileSystem\MainStorage(A)\%bhas%
+rmdir %SYSTEMDRIVE%\JasonJaguarFileSystem\MainStorage(A)\%bhas%
 goto cyhalm
 
 :cyhalm
-if not exist C:\JasonJaguarFileSystem\MainStorage(A)\%bhas% goto barffarb
-if exist C:\JasonJaguarFileSystem\MainStorage(A)\%bhas% goto siadface
+if not exist %SYSTEMDRIVE%\JasonJaguarFileSystem\MainStorage(A)\%bhas% goto barffarb
+if exist %SYSTEMDRIVE%\JasonJaguarFileSystem\MainStorage(A)\%bhas% goto siadface
 
 :barffarb
 echo Folder %bhas% deleted successfully.
@@ -3479,7 +3457,7 @@ rem PrintColorAt %specID% 1 41 0 9
 rem PrintColorAt %taskID% 1 63 15 1
 rem rem Last color value is box, first is text, first real value is height,
 rem rem second one is width
-rem MouseCMD 54,6,56,6 41,10,50,12 23,10,31,12 17,6,19,6 1,14,120,30 2,1,5,1 63,1,66,1 41,1,54,1 get
+rem MouseCMD 54,6,56,6 41,10,50,12 23,10,32,12 17,6,19,6 1,14,120,30 2,1,5,1 63,1,66,1 41,1,54,1 get
 
 if %result%==1 goto resizefile1
 if %result%==2 goto smally1
@@ -5325,28 +5303,28 @@ rem rem first four on these are answer questrion
 
 
 :calcread
-set wordID=C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\calc.txt
+set wordID=%SYSTEMDRIVE%\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\calc.txt
 goto readbeegorsmall
 
 
 :calc2read
-set wordID=C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\calc2.txt
+set wordID=%SYSTEMDRIVE%\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\calc2.txt
 goto readbeegorsmall
 
 :sysinforead
-set wordID=C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\sysinfo.txt
+set wordID=%SYSTEMDRIVE%\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\sysinfo.txt
 goto readbeegorsmall
 
 :mathinputread
-set wordID=C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\mathinput.txt
+set wordID=%SYSTEMDRIVE%\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\mathinput.txt
 goto readbeegorsmall
 
 :jaguarwordread
-set wordID=C:\JasonJaguarFileSystem\MainStorage(A)\Documents\JAGUARWORD.txt
+set wordID=%SYSTEMDRIVE%\JasonJaguarFileSystem\MainStorage(A)\Documents\JAGUARWORD.txt
 goto readbeegorsmall
 
 :userpassread
-set wordID=C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\UserPass\username.txt
+set wordID=%SYSTEMDRIVE%\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\UserPass\username.txt
 goto readbeegorsmall
 
 
@@ -5518,7 +5496,7 @@ rem rem rem ShadeBoxAt 6 17 18 58 4 on big ones
 
 
 :sasdy
-set /p usar=<C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\UserPass\username.txt
+set /p usar=<%SYSTEMDRIVE%\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\UserPass\username.txt
 rem Function to update date and time variables
 rem Get the current date
 for /F "tokens=2" %%i in ('date /t') do set mydate=%%i
@@ -5755,7 +5733,7 @@ goto brui
 
 
 :brui
-set /p usar=<C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\UserPass\username.txt
+set /p usar=<%SYSTEMDRIVE%\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\UserPass\username.txt
 rem Function to update date and time variables
 rem Get the current date
 for /F "tokens=2" %%i in ('date /t') do set mydate=%%i
@@ -5974,7 +5952,7 @@ rem rem rem ShadeBoxAt 6 17 18 58 4 on big ones
 
 
 :fyletree
-TREE C:\JasonJaguarFileSystem\ /A /F
+TREE %SYSTEMDRIVE%\JasonJaguarFileSystem\ /A /F
 set /p replar=@%usar%jaguarcmd}Open file in any tree directory? Y/N
 
 if %replar% EQU Y goto opanfyle1
@@ -5985,7 +5963,7 @@ goto CLIUS
 
 
 :opanfyle1
-cd C:\JasonJaguarFileSystem\
+cd %SYSTEMDRIVE%\JasonJaguarFileSystem\
 set /p poan=@%usar%jaguarcmd}Directory name?
 
 if exist %poan% goto tarballs1
@@ -5993,7 +5971,7 @@ if not exist %poan% goto insalad1
 
 
 :tarballs1
-cd C:\JasonJaguarFileSystem\%poan%
+cd %SYSTEMDRIVE%\JasonJaguarFileSystem\%poan%
 
 set /p poan2=@%usar%jaguarcmd}File? (Press 0 to return to File Tree and Browser)
 
@@ -6035,7 +6013,7 @@ goto CLIUS
 
 
 :sizel
-dir C:\JasonJaguarFileSystem\ /s
+dir %SYSTEMDRIVE%\JasonJaguarFileSystem\ /s
 pause
 goto CLIUS
 
@@ -6049,7 +6027,7 @@ goto CLIUS
 :filesys
 cls
 color 0a
-TREE C:\JasonJaguarFileSystem\ /A /F
+TREE %SYSTEMDRIVE%\JasonJaguarFileSystem\ /A /F
 set /p replar=@%usar%jaguarcmd}Open file in any tree directory? Y/N
 
 if %replar% EQU Y goto opanfyle2
@@ -6060,7 +6038,7 @@ goto GUI
 
 
 :opanfyle2
-cd C:\JasonJaguarFileSystem\
+cd %SYSTEMDRIVE%\JasonJaguarFileSystem\
 set /p poan=@%usar%jaguarcmd}Directory name?
 
 if exist %poan% goto tarballs2
@@ -6068,7 +6046,7 @@ if not exist %poan% goto insalad3
 
 
 :tarballs2
-cd C:\JasonJaguarFileSystem\%poan%
+cd %SYSTEMDRIVE%\JasonJaguarFileSystem\%poan%
 
 set /p poan2=@%usar%jaguarcmd}File? (Press 0 to return to File Tree and Browser)
 
@@ -6194,8 +6172,8 @@ if %result%==0 goto CLI
 
 
 :soffy
-if exist C:\JasonJaguarFileSystem\App(B)\app.bat goto soffycorrect
-if not exist C:\JasonJaguarFileSystem\App(B)\app.bat goto soffyincorrect
+if exist %SYSTEMDRIVE%\JasonJaguarFileSystem\App(B)\app.bat goto soffycorrect
+if not exist %SYSTEMDRIVE%\JasonJaguarFileSystem\App(B)\app.bat goto soffyincorrect
 
 :soffyincorrect
 cls
@@ -6264,7 +6242,7 @@ rem PrintCenter Your Jason Jaguar external software is installed! 23 0 9
 pause
 rem PrintCenter Your OS will now boot into the program until it is terminated. 26 0 9
 pause
-cd C:\JasonJaguarFileSystem\App(B)
+cd %SYSTEMDRIVE%\JasonJaguarFileSystem\App(B)
 cls
 color 0a
 call app.bat
@@ -6452,15 +6430,15 @@ if %result%==0 goto CLI
 
 
 :calcu
-if exist C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\mathinput.txt goto mahincalc
+if exist %SYSTEMDRIVE%\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\mathinput.txt goto mahincalc
 
 :mahincalc
 set taskID=Calc
 set flagID=calcu
 set specID=CalculatorSpec
-echo.:>C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\calc.txt
-echo.:>C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\calc2.txt
-echo.:>C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\mathinput.txt
+echo.:>%SYSTEMDRIVE%\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\calc.txt
+echo.:>%SYSTEMDRIVE%\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\calc2.txt
+echo.:>%SYSTEMDRIVE%\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\mathinput.txt
 rem ShadeBoxAt 2 41 5 19 2
 rem ShadeBoxAt 7 58 1 2 2
 rem ShadeBoxAt 2 63 1 11 1
@@ -6564,7 +6542,7 @@ if %result%==12 goto snui
 if %result%==13 goto multifinder
 if %result%==14 goto calcspec
 if %result%==0 goto CLI
-echo:%result%>C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\calc.txt
+echo:%result%>%SYSTEMDRIVE%\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\calc.txt
 
 :gotogyolf
 goto gyolf
@@ -6580,7 +6558,7 @@ if %result%==12 goto snui
 if %result%==13 goto multifinder
 if %result%==14 goto calcspec
 if %result%==0 goto CLI
-echo:%result%>C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\calc.txt
+echo:%result%>%SYSTEMDRIVE%\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\calc.txt
 
 
 :gyolf
@@ -6600,15 +6578,15 @@ if %result%==9 goto calcspec
 if %result%==0 goto CLI
 
 :plush
-echo:+>C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\mathinput.txt
-set /p mathinput=<C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\mathinput.txt
-set /p answer1=<C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\calc.txt
+echo:+>%SYSTEMDRIVE%\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\mathinput.txt
+set /p mathinput=<%SYSTEMDRIVE%\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\mathinput.txt
+set /p answer1=<%SYSTEMDRIVE%\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\calc.txt
 rem PrintColorAt %answer1% 8 39 15 1
 rem PrintColorAt %mathinput% 8 43 15 1
 rem ShadeBoxAt 2 63 1 11 1
 rem ShadeBoxAt 3 63 6 12 2
 rem MouseCMD 19,7,21,7 19,9,21,9 19,11,21,11 19,13,21,13 23,7,25,7 23,9,25,9 23,11,25,11 23,13,25,13 27,7,29,7 17,6,19,6 1,16,120,30 2,1,5,1 63,1,66,1 41,1,54,1 get
-echo:%result%>C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\calc2.txt
+echo:%result%>%SYSTEMDRIVE%\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\calc2.txt
 if %result%==LEQ 9 goto ahnsar1
 if %result%==10 goto snui
 if %result%==11 goto snui
@@ -6618,21 +6596,21 @@ if %result%==14 goto calcspec
 if %result%==0 goto CLI
 
 :ahnsar1
-set /p mathinput=<C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\mathinput.txt
-set /p answer1=<C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\calc.txt
-set /p answer2=<C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\calc2.txt
+set /p mathinput=<%SYSTEMDRIVE%\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\mathinput.txt
+set /p answer1=<%SYSTEMDRIVE%\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\calc.txt
+set /p answer2=<%SYSTEMDRIVE%\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\calc2.txt
 goto addcommand
 
 :siubtract
-echo:->C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\mathinput.txt
-set /p mathinput=<C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\mathinput.txt
-set /p answer1=<C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\calc.txt
+echo:->%SYSTEMDRIVE%\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\mathinput.txt
+set /p mathinput=<%SYSTEMDRIVE%\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\mathinput.txt
+set /p answer1=<%SYSTEMDRIVE%\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\calc.txt
 rem PrintColorAt %answer1% 8 39 15 1
 rem PrintColorAt %mathinput% 8 43 15 1
 rem ShadeBoxAt 2 63 1 11 1
 rem ShadeBoxAt 3 63 6 12 2
 rem MouseCMD 19,7,21,7 19,9,21,9 19,11,21,11 19,13,21,13 23,7,25,7 23,9,25,9 23,11,25,11 23,13,25,13 27,7,29,7 17,6,19,6 1,16,120,30 2,1,5,1 63,1,66,1 41,1,54,1 get
-echo:%result%>C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\calc2.txt
+echo:%result%>%SYSTEMDRIVE%\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\calc2.txt
 if %result%==LEQ 9 goto ahnsar2
 if %result%==10 goto snui
 if %result%==11 goto snui
@@ -6642,21 +6620,21 @@ if %result%==14 goto calcspec
 if %result%==0 goto CLI 
 
 :ahnsar2
-set /p mathinput=<C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\mathinput.txt
-set /p answer1=<C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\calc.txt
-set /p answer2=<C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\calc2.txt
+set /p mathinput=<%SYSTEMDRIVE%\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\mathinput.txt
+set /p answer1=<%SYSTEMDRIVE%\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\calc.txt
+set /p answer2=<%SYSTEMDRIVE%\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\calc2.txt
 goto subtractcommand
 
 :myultiply
-echo:*>C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\mathinput.txt
-set /p mathinput=<C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\mathinput.txt
-set /p answer1=<C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\calc.txt
+echo:*>%SYSTEMDRIVE%\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\mathinput.txt
+set /p mathinput=<%SYSTEMDRIVE%\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\mathinput.txt
+set /p answer1=<%SYSTEMDRIVE%\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\calc.txt
 rem PrintColorAt %answer1% 8 39 15 1
 rem PrintColorAt %mathinput% 8 43 15 1
 rem ShadeBoxAt 2 63 1 11 1
 rem ShadeBoxAt 3 63 6 12 2
 rem MouseCMD 19,7,21,7 19,9,21,9 19,11,21,11 19,13,21,13 23,7,25,7 23,9,25,9 23,11,25,11 23,13,25,13 27,7,29,7 17,6,19,6 1,16,120,30 2,1,5,1 63,1,66,1 41,1,54,1 get
-echo:%result%>C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\calc2.txt
+echo:%result%>%SYSTEMDRIVE%\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\calc2.txt
 if %result%==LEQ 9 goto ahnsar3
 if %result%==10 goto snui
 if %result%==11 goto snui
@@ -6666,21 +6644,21 @@ if %result%==14 goto calcspec
 if %result%==0 goto CLI
 
 :ahnsar3
-set /p mathinput=<C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\mathinput.txt
-set /p answer1=<C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\calc.txt
-set /p answer2=<C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\calc2.txt
+set /p mathinput=<%SYSTEMDRIVE%\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\mathinput.txt
+set /p answer1=<%SYSTEMDRIVE%\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\calc.txt
+set /p answer2=<%SYSTEMDRIVE%\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\calc2.txt
 goto multiplycommand
 
 :divdied
-echo:/>C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\mathinput.txt
-set /p mathinput=<C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\mathinput.txt
-set /p answer1=<C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\calc.txt
+echo:/>%SYSTEMDRIVE%\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\mathinput.txt
+set /p mathinput=<%SYSTEMDRIVE%\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\mathinput.txt
+set /p answer1=<%SYSTEMDRIVE%\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\calc.txt
 rem PrintColorAt %answer1% 8 39 15 1
 rem PrintColorAt %mathinput% 8 43 15 1
 rem ShadeBoxAt 2 63 1 11 1
 rem ShadeBoxAt 3 63 6 12 2
 rem MouseCMD 19,7,21,7 19,9,21,9 19,11,21,11 19,13,21,13 23,7,25,7 23,9,25,9 23,11,25,11 23,13,25,13 27,7,29,7 17,6,19,6 1,16,120,30 2,1,5,1 63,1,66,1 41,1,54,1 get
-echo:%result%>C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\calc2.txt
+echo:%result%>%SYSTEMDRIVE%\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\calc2.txt
 if %result%==LEQ 9 goto ahnsar4
 if %result%==10 goto snui
 if %result%==11 goto snui
@@ -6690,9 +6668,9 @@ if %result%==14 goto calcspec
 if %result%==0 goto CLI
 
 :ahnsar4
-set /p mathinput=<C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\mathinput.txt
-set /p answer1=<C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\calc.txt
-set /p answer2=<C:\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\calc2.txt
+set /p mathinput=<%SYSTEMDRIVE%\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\mathinput.txt
+set /p answer1=<%SYSTEMDRIVE%\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\calc.txt
+set /p answer2=<%SYSTEMDRIVE%\JasonJaguarFileSystem\MainStorage(A)\OtherUserData\calc2.txt
 goto dividecommand
 
 :addcommand
@@ -8052,7 +8030,7 @@ Echo. ÚÄÄ¿ ÚÄÄÄÄÄÄÄÄÄÄÄÄ¿
 Echo. ³3.³ ³Exit Game   ³
 Echo. ÀÄÄÙ ÀÄÄÄÄÄÄÄÄÄÄÄÄÙ
 Echo.
-CHOICE /C:123 /N >nul
+CHOICE /%SYSTEMDRIVE%123 /N >nul
 If "%errorlevel%"=="1" (Goto :Load)
 If "%errorlevel%"=="2" (Goto :Help)
 If "%errorlevel%"=="3" (Goto :End)
@@ -8096,7 +8074,7 @@ Goto :Graphic
 
 :Move
 :: Normal CHOICE (provided into ZIP package)
-CHOICE /C:SADRXC /N >nul
+CHOICE /%SYSTEMDRIVE%SADRXC /N >nul
 :: Windows 7 or x64 system CHOICE (uncomment)
 REM CHOICE /C SADRXC /N 
 If "%errorlevel%"=="1" (Call :Down)
@@ -9469,7 +9447,7 @@ echo.
 echo.
 echo  k/Let go   L-R/Rotate   o/Options   s/Resign
 echo.
-choice /c:12345678abcdefghklrso /n
+choice /%SYSTEMDRIVE%12345678abcdefghklrso /n
 REM Skip turn: if ERRORLEVEL # (if "!turn!" == "w" (set turn=b) ELSE set turn=w) && goto game
 if ERRORLEVEL 21 goto options
 if ERRORLEVEL 20 goto resign
@@ -10516,7 +10494,7 @@ cls
 call :rpbscr
 echo.
 echo  f/Fast Forward    p/Pause
-choice /t:!speed! /d:f /c:pf /n >nul
+choice /t:!speed! /d:f /%SYSTEMDRIVE%pf /n >nul
 
 if "!ERRORLEVEL!" == "1" (
 echo.
@@ -10832,7 +10810,7 @@ echo    ÀÄÄÄÄÄÄÄÄÁÄÄÄÄÄÄÄÁÄÄÄÄÄÄÄÙ
 echo.
 echo  b/Back   d/Default
 echo.
-set /p choose=Choose a number to change the current graphic:
+set /p choose=Choose a number to change the current graphi%SYSTEMDRIVE%
 if /i "!choose!" == "b" goto config
 if "!choose!" == "1" set tochange=wPawn
 if "!choose!" == "2" set tochange=wRook
