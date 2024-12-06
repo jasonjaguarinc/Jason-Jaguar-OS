@@ -38,6 +38,7 @@ Introducing Jason Jaguar OS! A little batch shell that directs you to different 
 - A graphical menu before redirecting to Jason Jaguar Legacy Version.
 - The ability to boot from a previous FileSystem Backup in both the GUI and the Terminal.
 - The ability to nuke your entire install of JaguarOS and the FileSystem from the Terminal.
+- Multi drive install support, so you aren't required to use a C: drive and can use whatever drive your version of Windows is installed on to install Jason Jaguar.
 - And a few general QOL and stability improvements!
 
 
