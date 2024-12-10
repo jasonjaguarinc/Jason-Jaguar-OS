@@ -1,3 +1,25 @@
+@ECHO OFF
+REM BFCPEOPTIONSTART
+REM Advanced BAT to EXE Converter www.BatToExeConverter.com
+REM BFCPEEXE=C:\Users\Snu 2.1\Downloads\Jason Jaguar 2.x Upgrade Versions\Jason Jaguar Operating System 2.3 ZDOS BACKUP MultiFile Operating System.exe
+REM BFCPEICON=
+REM BFCPEICONINDEX=1
+REM BFCPEEMBEDDISPLAY=0
+REM BFCPEEMBEDDELETE=1
+REM BFCPEADMINEXE=0
+REM BFCPEINVISEXE=0
+REM BFCPEVERINCLUDE=1
+REM BFCPEVERVERSION=2.3.0.0
+REM BFCPEVERPRODUCT=Jason Jaguar OS 2.3 MultiFile OS
+REM BFCPEVERDESC=The world's most advanced batch OS!
+REM BFCPEVERCOMPANY=Jason Jaguar Inc. 
+REM BFCPEVERCOPYRIGHT=Jason Jaguar Inc. Labs 1983 (C)
+REM BFCPEWINDOWCENTER=1
+REM BFCPEDISABLEQE=0
+REM BFCPEWINDOWHEIGHT=30
+REM BFCPEWINDOWWIDTH=120
+REM BFCPEWTITLE=Jason Jaguar 2.3 GUI MultiFile System
+REM BFCPEOPTIONEND
 @echo off
 
 setlocal EnableDelayedExpansion
@@ -5933,7 +5955,7 @@ if %result%==5 goto snui
 if %result%==6 goto snui
 if %result%==7 goto snui
 if %result%==8 goto multifinder
-if %result%==8 goto pathspec
+if %result%==9 goto pathspec
 if %result%==0 goto CLI
 
 rem rem 19,7,21,7 is go backwards
