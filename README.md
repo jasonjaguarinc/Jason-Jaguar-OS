@@ -11,10 +11,10 @@ HOWEVER, what if we could do something interesting without using these bigger an
 Introducing Jason Jaguar OS! A little batch shell that directs you to different programs I made within just the batch Windows CMD language. No VBScript, no JScript, nothing other than some batch and external commands. What's the best part? It's incredibly integrated, meaning everything you do from startup only requires the user to compile 1 batch file or EXE. I do the rest behind the scenes, making it easy for first-time users to jump right in to Jason Jaguar OS and makes it extremely operational on Windows computers of all varieties. No dropping DLLs in random locations just for one function, no re-routing directories to get things to link properly, this one program in just thousands of lines of Batch + External commands can do the work that takes other Batch Operating Shells more than 10 different "EXE"s and bat files to get running. Try now, make the dream of an easy batch OS a thing of the past!
 
 
-# Features included for 2.3:
+# Features included for 2.4:
 
 - A functional Graphical User Interface, or clickable GUI, that's been fully implemented and programmed in by me with window-drawing routines
-- Inbuilt support for all of Jason Jaguar 1.2.9 and therefore all its apps, as you can run it from the GUI and terminal
+- Inbuilt support for all of Jason Jaguar 1.2.9 and therefore all its apps, as you can run it from the terminal
 - A non-GUI folder explorer that lets you navigate the Jason Jaguar FileSystem
 - A Systen info log, which in GUI funnels to a .txt doc in the MainStorage(A) drive and in terminal lists it on the screen without sending to a .txt
 - A date & time button, labelled 'Date'
@@ -39,6 +39,13 @@ Introducing Jason Jaguar OS! A little batch shell that directs you to different 
 - The ability to boot from a previous FileSystem Backup in both the GUI and the Terminal.
 - The ability to nuke your entire install of JaguarOS and the FileSystem from the Terminal.
 - Multi drive install support, so you aren't required to use a C: drive and can use whatever drive your version of Windows is installed on to install Jason Jaguar.
+- Made the JaguarOS Online Store, now capable of letting the user download software right from the OS to play from the PathFinder. (also available in the Terminal in its current limited form)
+- Figured out what is essentially JaguarOS's fullscreen mode: Change the font size by right clicking the title top bar for the JaguarOS window and click on properties. From there in the new window it spawns, click on the "Font" section in the buttons at the top and change the size. The size should not completely fill the screen, as that will give it a scroll bar and ruin the graphic interface, but you can change it to as high as it will go (and you can even input your own value in between the ones they give you to customize it more). Once you set it correctly, the EXE you made that has that font change will stay like that and you can use it as even more of the desktop interface that it was meant to be! Not exactly something I made, but it's one thing I discovered and am glad to have discovered.
+- Can now detect if you have Advanced BAT to EXE converter, and download it if you don't as well as being able to tell you how to build the OS.
+- Updated PathFinder to 1.7, adding different colored folders to differentiate them from the files, the ability to count how many files and folders there are in a given directory, and an updated special menu for it.
+- Fully working online updating, so now you can grab the latest version of JaguarOS right from the OS itself and install it entirely locally (this option in the GUI replaces the "Appinst" option, so now the only way to open your APP.bat file is from the PathFinder).
+- New "about" pages for Calculator, Pathfinder, and Bubble popper, complete with nice colors to look at.
+- Fixed a rendering issue with the Jaguar Calculator, so now the answer stays within the window.
 - And a few general QOL and stability improvements!
 
 
