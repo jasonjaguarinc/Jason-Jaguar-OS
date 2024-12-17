@@ -46,6 +46,9 @@ Introducing Jason Jaguar OS! A little batch shell that directs you to different 
 - Fully working online updating, so now you can grab the latest version of JaguarOS right from the OS itself and install it entirely locally (this option in the GUI replaces the "Appinst" option, so now the only way to open your APP.bat file is from the PathFinder).
 - New "about" pages for Calculator, Pathfinder, and Bubble popper, complete with nice colors to look at.
 - Fixed a rendering issue with the Jaguar Calculator, so now the answer stays within the window.
+- Fixed some bugs in the Terminal's FileSystem nuking code.
+- Took out a lot of bloat and filler code with the removal of the in-built Jaguar 1.2.9 support, as you'll be able to download any piece of software from its initial release on the store.
+- Rebranded many things to say JaguarOS instead of Jason Jaguar, moving branding over to that name gradually.
 - And a few general QOL and stability improvements!
 
 
