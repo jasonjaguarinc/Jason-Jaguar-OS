@@ -4578,7 +4578,7 @@ rem PrintColorAt } 24 74 0 8
 
 rem rem dividing line between windowing code and the stuff above
 rem PrintColorAt ( 13 19 0 9
-rem PrintColorAt ) 13 32 0 9
+rem PrintColorAt ( 14 19 0 9
 rem PrintColorAt / 12 19 0 9
 rem PrintColorAt - 12 20 0 9
 rem PrintColorAt - 12 21 0 9
@@ -4593,22 +4593,23 @@ rem PrintColorAt - 12 29 0 9
 rem PrintColorAt - 12 30 0 9
 rem PrintColorAt - 12 31 0 9
 rem PrintColorAt \ 12 32 0 9
-rem PrintColorAt \ 14 19 0 9
-rem PrintColorAt - 14 20 0 9
-rem PrintColorAt - 14 21 0 9
-rem PrintColorAt - 14 22 0 9
-rem PrintColorAt - 14 23 0 9
-rem PrintColorAt - 14 24 0 9
-rem PrintColorAt - 14 25 0 9
-rem PrintColorAt - 14 26 0 9
-rem PrintColorAt - 14 27 0 9
-rem PrintColorAt - 14 28 0 9
-rem PrintColorAt - 14 29 0 9
-rem PrintColorAt - 14 30 0 9
-rem PrintColorAt - 14 31 0 9
-rem PrintColorAt / 14 32 0 9
+rem PrintColorAt \ 15 19 0 9
+rem PrintColorAt - 15 20 0 9
+rem PrintColorAt - 15 21 0 9
+rem PrintColorAt - 15 22 0 9
+rem PrintColorAt - 15 23 0 9
+rem PrintColorAt - 15 24 0 9
+rem PrintColorAt - 15 25 0 9
+rem PrintColorAt - 15 26 0 9
+rem PrintColorAt - 15 27 0 9
+rem PrintColorAt - 15 28 0 9
+rem PrintColorAt - 15 29 0 9
+rem PrintColorAt - 15 30 0 9
+rem PrintColorAt - 15 31 0 9
+rem PrintColorAt / 15 32 0 9
 rem PrintColorAt Sorry, couldn't find or load specified folder :( 11 20 0 3
-rem PrintColorAt Press the back button to redirect to the JasonJaguarFileSystem directory. 13 21 0 11
+rem PrintColorAt Press the back button to redirect 13 21 0 11
+rem PrintColorAt to the JasonJaguarFileSystem directory. 14 21 0 11
 rem ShadeBoxAt 7 75 18 1 1
 rem ShadeBoxAt 25 18 1 58 1
 rem PrintColorAt %taskID% 1 63 15 1
