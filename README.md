@@ -11,7 +11,7 @@ HOWEVER, what if we could do something interesting without using these bigger an
 Introducing Jason Jaguar OS! A little batch shell that directs you to different programs I made within just the batch Windows CMD language. No VBScript, no JScript, nothing other than some batch and external commands. What's the best part? It's incredibly integrated, meaning everything you do from startup only requires the user to compile 1 batch file or EXE. I do the rest behind the scenes, making it easy for first-time users to jump right in to Jason Jaguar OS and makes it extremely operational on Windows computers of all varieties. No dropping DLLs in random locations just for one function, no re-routing directories to get things to link properly, this one program in just thousands of lines of Batch + External commands can do the work that takes other Batch Operating Shells more than 10 different "EXE"s and bat files to get running. Try now, make the dream of an easy batch OS a thing of the past!
 
 
-# Features included for 2.4.1:
+# Features included for OS 2.5:
 
 - A functional Graphical User Interface, or clickable GUI, that's been fully implemented and programmed in by me with window-drawing routines
 - Inbuilt support for all of Jason Jaguar 1.2.9 and therefore all its apps, as you can run its apps from the JaguarOS Online Store.
@@ -49,6 +49,13 @@ Introducing Jason Jaguar OS! A little batch shell that directs you to different 
 - Fixed some bugs in the Terminal's FileSystem nuking code.
 - Took out a lot of bloat and filler code with the removal of the in-built Jaguar 1.2.9 support, as you'll be able to download any piece of software from its initial release on the store.
 - Rebranded many things to say JaguarOS instead of Jason Jaguar, moving branding over to that name gradually.
+- A new "Settings" app, put right where "About" used to be and now allows the user to customize their username, re-sync the date and time, capture their system's specifications, and choose whether they wanna boot back to JaguarDOS Boot or regular JaguarDOS when clicking the red ".X." on the top-most right
+- An updated PathFinder, now with the annoying screen hotspot removed from the bottom, the "APP.BAT" Y/N screen exiting to the main B: drive screen if you click no, fixing a few hitboxes, and the ability to move between the current directory tree by clicking on the directory you'd wish to go to
+- Heavily improved multitasking with the MultiFile system, now actually allowing the user to go back to what open important app they had in the background from something like the "About" window
+- Clicking the bottom left or right on the desktop allows to the change the username and date/time respectively while on the desktop
+- A much more put-together and smooth aesthetic interface, with everything now saying "JaguarOS" and a generally cleaner look to all the options
+- Removal of the text in the middle on the desktop that's been there from the beginning, now replaced with actual space for your windows
+- Assures beforehand if you actually mean to capture system specs and change username
 - And a few general QOL and stability improvements!
 
 
